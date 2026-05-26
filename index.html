@@ -204,9 +204,10 @@
             </ul>
 
             <!-- Search -->
-            <a class="nav-search" href="#search" aria-label="Søg på siden">
+             <button class="nav-search" type="button" data-search-open aria-label="Søg på hjemmesiden">
               <i class="bi bi-search" aria-hidden="true"></i>
-            </a>
+              <span>Søg</span>
+            </button>
 
             <!-- Mobile topbar links -->
             <div class="mobile-actions d-lg-none mt-3 pt-3 border-top">
@@ -683,10 +684,51 @@
       </div>
     </footer>
 
+    <!-- Search Overlay -->
+<div class="search-overlay" data-search-overlay aria-hidden="true">
+  <div class="search-backdrop" data-search-close></div>
+
+  <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+    <div class="search-panel-header">
+      <div>
+        <h2 id="searchTitle">Hvad leder du efter?</h2>
+      </div>
+
+      <button class="search-close" type="button" data-search-close aria-label="Luk søgning">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="search-input-wrap">
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <input
+        id="siteSearchInput"
+        type="search"
+        placeholder="Søg fx vaskeri, internet, ansøgning, klubber..."
+        autocomplete="off"
+      >
+    </div>
+
+    <div class="search-suggestions" aria-label="Populære søgninger">
+      <button type="button" data-search-term="vaskeri">Vaskeri</button>
+      <button type="button" data-search-term="internet">Internet</button>
+      <button type="button" data-search-term="ansøgning">Ansøgning</button>
+      <button type="button" data-search-term="klubber">Klubber</button>
+      <button type="button" data-search-term="kontakt">Kontakt</button>
+    </div>
+
+    <div class="search-results-info" data-search-info>
+      Skriv noget for at finde relevante sider.
+    </div>
+
+    <div class="search-results" data-search-results></div>
+  </section>
+</div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
