@@ -544,7 +544,7 @@ h2 {
       rgba(23, 49, 36, 0.42),
       rgba(23, 49, 36, 0.12)
     ),
-    url("../images/hero-nybrogaard.jpg") center / cover no-repeat;
+    url("../assets/images/hero-nybrogaard.jpg") center / cover no-repeat;
 }
 
 .hero-section::after {
