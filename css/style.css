@@ -1168,6 +1168,99 @@ h2 {
 }
 
 
+/*---------- Image Slider ----------*/
+
+.college-slider {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  min-height: 100%;
+}
+
+.college-slider .carousel,
+.college-slider .carousel-inner,
+.college-slider .carousel-item {
+  height: 100%;
+  min-height: 420px;
+}
+
+.college-slider img {
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.college-slider .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 43, 31, 0.05) 0%,
+    rgba(31, 43, 31, 0.25) 45%,
+    rgba(31, 43, 31, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.college-slider .carousel-caption {
+  right: 2rem;
+  bottom: 1.75rem;
+  left: 2rem;
+  z-index: 2;
+  text-align: left;
+}
+
+.college-slider .carousel-caption h3 {
+  margin-bottom: 0.35rem;
+  color: #fff;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.college-slider .carousel-caption p {
+  max-width: 34rem;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.college-slider .carousel-indicators {
+  z-index: 3;
+  margin-bottom: 0.8rem;
+}
+
+.college-slider .carousel-indicators [data-bs-target] {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+}
+
+.college-slider .carousel-control-prev,
+.college-slider .carousel-control-next {
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  .college-slider .carousel,
+  .college-slider .carousel-inner,
+  .college-slider .carousel-item,
+  .college-slider img {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 575px) {
+  .college-slider .carousel-caption {
+    right: 1.2rem;
+    bottom: 1.4rem;
+    left: 1.2rem;
+  }
+
+  .college-slider .carousel-caption p {
+    display: none;
+  }
+}
+
+
 /* =====================================================
    10. Tables, notices and forms
    Practical content blocks, tables and form fields
