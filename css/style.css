@@ -1170,6 +1170,7 @@ h2 {
 
 /*---------- Image Slider ----------*/
 
+/* Slider images */
 .college-slider {
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -1184,10 +1185,32 @@ h2 {
   min-height: 420px;
 }
 
-.college-slider img {
+.gallery-image-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.gallery-image-button img {
+  width: 100%;
   height: 100%;
   min-height: 420px;
   object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gallery-image-button:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-image-button img {
+  transition: transform 0.35s ease;
 }
 
 .college-slider .carousel-item::after {
@@ -1196,9 +1219,9 @@ h2 {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(31, 43, 31, 0.05) 0%,
-    rgba(31, 43, 31, 0.25) 45%,
-    rgba(31, 43, 31, 0.78) 100%
+    rgba(31, 43, 31, 0.04) 0%,
+    rgba(31, 43, 31, 0.22) 45%,
+    rgba(31, 43, 31, 0.76) 100%
   );
   pointer-events: none;
 }
@@ -1209,6 +1232,7 @@ h2 {
   left: 2rem;
   z-index: 2;
   text-align: left;
+  pointer-events: none;
 }
 
 .college-slider .carousel-caption h3 {
@@ -1223,9 +1247,10 @@ h2 {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.college-slider .carousel-indicators {
+.college-slider .carousel-indicators,
+.college-slider .carousel-control-prev,
+.college-slider .carousel-control-next {
   z-index: 3;
-  margin-bottom: 0.8rem;
 }
 
 .college-slider .carousel-indicators [data-bs-target] {
@@ -1234,16 +1259,97 @@ h2 {
   border-radius: 999px;
 }
 
-.college-slider .carousel-control-prev,
-.college-slider .carousel-control-next {
-  z-index: 3;
+/* Fullscreen image lightbox */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.image-lightbox.is-open {
+  display: flex;
+}
+
+.image-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 25, 20, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.image-lightbox-content {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 96vw);
+  height: min(760px, 88vh);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.image-lightbox-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.lightbox-tool {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.lightbox-tool:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.26);
+}
+
+.lightbox-close {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.image-lightbox-frame {
+  flex: 1;
+  overflow: auto;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+.image-lightbox-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: scale(var(--lightbox-zoom, 1));
+  transform-origin: center center;
+  transition: transform 0.2s ease;
+  cursor: zoom-in;
+}
+
+/* Prevent background scroll when lightbox is open */
+body.lightbox-open {
+  overflow: hidden;
 }
 
 @media (max-width: 991px) {
   .college-slider .carousel,
   .college-slider .carousel-inner,
   .college-slider .carousel-item,
-  .college-slider img {
+  .gallery-image-button,
+  .gallery-image-button img {
     min-height: 320px;
   }
 }
@@ -1257,6 +1363,19 @@ h2 {
 
   .college-slider .carousel-caption p {
     display: none;
+  }
+
+  .image-lightbox {
+    padding: 0.75rem;
+  }
+
+  .image-lightbox-content {
+    height: 92vh;
+  }
+
+  .lightbox-tool {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 

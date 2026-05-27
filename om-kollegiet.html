@@ -286,58 +286,47 @@
             </p>
           </div>
 
-          <div class="college-slider">
-  <div id="kollegieCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#kollegieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Billede 1"></button>
-      <button type="button" data-bs-target="#kollegieCarousel" data-bs-slide-to="1" aria-label="Billede 2"></button>
-      <button type="button" data-bs-target="#kollegieCarousel" data-bs-slide-to="2" aria-label="Billede 3"></button>
-      <button type="button" data-bs-target="#kollegieCarousel" data-bs-slide-to="3" aria-label="Billede 4"></button>
-    </div>
+          <div class="carousel-item active">
+  <button class="gallery-image-button" type="button" data-full-image="images/kollegiet-1.jpg" aria-label="Åbn billede i fuld størrelse">
+    <img src="assets/images/outdoor1.jpg" class="d-block w-100" alt="Nybrogård Kollegiet set udefra">
+  </button>
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/images/outdoor1.jpg" class="d-block w-100" alt="Nybrogård Kollegiet set udefra">
-        <div class="carousel-caption">
-          <h3>Grønne omgivelser</h3>
-          <p>Kollegiet ligger tæt på både Lyngby Sø, Bagsværd Sø og Mølleåen.</p>
-        </div>
-      </div>
+  <div class="carousel-caption">
+    <h3>Grønne omgivelser</h3>
+    <p>Kollegiet ligger tæt på både Lyngby Sø, Bagsværd Sø og Mølleåen.</p>
+  </div>
+</div>
 
-      <div class="carousel-item">
-        <img src="assets/images/outdoor2.jpg" class="d-block w-100" alt="Fællesområde på Nybrogård Kollegiet">
-        <div class="carousel-caption">
-          <h3>Plads til fællesskab</h3>
-          <p>Fælleskøkkener, klubber og sociale områder skaber liv mellem bygningerne.</p>
-        </div>
-      </div>
+<div class="carousel-item">
+  <button class="gallery-image-button" type="button" data-full-image="images/kollegiet-2.jpg" aria-label="Åbn billede i fuld størrelse">
+    <img src="assets/images/outdoor2.jpg" class="d-block w-100" alt="Fællesområde på Nybrogård Kollegiet">
+  </button>
 
-      <div class="carousel-item">
-        <img src="assets/images/outdoor3.jpg" class="d-block w-100" alt="Udendørsområde ved Nybrogård Kollegiet">
-        <div class="carousel-caption">
-          <h3>Rolige rammer</h3>
-          <p>Et kollegie med luft, natur og små åndehuller i hverdagen.</p>
-        </div>
-      </div>
+  <div class="carousel-caption">
+    <h3>Plads til fællesskab</h3>
+    <p>Fælleskøkkener, klubber og sociale områder skaber liv mellem bygningerne.</p>
+  </div>
+</div>
 
-      <div class="carousel-item">
-        <img src="assets/images/svane.jpg" class="d-block w-100" alt="Beboere eller aktivitet på kollegiet">
-        <div class="carousel-caption">
-          <h3>Et levende kollegie</h3>
-          <p>Nybro er både et sted at bo, mødes og tage del i fællesskabet.</p>
-        </div>
-      </div>
-    </div>
+<div class="carousel-item">
+  <button class="gallery-image-button" type="button" data-full-image="images/kollegiet-3.jpg" aria-label="Åbn billede i fuld størrelse">
+    <img src="assets/images/outdoor3.jpg" class="d-block w-100" alt="Udendørsområde ved Nybrogård Kollegiet">
+  </button>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#kollegieCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Forrige</span>
-    </button>
+  <div class="carousel-caption">
+    <h3>Rolige rammer</h3>
+    <p>Et kollegie med luft, natur og små åndehuller i hverdagen.</p>
+  </div>
+</div>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#kollegieCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Næste</span>
-    </button>
+<div class="carousel-item">
+  <button class="gallery-image-button" type="button" data-full-image="images/kollegiet-4.jpg" aria-label="Åbn billede i fuld størrelse">
+    <img src="assets/images/outdoor4.jpg" class="d-block w-100" alt="Beboere eller aktivitet på kollegiet">
+  </button>
+
+  <div class="carousel-caption">
+    <h3>Et levende kollegie</h3>
+    <p>Nybro er både et sted at bo, mødes og tage del i fællesskabet.</p>
   </div>
 </div>
         </div>
@@ -705,6 +694,35 @@
 
     <div class="search-results" data-search-results></div>
   </section>
+</div>
+
+<!-- Image Lightbox -->
+<div class="image-lightbox" data-image-lightbox aria-hidden="true">
+  <div class="image-lightbox-backdrop" data-lightbox-close></div>
+
+  <div class="image-lightbox-content" role="dialog" aria-modal="true" aria-label="Billede i fuld størrelse">
+    <div class="image-lightbox-toolbar">
+      <button class="lightbox-tool" type="button" data-lightbox-zoom-out aria-label="Zoom ud">
+        <i class="bi bi-zoom-out"></i>
+      </button>
+
+      <button class="lightbox-tool" type="button" data-lightbox-zoom-in aria-label="Zoom ind">
+        <i class="bi bi-zoom-in"></i>
+      </button>
+
+      <button class="lightbox-tool" type="button" data-lightbox-reset aria-label="Nulstil zoom">
+        <i class="bi bi-arrows-angle-contract"></i>
+      </button>
+
+      <button class="lightbox-tool lightbox-close" type="button" data-lightbox-close aria-label="Luk billede">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div class="image-lightbox-frame">
+      <img src="" alt="" data-lightbox-image>
+    </div>
+  </div>
 </div>
 
     <!-- Bootstrap JS -->

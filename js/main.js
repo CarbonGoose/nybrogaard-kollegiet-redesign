@@ -215,3 +215,105 @@ document.addEventListener("keydown", (event) => {
     openSearch();
   }
 });
+
+
+
+
+// Image lightbox with zoom
+const galleryButtons = document.querySelectorAll("[data-full-image]");
+const lightbox = document.querySelector("[data-image-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCloseButtons = document.querySelectorAll("[data-lightbox-close]");
+const zoomInButton = document.querySelector("[data-lightbox-zoom-in]");
+const zoomOutButton = document.querySelector("[data-lightbox-zoom-out]");
+const resetZoomButton = document.querySelector("[data-lightbox-reset]");
+
+let lightboxZoom = 1;
+
+function setLightboxZoom(value) {
+  lightboxZoom = Math.min(Math.max(value, 1), 3);
+  lightboxImage.style.setProperty("--lightbox-zoom", lightboxZoom);
+}
+
+function openLightbox(imageSrc, imageAlt) {
+  if (!lightbox || !lightboxImage) return;
+
+  lightboxImage.src = imageSrc;
+  lightboxImage.alt = imageAlt || "Billede fra Nybrogård Kollegiet";
+
+  setLightboxZoom(1);
+
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.classList.add("lightbox-open");
+}
+
+function closeLightbox() {
+  if (!lightbox || !lightboxImage) return;
+
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("lightbox-open");
+
+  lightboxImage.src = "";
+  lightboxImage.alt = "";
+  setLightboxZoom(1);
+}
+
+galleryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const imageSrc = button.dataset.fullImage;
+    const image = button.querySelector("img");
+    const imageAlt = image ? image.alt : "";
+
+    openLightbox(imageSrc, imageAlt);
+  });
+});
+
+lightboxCloseButtons.forEach((button) => {
+  button.addEventListener("click", closeLightbox);
+});
+
+if (zoomInButton) {
+  zoomInButton.addEventListener("click", () => {
+    setLightboxZoom(lightboxZoom + 0.25);
+  });
+}
+
+if (zoomOutButton) {
+  zoomOutButton.addEventListener("click", () => {
+    setLightboxZoom(lightboxZoom - 0.25);
+  });
+}
+
+if (resetZoomButton) {
+  resetZoomButton.addEventListener("click", () => {
+    setLightboxZoom(1);
+  });
+}
+
+if (lightboxImage) {
+  lightboxImage.addEventListener("click", () => {
+    if (lightboxZoom >= 3) {
+      setLightboxZoom(1);
+    } else {
+      setLightboxZoom(lightboxZoom + 0.5);
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (!lightbox || !lightbox.classList.contains("is-open")) return;
+
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+
+  if (event.key === "+" || event.key === "=") {
+    setLightboxZoom(lightboxZoom + 0.25);
+  }
+
+  if (event.key === "-") {
+    setLightboxZoom(lightboxZoom - 0.25);
+  }
+});
