@@ -31,10 +31,210 @@
     <a class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white" href="#main-content">
       Spring til indhold
     </a>
-    
-    <!-- HEADER -->
-   <div data-include="components/header.html"></div>
 
+    <!-- Header -->
+    <header class="site-header sticky-top">
+      <!-- Topbar -->
+      <div class="topbar bg-white">
+        <div class="container d-flex align-items-center justify-content-between py-3">
+          <!-- Logo -->
+          <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+  <img 
+    src="assets//icons/logo ide3.png" 
+    alt="Nybrogård Kollegiet logo" 
+    class="brand-logo"
+  >
+
+  <span class="brand-text">
+    <strong>Nybrogård Kollegiet</strong>
+  </span>
+</a>
+
+          <!-- Topbar actions -->
+          <div class="topbar-actions d-none d-lg-flex align-items-center gap-4">
+            <a class="topbar-link" href="#" target="_blank" rel="noopener">
+              <i class="bi bi-calendar-check me-2" aria-hidden="true"></i>
+              Vaskeri login
+            </a>
+
+            <a class="topbar-link" href="#" target="_blank" rel="noopener">
+              <i class="bi bi-person me-2" aria-hidden="true"></i>
+              Beboer login
+            </a>
+
+            <div class="vr"></div>
+
+            <div class="dropdown">
+              <button
+                class="btn btn-sm dropdown-toggle topbar-link"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                🇩🇰 Dansk
+              </button>
+
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item active" href="#">Dansk</a></li>
+                <li><a class="dropdown-item" href="#">English</a></li>
+              </ul>
+            </div>
+
+            <div class="vr"></div>
+
+            <a class="topbar-link facebook-link" href="https://facebook.com" target="_blank" rel="noopener">
+              <i class="bi bi-facebook me-2" aria-hidden="true"></i>
+              Følg os på Facebook
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavigation"
+            aria-controls="mainNavigation"
+            aria-expanded="false"
+            aria-label="Åbn navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main navigation -->
+      <nav class="main-nav navbar navbar-expand-lg" aria-label="Hovednavigation">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Forside</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="om-kollegiet.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Om kollegiet
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="om-kollegiet.html#introduktion">Introduktion</a></li>
+                  <li><a class="dropdown-item" href="om-kollegiet.html#faciliteter">Faciliteter</a></li>
+                  <li><a class="dropdown-item" href="om-kollegiet.html#lokation-transport">Lokation & transport</a></li>
+                  <li><a class="dropdown-item" href="om-kollegiet.html#livet">Livet på kollegiet</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="bolig-ansoegning.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Bolig & ansøgning
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="bolig-ansoegning.html#boligtyper">Boligtyper</a></li>
+                  <li><a class="dropdown-item" href="bolig-ansoegning.html#priser">Priser</a></li>
+                  <li><a class="dropdown-item" href="bolig-ansoegning.html#ansoegning">Ansøgning</a></li>
+                  <li><a class="dropdown-item" href="bolig-ansoegning.html#flyt-ind-ud">Flyt ind / flyt ud</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="for-beboere.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  For beboere
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="for-beboere.html#praktisk-info">Praktisk info</a></li>
+                  <li><a class="dropdown-item" href="for-beboere.html#vaskeri">Vaskeri</a></li>
+                  <li><a class="dropdown-item" href="for-beboere.html#internet">Internet</a></li>
+                  <li><a class="dropdown-item" href="for-beboere.html#regler">Regler</a></li>
+                  <li><a class="dropdown-item" href="for-beboere.html#nyheder">Vigtige beskeder</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="faellesskab.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Fællesskab
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="faellesskab.html#klubber">Klubber</a></li>
+                  <li><a class="dropdown-item" href="faellesskab.html#events">Events</a></li>
+                  <li><a class="dropdown-item" href="faellesskab.html#kort">Kort over fællesområder</a></li>
+                  <li><a class="dropdown-item" href="faellesskab.html#facebook">Facebook-gruppe</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="kontakt-hjaelp.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Kontakt & hjælp
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="kontakt-hjaelp.html#kontakt-guide">Hvem skal jeg kontakte?</a></li>
+                  <li><a class="dropdown-item" href="kontakt-hjaelp.html#kontaktoversigt">Kontaktoversigt</a></li>
+                  <li><a class="dropdown-item" href="kontakt-hjaelp.html#faq">FAQ</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <!-- Search -->
+             <button class="nav-search" type="button" data-search-open aria-label="Søg på hjemmesiden">
+              <i class="bi bi-search" aria-hidden="true"></i>
+              <span>Søg</span>
+            </button>
+
+            <!-- Mobile topbar links -->
+            <div class="mobile-actions d-lg-none mt-3 pt-3 border-top">
+              <a href="#" class="mobile-action-link">
+                <i class="bi bi-calendar-check me-2" aria-hidden="true"></i>
+                Vaskeri login
+              </a>
+
+              <a href="#" class="mobile-action-link">
+                <i class="bi bi-person me-2" aria-hidden="true"></i>
+                Beboer login
+              </a>
+
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="mobile-action-link">
+                <i class="bi bi-facebook me-2" aria-hidden="true"></i>
+                Følg os på Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Main content -->
     <main id="main-content">
@@ -419,14 +619,126 @@
       </section>
     </main>
 
-    <!-- FOOTER + SEARCH OVERLAY -->
-    <div data-include="components/footer.html"></div>
-<div data-include="components/search-overlay.html"></div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="footer-brand d-inline-flex align-items-center gap-3 mb-3" href="index.html">
+              <img
+                src="assets/icons/logo ide3.png"
+                alt="Nybrogård Kollegiet logo"
+                class="brand-logo"
+              >
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+              <span>
+                <strong>Nybrogård Kollegiet</strong>
+              </span>
+            </a>
 
-<!-- Global includes -->
-<script src="js/includes.js"></script>
+            <address class="mb-0">
+              Nybrovej 304<br>
+              2800 Kgs. Lyngby<br>
+              <a href="tel:+4561506769">61 50 67 69</a><br>
+              <a href="mailto:nybro@kab-bolig.dk">nybro@kab-bolig.dk</a>
+            </address>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h2 class="footer-heading">Genveje</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="om-kollegiet.html">Om kollegiet</a></li>
+              <li><a href="bolig-ansoegning.html">Bolig & ansøgning</a></li>
+              <li><a href="for-beboere.html">For beboere</a></li>
+              <li><a href="kontakt-hjaelp.html">Kontakt & hjælp</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h2 class="footer-heading">Praktisk</h2>
+
+            <ul class="list-unstyled footer-links">
+              <li><a href="for-beboere.html#vaskeri">Vaskeri login</a></li>
+              <li><a href="for-beboere.html#beboer-login">Beboer login</a></li>
+              <li><a href="for-beboere.html#regler">Regler</a></li>
+              <li><a href="bolig-ansoegning.html#flyt-ind-ud">Flyt ind / flyt ud</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4">
+            <h2 class="footer-heading">Følg fællesskabet</h2>
+
+            <p>
+              Facebook-gruppen bruges som supplement til sociale opslag, events og hverdagskommunikation.
+            </p>
+
+            <a class="btn btn-outline-light" href="https://facebook.com" target="_blank" rel="noopener">
+              <i class="bi bi-facebook me-2" aria-hidden="true"></i>
+              Følg os på Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom py-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 small">
+          <p class="mb-0">© 2026 Nybrogård Kollegiet</p>
+
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#">Privatlivspolitik</a></li>
+            <li class="list-inline-item"><a href="#">Cookiepolitik</a></li>
+            <li class="list-inline-item"><a href="#">Tilgængelighed</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Search Overlay -->
+<div class="search-overlay" data-search-overlay aria-hidden="true">
+  <div class="search-backdrop" data-search-close></div>
+
+  <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+    <div class="search-panel-header">
+      <div>
+        <h2 id="searchTitle">Hvad leder du efter?</h2>
+      </div>
+
+      <button class="search-close" type="button" data-search-close aria-label="Luk søgning">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="search-input-wrap">
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <input
+        id="siteSearchInput"
+        type="search"
+        placeholder="Søg fx vaskeri, internet, ansøgning, klubber..."
+        autocomplete="off"
+      >
+    </div>
+
+    <div class="search-suggestions" aria-label="Populære søgninger">
+      <button type="button" data-search-term="vaskeri">Vaskeri</button>
+      <button type="button" data-search-term="internet">Internet</button>
+      <button type="button" data-search-term="ansøgning">Ansøgning</button>
+      <button type="button" data-search-term="klubber">Klubber</button>
+      <button type="button" data-search-term="kontakt">Kontakt</button>
+    </div>
+
+    <div class="search-results-info" data-search-info>
+      Skriv noget for at finde relevante sider.
+    </div>
+
+    <div class="search-results" data-search-results></div>
+  </section>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
   </body>
 </html>
