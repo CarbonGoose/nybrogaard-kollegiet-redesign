@@ -1,0 +1,117 @@
+/* ---------- Facility hub buttons ---------- */
+
+.facility-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--grid-gap);
+}
+
+.facility-button-card {
+  width: 100%;
+  min-height: 7.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem;
+  color: var(--color-text);
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+button.facility-button-card {
+  font: inherit;
+}
+
+.facility-button-card:hover,
+.facility-button-card:focus-visible {
+  color: var(--color-text);
+  background-color: #ffffff;
+  border-color: rgba(36, 71, 52, 0.28);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.facility-button-icon {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  border-radius: 999px;
+  font-size: 1.3rem;
+}
+
+.facility-button-content {
+  flex: 1;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.facility-button-content strong {
+  color: var(--color-primary-dark);
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+.facility-button-content span {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.facility-button-arrow {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.facility-modal {
+  border: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.facility-modal .modal-header {
+  background-color: var(--color-primary-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.facility-modal .modal-title {
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.facility-modal .modal-body {
+  padding: 1.25rem;
+}
+
+.facility-modal .modal-body p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+}
+
+@media (max-width: 575.98px) {
+  .facility-button-card {
+    min-height: auto;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .facility-button-icon {
+    width: 2.65rem;
+    height: 2.65rem;
+  }
+}
