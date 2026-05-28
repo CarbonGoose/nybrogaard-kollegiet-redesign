@@ -1,0 +1,40 @@
+ <!-- Search Overlay -->
+<div class="search-overlay" data-search-overlay aria-hidden="true">
+  <div class="search-backdrop" data-search-close></div>
+
+  <section class="search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+    <div class="search-panel-header">
+      <div>
+        <h2 id="searchTitle">Hvad leder du efter?</h2>
+      </div>
+
+      <button class="search-close" type="button" data-search-close aria-label="Luk søgning">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="search-input-wrap">
+      <i class="bi bi-search" aria-hidden="true"></i>
+      <input
+        id="siteSearchInput"
+        type="search"
+        placeholder="Søg fx vaskeri, internet, ansøgning, klubber..."
+        autocomplete="off"
+      >
+    </div>
+
+    <div class="search-suggestions" aria-label="Populære søgninger">
+      <button type="button" data-search-term="vaskeri">Vaskeri</button>
+      <button type="button" data-search-term="internet">Internet</button>
+      <button type="button" data-search-term="ansøgning">Ansøgning</button>
+      <button type="button" data-search-term="klubber">Klubber</button>
+      <button type="button" data-search-term="kontakt">Kontakt</button>
+    </div>
+
+    <div class="search-results-info" data-search-info>
+      Skriv noget for at finde relevante sider.
+    </div>
+
+    <div class="search-results" data-search-results></div>
+  </section>
+</div>

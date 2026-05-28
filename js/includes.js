@@ -19,11 +19,7 @@ function setActiveNavLink() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".main-nav .nav-link").forEach((link) => {
-    const href = link.getAttribute("href");
-
-    if (!href) return;
-
-    const linkPage = href.split("#")[0];
+    const linkPage = link.getAttribute("href")?.split("#")[0];
 
     link.classList.remove("active");
     link.removeAttribute("aria-current");
@@ -36,6 +32,10 @@ function setActiveNavLink() {
 }
 
 function loadMainScript() {
+  const existingScript = document.querySelector('script[src="js/main.js"]');
+
+  if (existingScript) return;
+
   const script = document.createElement("script");
   script.src = "js/main.js";
   script.defer = true;
