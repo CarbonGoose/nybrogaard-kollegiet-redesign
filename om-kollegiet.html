@@ -694,141 +694,111 @@
 
 
 <!-- Lokation og transport -->
-<section id="lokation-transport" class="page-section transport-section">
-  <div class="container">
-    <div class="transport-section-head">
-      <span class="section-kicker">Lokation & transport</span>
-    </div>
+<!-- Location & transport -->
+<section id="lokation-transport" class="page-section location-section border-top-soft border-bottom-soft">
+  <div class="content-container">
 
-    <div class="transport-hero">
-      <div class="transport-copy">
-        <h2>Tæt på søer, studie og byliv</h2>
-        <p>
-          Her bor du i rolige omgivelser tæt på Bagsværd Sø, Lyngby Sø og Mølleåen, <br>
-          men stadig med nem adgang til offentlig transport, campus og indkøb i hverdagen.
+    <div class="location-shell">
+      <div class="location-copy">
+        <span class="section-kicker">Lokation & transport</span>
+
+        <h2 class="section-title">Tæt på søer, studie og byliv</h2>
+
+        <p class="section-text location-lead">
+          Nybrogård Kollegiet ligger i grønne omgivelser mellem Bagsværd Sø,
+          Lyngby Sø og Mølleåen — med kort afstand til DTU, Lyngby Station,
+          indkøb og offentlig transport.
         </p>
 
-        <address class="location-address">
-          <strong>Nybrogård Kollegiet</strong>
-          <span>Nybrovej 304</span>
-          <span>2800 Kgs. Lyngby</span>
-        </address>
+        <div class="location-address-card">
+          <span class="location-address-icon">
+            <i class="bi bi-geo-alt"></i>
+          </span>
 
-        <div class="d-flex flex-wrap gap-2 mt-4">
+          <div>
+            <h3>Nybrogård Kollegiet</h3>
+            <p>
+              Nybrovej 304<br>
+              2800 Kgs. Lyngby
+            </p>
+          </div>
+        </div>
+
+        <div class="location-actions">
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Nybrog%C3%A5rd+Kollegiet+Nybrovej+304+2800+Kgs.+Lyngby"
             class="btn btn-primary"
+            href="https://www.google.com/maps/search/?api=1&query=Nybrog%C3%A5rd+Kollegiet+Nybrovej+304+2800+Kgs.+Lyngby"
             target="_blank"
             rel="noopener"
           >
-            <i class="bi bi-geo-alt me-1"></i>
+            <i class="bi bi-map me-2"></i>
             Se på kort
           </a>
 
-          <a href="bolig-ansoegning.html" class="btn btn-outline-secondary">
-            <i class="bi bi-house-heart me-1"></i>
+          <a class="btn btn-outline-secondary" href="bolig-ansoegning.html">
+            <i class="bi bi-house-heart me-2"></i>
             Ansøg om bolig
           </a>
         </div>
       </div>
 
-      <figure class="transport-visual">
-        <!-- Udskift src med dit eget billede -->
+      <figure class="location-media-card">
         <img
           src="assets/images/bus.jpg"
-          alt="Området omkring Nybrogård Kollegiet"
-        />
+          alt="Område ved Nybrogård Kollegiet"
+        >
+
+        <figcaption class="location-media-label">
+          <span>Rolig base i Lyngby</span>
+          <strong>Natur tæt på hverdagen</strong>
+        </figcaption>
       </figure>
     </div>
 
-    <div class="transport-content-grid">
-      <aside class="location-side-card">
-        <h3>Hurtigt overblik</h3>
+    <div class="transport-grid" aria-label="Transportmuligheder og nærområde">
+      <article class="transport-card">
+        <span class="transport-icon">
+          <i class="bi bi-bus-front"></i>
+        </span>
 
-        <ul class="location-quick-list">
-          <li>
-            <i class="bi bi-bicycle"></i>
-            <span><strong>Ca. 10 min.</strong> på cykel til Lyngby Station</span>
-          </li>
-          <li>
-            <i class="bi bi-mortarboard"></i>
-            <span><strong>Ca. 20 min.</strong> på cykel til DTU</span>
-          </li>
-          <li>
-            <i class="bi bi-bus-front"></i>
-            <span><strong>Bus 191</strong> kører fra området til Lyngby Station</span>
-          </li>
-          <li>
-            <i class="bi bi-tree"></i>
-            <span><strong>Natur tæt på</strong> med søer og grønne områder</span>
-          </li>
-        </ul>
-      </aside>
+        <div>
+          <h3>Offentlig transport</h3>
+          <p>
+            Nem adgang til bus og videre forbindelse fra Lyngby Station,
+            så du kan komme rundt til studie, arbejde og København.
+          </p>
+        </div>
+      </article>
 
-      <div class="transport-card-grid transport-card-grid--compact">
-        <article class="transport-card">
-          <div class="transport-card-icon">
-            <i class="bi bi-bus-front"></i>
-          </div>
-          <div>
-            <h3>Offentlig transport</h3>
-            <p>
-              Bus 191 forbinder området med Lyngby Station, hvorfra du nemt kan komme videre
-              med tog og bus.
-            </p>
-          </div>
-        </article>
+      <article class="transport-card">
+        <span class="transport-icon">
+          <i class="bi bi-bicycle"></i>
+        </span>
 
-        <article class="transport-card">
-          <div class="transport-card-icon">
-            <i class="bi bi-bicycle"></i>
-          </div>
-          <div>
-            <h3>På cykel</h3>
-            <p>
-              Både Lyngby Station og DTU ligger i overskuelig cykelafstand, hvilket gør
-              cyklen til en praktisk hverdagsløsning.
-            </p>
-          </div>
-        </article>
+        <div>
+          <h3>Cykelvenligt område</h3>
+          <p>
+            Kollegiet ligger i cykelafstand til DTU, Lyngby centrum og grønne
+            ruter omkring søerne.
+          </p>
+        </div>
+      </article>
 
-        <article class="transport-card">
-          <div class="transport-card-icon">
-            <i class="bi bi-basket"></i>
-          </div>
-          <div>
-            <h3>Indkøb i nærheden</h3>
-            <p>
-              Der findes flere indkøbsmuligheder i området, blandt andet Netto, Rema 1000,
-              365discount, Føtex og Meny.
-            </p>
-          </div>
-        </article>
+      <article class="transport-card">
+        <span class="transport-icon">
+          <i class="bi bi-tree"></i>
+        </span>
 
-        <article class="transport-card">
-          <div class="transport-card-icon">
-            <i class="bi bi-tree"></i>
-          </div>
-          <div>
-            <h3>Natur lige udenfor</h3>
-            <p>
-              Søer og grønne områder tæt på kollegiet giver plads til gåture, løb og små
-              pauser fra studielivet.
-            </p>
-          </div>
-        </article>
-      </div>
+        <div>
+          <h3>Natur og hverdag</h3>
+          <p>
+            Her bor du tæt på vand, grønne områder og rolige stier — men stadig
+            med indkøb og byliv inden for rækkevidde.
+          </p>
+        </div>
+      </article>
     </div>
 
-    <div class="notice-box mt-4">
-      <div>
-        <h3>Godt at vide</h3>
-        <p>
-          Rejsetider og busafgange kan ændre sig, så det er altid en god idé at tjekke den
-          aktuelle rute, før du tager afsted.
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -837,59 +807,136 @@
 
 
       <!-- Life at the dorm -->
-      <section id="livet-paa-kollegiet" class="page-section bg-soft border-top-soft">
-        <div class="content-container">
-          <div class="section-header center">
-            <span class="section-kicker">Livet på kollegiet</span>
-            <h2 class="section-title">Mere end bare et sted at bo</h2>
+<!-- Life at the dorm -->
+<section id="livet" class="page-section dorm-life-section border-bottom-soft">
+  <div class="content-container">
 
-            <p class="section-text">
-              Nybro er også fællesskab, spontane samtaler i køkkenet, klubber, arrangementer og hverdagsliv med andre studerende.
-            </p>
+    <div class="life-intro-grid">
+      <div class="life-intro-copy">
+        <span class="section-kicker">Livet på kollegiet</span>
+
+        <h2 class="section-title">Mere end bare et sted at bo</h2>
+
+        <p class="section-text">
+          Nybro er et sted, hvor hverdagen både kan være rolig, social og praktisk.
+          Her kan du lukke døren til dit eget rum, men også træde ud i fælleskøkkener,
+          klubber, arrangementer og spontane samtaler med andre studerende.
+        </p>
+
+        <p class="section-text">
+          For nogle starter fællesskabet i køkkenet. For andre starter det med en klub,
+          en gåtur, et arrangement eller bare en nabo, der siger hej. Du vælger selv,
+          hvor meget du vil være med.
+        </p>
+
+        <div class="life-brand-card">
+          <div class="life-brand-illustration">
+            <img 
+              src="assets/images/house1.png" 
+              alt="Illustration af hjem og fællesskab"
+            >
           </div>
 
-          <div class="content-grid content-grid-3">
-            <article class="feature-card">
-              <span class="feature-icon"><i class="bi bi-people"></i></span>
-              <h3>Fælleskøkkener</h3>
+          <div class="life-brand-text">
+            <span>Kollegieliv i balance</span>
 
-              <p>
-                Værelserne ligger på gange med fælleskøkkener, hvor beboerne kan lave mad, hænge ud og lære hinanden at kende.
-              </p>
+            <strong>
+              Fællesskab, når du vil - <br>
+              Ro, når du har brug for det
+            </strong>
 
-              <a class="ui-card-link" href="for-beboere.html">
-                Praktisk info <i class="bi bi-arrow-right"></i>
-              </a>
-            </article>
+            <p>
+              På Nybro kan hverdagen både være social og stille. Du kan mødes med andre
+              i køkkener, klubber og aktiviteter, men stadig have dit eget sted at lande.
+            </p>
 
-            <article class="feature-card">
-              <span class="feature-icon"><i class="bi bi-stars"></i></span>
-              <h3>Klubber og aktiviteter</h3>
-
-              <p>
-                Fra musikrum og motionsrum til kano, cykelværksted og kreative fællesskaber — der er flere måder at være med på.
-              </p>
-
-              <a class="ui-card-link" href="faellesskab.html#klubber">
-                Se klubber <i class="bi bi-arrow-right"></i>
-              </a>
-            </article>
-
-            <article class="feature-card">
-              <span class="feature-icon"><i class="bi bi-house-heart"></i></span>
-              <h3>Et sted at lande</h3>
-
-              <p>
-                For nye beboere handler kollegielivet både om at finde ro i eget rum og at kunne træde ud i et større fællesskab.
-              </p>
-
-              <a class="ui-card-link" href="bolig-ansoegning.html">
-                Se boligtyper <i class="bi bi-arrow-right"></i>
-              </a>
-            </article>
+            <a href="faellesskab.html" class="life-brand-link">
+              Se fællesskabet
+              <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+
+      <aside class="life-link-panel" aria-label="Genveje til praktisk information">
+        <h3>Find hurtigt videre</h3>
+
+        <p>
+          Skal du bruge de mere konkrete detaljer? Her er de sider, der typisk er mest
+          relevante for nye og nuværende beboere.
+        </p>
+
+        <div class="life-link-list">
+          <a href="for-beboere.html#praktisk-info">
+            <i class="bi bi-info-circle"></i>
+            Praktisk info
+          </a>
+
+          <a href="for-beboere.html#regler">
+            <i class="bi bi-journal-check"></i>
+            Regler og husorden
+          </a>
+
+          <a href="faellesskab.html#klubber">
+            <i class="bi bi-people"></i>
+            Klubber og aktiviteter
+          </a>
+
+          <a href="kontakt.html">
+            <i class="bi bi-question-circle"></i>
+            Kontakt og hjælp
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="life-card-grid">
+      <article class="life-card">
+        <span class="life-card-icon">
+          <i class="bi bi-cup-hot"></i>
+        </span>
+
+        <h3>Fælleskøkkener</h3>
+
+        <p>
+          På værelsesgangene bliver køkkenet ofte et naturligt samlingspunkt for mad,
+          hverdagssnak og nye bekendtskaber.
+        </p>
+      </article>
+
+      <article class="life-card">
+        <span class="life-card-icon">
+          <i class="bi bi-stars"></i>
+        </span>
+
+        <h3>Klubber og fællesskab</h3>
+
+        <p>
+          Kollegiet har forskellige klubber og fællesaktiviteter, hvor beboere kan mødes
+          omkring interesser, hygge og arrangementer.
+        </p>
+      </article>
+
+      <article class="life-card">
+        <span class="life-card-icon">
+          <i class="bi bi-house-heart"></i>
+        </span>
+
+        <h3>Dit eget tempo</h3>
+
+        <p>
+          Du kan være social, når du har lyst — og trække dig tilbage, når du har brug for ro.
+          Begge dele er en del af kollegielivet.
+        </p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
       <!-- CTA -->
       <section class="page-section-sm">
