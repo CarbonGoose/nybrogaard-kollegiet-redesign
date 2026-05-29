@@ -20,6 +20,7 @@
       Spring til indhold
     </a>
 
+    <!-- Header -->
     <div data-include="components/header.html"></div>
 
     <!-- Main content -->
@@ -52,80 +53,398 @@
         </div>
       </section>
 
-      <!-- Quick navigation -->
-      <section class="page-section-sm border-bottom-soft bg-white-soft" aria-label="Hurtige genveje">
-        <div class="content-container">
-          <div class="equal-card-grid">
-            <a class="shortcut-card" href="#boligtyper"><i class="bi bi-door-open" aria-hidden="true"></i><span>Boligtyper</span></a>
-            <a class="shortcut-card" href="#priser"><i class="bi bi-wallet2" aria-hidden="true"></i><span>Priser</span></a>
-            <a class="shortcut-card" href="#ansoegning"><i class="bi bi-list-check" aria-hidden="true"></i><span>Ansøgning</span></a>
-            <a class="shortcut-card" href="#flyt-ind-ud"><i class="bi bi-box-seam" aria-hidden="true"></i><span>Flyt ind / ud</span></a>
+      <!-- Housing image sliders -->
+<section class="page-section-sm housing-sliders-section border-bottom-soft" aria-labelledby="housing-sliders-title">
+  <div class="content-container">
+
+    <div class="section-header housing-sliders-header">
+      <span class="section-kicker">Se boligerne</span>
+      <h2 id="housing-sliders-title" class="section-title">Få et hurtigt indtryk af værelser og lejligheder</h2>
+      <p class="section-text">
+        Se billeder og plantegninger af de mest almindelige boligtyper på Nybrogård Kollegiet,
+        før du dykker ned i priser, venteliste og ansøgning.
+      </p>
+    </div>
+
+    <div class="housing-slider-grid">
+
+      <!-- Almindeligt værelse -->
+      <article class="housing-slider-card" id="almindeligt-vaerelse-preview">
+        <div class="housing-slider-top">
+          <span class="housing-slider-label">Almindeligt værelse</span>
+          <h3>Ca. 12 m² + entré og bad</h3>
+        </div>
+
+        <div class="college-slider housing-mini-slider">
+          <div id="roomCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Værelse billede 1"></button>
+              <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="1" aria-label="Værelse billede 2"></button>
+              <button type="button" data-bs-target="#roomCarousel" data-bs-slide-to="2" aria-label="Værelse plantegning"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/vaerelse-1.jpg">
+                  <img src="assets/images/vaerelse-1.jpg" alt="Almindeligt kollegieværelse på Nybrogård Kollegiet">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Privat værelse</h3>
+                  <p>Dit eget rum med plads til seng, skrivebord og hverdag.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/vaerelse-2.jpg">
+                  <img src="assets/images/vaerelse-2.jpg" alt="Indretning af almindeligt værelse på Nybrogård Kollegiet">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Eget bad og entré</h3>
+                  <p>Alle værelser har eget toilet, bruseniche og garderobeskab i entréen.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/plantegning-almindeligt-vaerelse.png">
+                  <img src="assets/images/plantegning-almindeligt-vaerelse.png" alt="Plantegning af almindeligt værelse">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Plantegning</h3>
+                  <p>Ca. 12 m² værelse plus entré og badeværelse.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Forrige</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Næste</span>
+            </button>
           </div>
         </div>
-      </section>
 
-      <!-- Housing types -->
-      <section id="boligtyper" class="page-section border-bottom-soft">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Boligtyper</span>
-            <h2 class="section-title">Værelser, store værelser og lejligheder</h2>
-            <p class="section-text">
-              Nybro har både klassiske kollegieværelser med fælleskøkken og mindre lejligheder med eget køkken. Her er den hurtige version — uden at du skal grave dig gennem fem undermenuer først.
-            </p>
-          </div>
+        <div class="housing-slider-body">
+          <p>
+            Et almindeligt værelse passer til dig, der gerne vil have dit eget private rum,
+            men stadig være tæt på fællesskabet på gangen.
+          </p>
+          <a class="housing-slider-link" href="#almindeligt-vaerelse">
+            Læs mere om almindeligt værelse
+            <i class="bi bi-arrow-down"></i>
+          </a>
+        </div>
+      </article>
 
-          <div class="housing-type-grid">
-            <article class="housing-type-card housing-type-card-featured">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-door-closed" aria-hidden="true"></i></span>
-                <span class="housing-badge">Mest almindelig</span>
+      <!-- Stort værelse -->
+      <article class="housing-slider-card" id="stort-vaerelse-preview">
+        <div class="housing-slider-top">
+          <span class="housing-slider-label">Stort værelse</span>
+          <h3>Ca. 16 m² + større entré</h3>
+        </div>
+
+        <div class="college-slider housing-mini-slider">
+          <div id="largeRoomCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#largeRoomCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Stort værelse billede"></button>
+              <button type="button" data-bs-target="#largeRoomCarousel" data-bs-slide-to="1" aria-label="Stort værelse plantegning"></button>
+              <button type="button" data-bs-target="#largeRoomCarousel" data-bs-slide-to="2" aria-label="Stort værelse detalje"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/stort-vaerelse-1.jpg">
+                  <img src="assets/images/stort-vaerelse-1.jpg" alt="Stort værelse på Nybrogård Kollegiet">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Mere gulvplads</h3>
+                  <p>Et større værelse giver lidt mere luft til indretning og hverdag.</p>
+                </div>
               </div>
-              <h3>Kollegieværelse</h3>
-              <p>
-                Et almindeligt værelse har eget bad, toilet og entré. Køkkenet deles med andre beboere på gangen, hvilket gør det nemt at lande i fællesskabet.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Boligtype:</strong> 1-rums kollegiebolig</li>
-                <li><strong>Fælles:</strong> 2 fælleskøkkener pr. gang</li>
-                <li><strong>Passer til:</strong> Dig der vil bo selv, men tæt på andre</li>
-              </ul>
-            </article>
 
-            <article class="housing-type-card">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
-                <span class="housing-badge">Intern venteliste</span>
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/plantegning-stort-vaerelse.png">
+                  <img src="assets/images/plantegning-stort-vaerelse.png" alt="Plantegning af stort værelse">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Plantegning</h3>
+                  <p>Ca. 16 m² værelse plus større entré og badeværelse.</p>
+                </div>
               </div>
-              <h3>Stort værelse</h3>
-              <p>
-                De store værelser har mere plads end de almindelige værelser og udlejes normalt via intern venteliste, men kan i nogle tilfælde blive udbudt gennem KAB.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Størrelse:</strong> større værelse + større entré</li>
-                <li><strong>Bad:</strong> eget toilet og bruseniche</li>
-                <li><strong>Passer til:</strong> Beboere der ønsker mere luft</li>
-              </ul>
-            </article>
 
-            <article class="housing-type-card">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-house-heart" aria-hidden="true"></i></span>
-                <span class="housing-badge">2 rum</span>
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/stort-vaerelse-2.jpg">
+                  <img src="assets/images/stort-vaerelse-2.jpg" alt="Indretning eller detalje fra stort værelse">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Samme fællesskab</h3>
+                  <p>Du har stadig adgang til fælleskøkkenerne på gangen.</p>
+                </div>
               </div>
-              <h3>Kollegielejlighed</h3>
-              <p>
-                Lejlighederne har to rum, eget køkken, bad, toilet og entré. De kan være relevante for par eller studerende med barn, afhængigt af kriterierne.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Boligtype:</strong> 2-rums kollegielejlighed</li>
-                <li><strong>Køkken:</strong> eget køkken</li>
-                <li><strong>Passer til:</strong> Par eller enlige studerende med barn</li>
-              </ul>
-            </article>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#largeRoomCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Forrige</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#largeRoomCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Næste</span>
+            </button>
           </div>
         </div>
-      </section>
+
+        <div class="housing-slider-body">
+          <p>
+            De store værelser minder om de almindelige værelser, men har mere plads
+            og udlejes normalt via intern venteliste.
+          </p>
+          <a class="housing-slider-link" href="#stort-vaerelse">
+            Læs mere om stort værelse
+            <i class="bi bi-arrow-down"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Lejlighed -->
+      <article class="housing-slider-card" id="lejlighed-preview">
+        <div class="housing-slider-top">
+          <span class="housing-slider-label">Lejlighed</span>
+          <h3>To værelser + eget køkken</h3>
+        </div>
+
+        <div class="college-slider housing-mini-slider">
+          <div id="apartmentCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#apartmentCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Lejlighed køkken"></button>
+              <button type="button" data-bs-target="#apartmentCarousel" data-bs-slide-to="1" aria-label="Lejlighed plantegning"></button>
+              <button type="button" data-bs-target="#apartmentCarousel" data-bs-slide-to="2" aria-label="Lejlighed detalje"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/lejlighed-koekken.jpg">
+                  <img src="assets/images/lejlighed-koekken.jpg" alt="Køkken i kollegielejlighed på Nybrogård Kollegiet">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Eget køkken</h3>
+                  <p>Lejlighederne har eget køkken med kogeplader, ovn og køleskab.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/plantegning-lejlighed.png">
+                  <img src="assets/images/plantegning-lejlighed.png" alt="Plantegning af kollegielejlighed">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Plantegning</h3>
+                  <p>To almindelige værelser plus køkken, entré og badeværelse.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <button class="gallery-image-button" type="button" data-full-image="assets/images/lejlighed-1.jpg">
+                  <img src="assets/images/lejlighed-1.jpg" alt="Kollegielejlighed på Nybrogård Kollegiet">
+                </button>
+                <div class="carousel-caption">
+                  <h3>Mere privat</h3>
+                  <p>En mere selvstændig boligform med eget køkken og eget bad.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#apartmentCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Forrige</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#apartmentCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Næste</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="housing-slider-body">
+          <p>
+            Kollegielejlighederne er til dig, der ønsker mere privatliv og din egen køkkenplads,
+            men stadig vil bo på kollegiet.
+          </p>
+          <a class="housing-slider-link" href="#lejlighed">
+            Læs mere om lejlighed
+            <i class="bi bi-arrow-down"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <!-- Housing types detailed -->
+<section id="boligtyper" class="page-section bg-soft border-bottom-soft">
+  <div class="content-container">
+
+    <div class="section-header">
+      <span class="section-kicker">Boligtyper</span>
+      <h2 class="section-title">Hvilken bolig passer til dig?</h2>
+      <p class="section-text">
+        Nybrogård Kollegiet har både almindelige værelser, større værelser og lejligheder.
+        Her kan du sammenligne boligtyperne og få en bedre fornemmelse af, hvordan de adskiller sig.
+      </p>
+    </div>
+
+    <div class="housing-detail-list">
+
+      <!-- Almindeligt værelse -->
+      <article id="almindeligt-vaerelse" class="housing-detail-card">
+        <div class="housing-detail-media">
+          <img src="assets/images/værelse-alm.png" alt="Møbleret almindeligt værelse på Nybrogård Kollegiet">
+        </div>
+
+        <div class="housing-detail-content">
+          <span class="housing-detail-label">Mest almindelige boligtype</span>
+          <h3>Almindeligt kollegieværelse</h3>
+
+          <p>
+            Et almindeligt værelse er til dig, der gerne vil have dit eget private rum,
+            men stadig være tæt på fællesskabet. Du har eget toilet og bad, mens køkkenet deles med andre på gangen.
+          </p>
+
+          <div class="housing-fact-grid">
+            <div>
+              <span>Værelse</span>
+              <strong>ca. 12 m²</strong>
+            </div>
+            <div>
+              <span>Entré</span>
+              <strong>ca. 2 m²</strong>
+            </div>
+            <div>
+              <span>Bad/toilet</span>
+              <strong>ca. 2 m²</strong>
+            </div>
+            <div>
+              <span>Køkken</span>
+              <strong>Fælles</strong>
+            </div>
+          </div>
+
+          <ul class="housing-check-list">
+            <li>Eget toilet og bruseniche</li>
+            <li>Garderobeskab i entréen</li>
+            <li>Adgang til to store fælleskøkkener på gangen</li>
+            <li>God løsning for dig, der gerne vil bo socialt</li>
+          </ul>
+
+          <a class="btn btn-primary" href="https://www.kab-selvbetjening.dk/Ansoger/Bolig-praesentation/89" target="_blank" rel="noopener">
+            Søg værelse hos KAB
+          </a>
+        </div>
+      </article>
+
+      <!-- Stort værelse -->
+      <article id="stort-vaerelse" class="housing-detail-card housing-detail-card-reverse">
+        <div class="housing-detail-media housing-floorplan-media">
+          <img src="assets/images/værelse-stort.png" alt="Plantegning af stort værelse på Nybrogård Kollegiet">
+        </div>
+
+        <div class="housing-detail-content">
+          <span class="housing-detail-label">Mere plads</span>
+          <h3>Stort værelse</h3>
+
+          <p>
+            De store værelser minder om de almindelige værelser, men har mere gulvplads
+            og en større entré. De er derfor oplagte, hvis du gerne vil have lidt mere luft i hverdagen.
+          </p>
+
+          <div class="housing-fact-grid">
+            <div>
+              <span>Værelse</span>
+              <strong>ca. 16 m²</strong>
+            </div>
+            <div>
+              <span>Entré</span>
+              <strong>ca. 4 m²</strong>
+            </div>
+            <div>
+              <span>Bad/toilet</span>
+              <strong>ca. 2 m²</strong>
+            </div>
+            <div>
+              <span>Udlejning</span>
+              <strong>Varierer</strong>
+            </div>
+          </div>
+
+          <ul class="housing-check-list">
+            <li>Større værelse end standardtypen</li>
+            <li>Eget toilet og bruseniche</li>
+            <li>Adgang til fælleskøkkener</li>
+            <li>Udlejes typisk via intern venteliste, men kan forekomme gennem KAB</li>
+          </ul>
+
+          <a class="btn btn-outline-secondary" href="#ansoegning">
+            Læs om ansøgning
+          </a>
+        </div>
+      </article>
+
+      <!-- Lejlighed -->
+      <article id="lejlighed" class="housing-detail-card">
+        <div class="housing-detail-media">
+          <img src="assets/images/Lejlighederne.png" alt="Køkken i kollegielejlighed på Nybrogård Kollegiet">
+        </div>
+
+        <div class="housing-detail-content">
+          <span class="housing-detail-label">Mere selvstændig boligform</span>
+          <h3>Kollegielejlighed</h3>
+
+          <p>
+            En lejlighed består af to almindelige værelser samt eget køkken, entré og badeværelse.
+            Det er en god løsning, hvis du ønsker mere privatliv og din egen køkkenplads.
+          </p>
+
+          <div class="housing-fact-grid">
+            <div>
+              <span>Rum</span>
+              <strong>2 værelser</strong>
+            </div>
+            <div>
+              <span>Værelser</span>
+              <strong>ca. 12 m² hver</strong>
+            </div>
+            <div>
+              <span>Køkken</span>
+              <strong>Eget</strong>
+            </div>
+            <div>
+              <span>Bad/toilet</span>
+              <strong>Eget</strong>
+            </div>
+          </div>
+
+          <ul class="housing-check-list">
+            <li>Eget køkken med kogeplader, ovn og køleskab</li>
+            <li>Eget toilet og bruseniche</li>
+            <li>Garderobeskab i entréen</li>
+            <li>Forbindelse til internet</li>
+          </ul>
+
+          <a class="btn btn-primary" href="https://www.kab-selvbetjening.dk/Ansoger/Bolig-praesentation/90" target="_blank" rel="noopener">
+            Søg lejlighed hos KAB
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
 
       <!-- Prices -->
       <section id="priser" class="page-section bg-soft border-bottom-soft">
@@ -381,6 +700,32 @@
       </section>
     </main>
 
+    <!-- Image lightbox -->
+<div class="image-lightbox" data-image-lightbox aria-hidden="true">
+  <div class="image-lightbox-backdrop" data-lightbox-close></div>
+
+  <div class="image-lightbox-content" role="dialog" aria-modal="true" aria-label="Billedvisning">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="Luk billede">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <button class="lightbox-nav lightbox-prev" type="button" data-lightbox-prev aria-label="Forrige billede">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <div class="image-lightbox-frame">
+      <img src="" alt="" data-lightbox-image>
+    </div>
+
+    <button class="lightbox-nav lightbox-next" type="button" data-lightbox-next aria-label="Næste billede">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+
+    <p class="lightbox-hint">Scroll, pinch eller dobbeltklik for at zoome</p>
+  </div>
+</div>
+
+
 <!-- FOOTER + SEARCH OVERLAY -->
     <div data-include="components/footer.html"></div>
 <div data-include="components/search-overlay.html"></div>
@@ -390,6 +735,10 @@
 
 <!-- Global includes -->
 <script src="js/includes.js"></script>
+
+
+
+
 
   </body>
 </html>
