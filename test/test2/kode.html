@@ -1,28 +1,85 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Fællesskab på Nybrogård Kollegiet med overblik over klubber, sociale muligheder, fællesaktiviteter og hvordan beboere kan engagere sig."
+    >
+
+    <title>Nybrogård Kollegiet | Fællesskab</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <!-- Skip link for accessibility -->
+    <a class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-white" href="#main-content">
+      Spring til indhold
+    </a>
+
+    <!-- HEADER -->
+    <div data-include="components/header.html"></div>
+
     <main id="main-content">
-      <!-- Hero -->
-      <section class="page-hero housing-hero">
+      <!-- Page hero -->
+      <section class="page-hero community-hero" aria-labelledby="page-title">
         <div class="content-container page-hero-inner">
           <div class="page-hero-text">
-            <span class="section-kicker">Bolig & ansøgning</span>
-            <h1>Find din vej til et hjem på Nybro</h1>
+            <span class="section-kicker">Fællesskab</span>
+
+            <h1 id="page-title">Find dit sted i fællesskabet</h1>
+
             <p>
-              Her får du overblik over boligtyper, priser, venteliste og ansøgningsprocessen — samlet ét sted, så du ikke skal jagte information som en digital skattejæger.
+              Nybrogård er mere end værelser, køkkener og vaskebrikker. Det er også
+              fredagsbar, brætspil, træning, kreative rum, grønne projekter og mennesker,
+              der gør hverdagen lidt mindre anonym.
             </p>
 
             <div class="d-flex flex-wrap gap-2 mt-4">
-              <a class="btn btn-primary" href="#ansoegning">Sådan søger du</a>
-              <a class="btn btn-outline-secondary" href="#boligtyper">Se boligtyper</a>
+              <a class="btn btn-primary" href="#klubber">Udforsk klubber</a>
+              <a class="btn btn-outline-secondary" href="#start-selv">Start noget selv</a>
             </div>
           </div>
 
-          <aside class="page-hero-card housing-hero-card" aria-label="Kort overblik over bolig og ansøgning">
-            <h2>Kort fortalt</h2>
-            <ul class="housing-highlight-list">
-              <li><i class="bi bi-house-door" aria-hidden="true"></i><span>468 kollegieværelser og 68 kollegielejligheder</span></li>
-              <li><i class="bi bi-cash-coin" aria-hidden="true"></i><span>Gratis opskrivning til kollegieboliger gennem KAB</span></li>
-              <li><i class="bi bi-calendar-check" aria-hidden="true"></i><span>Du kan skrive dig op tidligt — men skal være 18 år ved indflytning</span></li>
-              <li><i class="bi bi-envelope-check" aria-hidden="true"></i><span>Boligtilbud sendes via den mail, du bruger hos KAB</span></li>
-            </ul>
+          <aside class="page-hero-card community-hero-card" aria-label="Kort overblik over fællesskab">
+            <div class="community-hero-stat">
+              <span>11+</span>
+              <p>klubber og sociale muligheder</p>
+            </div>
+
+            <div class="community-hero-mini-list">
+              <a href="#kaeldercafeen">
+                <i class="bi bi-cup-straw" aria-hidden="true"></i>
+                Fredagsstemning
+              </a>
+              <a href="#braetspil">
+                <i class="bi bi-dice-5" aria-hidden="true"></i>
+                Rolige aftener
+              </a>
+              <a href="#motionsklubben">
+                <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+                Aktiv hverdag
+              </a>
+              <a href="#kunstklubben">
+                <i class="bi bi-palette" aria-hidden="true"></i>
+                Kreative rum
+              </a>
+            </div>
           </aside>
         </div>
       </section>
@@ -31,327 +88,526 @@
       <section class="page-section-sm border-bottom-soft bg-white-soft" aria-label="Hurtige genveje">
         <div class="content-container">
           <div class="equal-card-grid">
-            <a class="shortcut-card" href="#boligtyper"><i class="bi bi-door-open" aria-hidden="true"></i><span>Boligtyper</span></a>
-            <a class="shortcut-card" href="#priser"><i class="bi bi-wallet2" aria-hidden="true"></i><span>Priser</span></a>
-            <a class="shortcut-card" href="#ansoegning"><i class="bi bi-list-check" aria-hidden="true"></i><span>Ansøgning</span></a>
-            <a class="shortcut-card" href="#flyt-ind-ud"><i class="bi bi-box-seam" aria-hidden="true"></i><span>Flyt ind / ud</span></a>
+            <a class="shortcut-card" href="#find-din-vibe">
+              <i class="bi bi-compass" aria-hidden="true"></i>
+              <span>Find din vibe</span>
+            </a>
+
+            <a class="shortcut-card" href="#klubber">
+              <i class="bi bi-stars" aria-hidden="true"></i>
+              <span>Alle klubber</span>
+            </a>
+
+            <a class="shortcut-card" href="#praktisk">
+              <i class="bi bi-info-circle" aria-hidden="true"></i>
+              <span>Sådan deltager du</span>
+            </a>
+
+            <a class="shortcut-card" href="#start-selv">
+              <i class="bi bi-lightbulb" aria-hidden="true"></i>
+              <span>Start noget selv</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <!-- Housing types -->
-      <section id="boligtyper" class="page-section border-bottom-soft">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Boligtyper</span>
-            <h2 class="section-title">Værelser, store værelser og lejligheder</h2>
-            <p class="section-text">
-              Nybro har både klassiske kollegieværelser med fælleskøkken og mindre lejligheder med eget køkken. Her er den hurtige version — uden at du skal grave dig gennem fem undermenuer først.
-            </p>
-          </div>
-
-          <div class="housing-type-grid">
-            <article class="housing-type-card housing-type-card-featured">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-door-closed" aria-hidden="true"></i></span>
-                <span class="housing-badge">Mest almindelig</span>
-              </div>
-              <h3>Kollegieværelse</h3>
-              <p>
-                Et almindeligt værelse har eget bad, toilet og entré. Køkkenet deles med andre beboere på gangen, hvilket gør det nemt at lande i fællesskabet.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Boligtype:</strong> 1-rums kollegiebolig</li>
-                <li><strong>Fælles:</strong> 2 fælleskøkkener pr. gang</li>
-                <li><strong>Passer til:</strong> Dig der vil bo selv, men tæt på andre</li>
-              </ul>
-            </article>
-
-            <article class="housing-type-card">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-arrows-angle-expand" aria-hidden="true"></i></span>
-                <span class="housing-badge">Intern venteliste</span>
-              </div>
-              <h3>Stort værelse</h3>
-              <p>
-                De store værelser har mere plads end de almindelige værelser og udlejes normalt via intern venteliste, men kan i nogle tilfælde blive udbudt gennem KAB.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Størrelse:</strong> større værelse + større entré</li>
-                <li><strong>Bad:</strong> eget toilet og bruseniche</li>
-                <li><strong>Passer til:</strong> Beboere der ønsker mere luft</li>
-              </ul>
-            </article>
-
-            <article class="housing-type-card">
-              <div class="housing-type-top">
-                <span class="housing-type-icon"><i class="bi bi-house-heart" aria-hidden="true"></i></span>
-                <span class="housing-badge">2 rum</span>
-              </div>
-              <h3>Kollegielejlighed</h3>
-              <p>
-                Lejlighederne har to rum, eget køkken, bad, toilet og entré. De kan være relevante for par eller studerende med barn, afhængigt af kriterierne.
-              </p>
-              <ul class="housing-meta-list">
-                <li><strong>Boligtype:</strong> 2-rums kollegielejlighed</li>
-                <li><strong>Køkken:</strong> eget køkken</li>
-                <li><strong>Passer til:</strong> Par eller enlige studerende med barn</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Prices -->
-      <section id="priser" class="page-section bg-soft border-bottom-soft">
-        <div class="content-container">
-          <div class="two-column-layout housing-price-layout">
-            <div>
-              <span class="section-kicker">Priser</span>
-              <h2 class="section-title">Hvad koster det at bo her?</h2>
-              <p class="section-text">
-                Priser kan ændre sig, og forbrug kan blive reguleret. Derfor er tallene her tænkt som et hurtigt overblik, mens KAB altid er stedet, hvor du dobbelttjekker det endelige beløb, før du søger eller siger ja.
-              </p>
-            </div>
-
-            <div class="notice-box">
-              <div>
-                <h3>Dobbelttjek altid hos KAB</h3>
-                <p>
-                  Husleje, depositum, ventetid og á conto-beløb kan ændre sig. Brug derfor tabellen som overblik — ikke som kontrakt. Tiny detail, big consequences.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-table mt-4">
-            <table class="table table-hover align-middle">
-              <caption class="visually-hidden">Vejledende priser for boligtyper på Nybrogård Kollegiet</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Boligtype</th>
-                  <th scope="col">Husleje / måned</th>
-                  <th scope="col">Depositum</th>
-                  <th scope="col">Ventetid</th>
-                  <th scope="col">Bemærkning</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1-rums kollegiebolig</th>
-                  <td>ca. 3.562–3.635 kr.</td>
-                  <td>ca. 9.006 kr.</td>
-                  <td>ca. 6–12 måneder</td>
-                  <td>Værelse med eget bad/toilet og adgang til fælleskøkken.</td>
-                </tr>
-                <tr>
-                  <th scope="row">2-rums kollegielejlighed</th>
-                  <td>ca. 6.468 kr.</td>
-                  <td>ca. 16.974 kr.</td>
-                  <td>ca. 1–4 år</td>
-                  <td>Lejlighed med eget køkken og to rum.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Application -->
-      <section id="ansoegning" class="page-section border-bottom-soft">
-        <div class="content-container application-layout">
-          <div>
-            <span class="section-kicker">Ansøgning</span>
-            <h2 class="section-title">Sådan søger du bolig</h2>
-            <p class="section-text mb-4">
-              Ansøgning og venteliste håndteres af KAB. Du skriver dig op elektronisk, vælger boligtypen og holder øje med din mail, når der kommer tilbud.
-            </p>
-
-            <div class="process-list">
-              <article class="process-step">
-                <span class="process-number">1</span>
-                <div>
-                  <h3>Tjek om du kan søge</h3>
-                  <p>
-                    Du skal være uddannelsessøgende eller på vej ind i en relevant uddannelse. Du kan godt søge, før du har endeligt optagelsesbrev, men du skal kunne dokumentere studieaktivitet før indflytning.
-                  </p>
-                </div>
-              </article>
-
-              <article class="process-step">
-                <span class="process-number">2</span>
-                <div>
-                  <h3>Vælg boligtype hos KAB</h3>
-                  <p>
-                    Vælg enten 1-rums kollegiebolig eller 2-rums kollegielejlighed. Hos KAB lægger du boligtypen i kurven og følger opskrivningen derfra.
-                  </p>
-                </div>
-              </article>
-
-              <article class="process-step">
-                <span class="process-number">3</span>
-                <div>
-                  <h3>Bliv skrevet på ventelisten</h3>
-                  <p>
-                    Boliger tildeles som udgangspunkt efter anciennitet på ventelisten. For lejligheder kan der være særlige køgrupper og indstillingskriterier.
-                  </p>
-                </div>
-              </article>
-
-              <article class="process-step">
-                <span class="process-number">4</span>
-                <div>
-                  <h3>Svar på boligtilbud</h3>
-                  <p>
-                    Hvis du får tilbudt en bolig, skal du svare elektronisk gennem KABs platform. Hold øje med den mail, du brugte ved opskrivning.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <aside class="sticky-apply-card" aria-label="Ansøgningslinks">
-            <span class="section-kicker">Klar til næste skridt?</span>
-            <h3>Skriv dig op hos KAB</h3>
-            <p>
-              Vælg den boligtype, der passer til dig. Linkene åbner KABs selvbetjening i en ny fane.
-            </p>
-            <div class="apply-link-list">
-              <a class="btn btn-primary" href="https://www.kab-selvbetjening.dk/Ansoger/Bolig-praesentation/89" target="_blank" rel="noopener">
-                Søg 1-rums bolig
-                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
-              <a class="btn btn-outline-secondary" href="https://www.kab-selvbetjening.dk/Ansoger/Bolig-praesentation/90" target="_blank" rel="noopener">
-                Søg 2-rums bolig
-                <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- Rules and FAQ -->
-      <section class="page-section bg-white-soft border-bottom-soft">
+      <!-- Intro / vibe finder -->
+      <section id="find-din-vibe" class="page-section border-bottom-soft" aria-labelledby="vibe-title">
         <div class="content-container">
           <div class="section-header center">
-            <span class="section-kicker">Godt at vide</span>
-            <h2 class="section-title">Små regler, store “nice to know”-ting</h2>
+            <span class="section-kicker">Find din vibe</span>
+            <h2 id="vibe-title" class="section-title">Der er flere måder at være social på</h2>
             <p class="section-text">
-              De her punkter hjælper især ansøgere med at forstå, hvad der sker før og efter en bolig bliver tilbudt.
+              Fællesskab behøver ikke betyde “stor fest og 40 mennesker”. Det kan også være
+              at låne et brætspil, reparere sin cykel, spille musik, dyrke tomater eller træne
+              alene med følelsen af, at stedet stadig er dit.
             </p>
           </div>
 
-          <div class="content-grid content-grid-3">
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Studieaktivitet</h3>
-              <p class="ui-card-text">Du skal kunne dokumentere, at du er studie- eller uddannelsesaktiv, når du skal flytte ind.</p>
+          <div class="content-grid content-grid-3 community-vibe-grid">
+            <article class="ui-card community-vibe-card">
+              <span class="ui-card-icon"><i class="bi bi-chat-heart" aria-hidden="true"></i></span>
+              <h3 class="ui-card-title">Jeg vil møde mennesker</h3>
+              <p class="ui-card-text">
+                Start med KælderCaféen, Brætspilsklubben eller fællesarrangementer.
+                Det er nemmere at falde i snak, når der allerede sker noget.
+              </p>
+              <a class="text-link" href="#sociale-klubber">
+                Se sociale klubber <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
             </article>
 
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-hourglass-split" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Venteliste</h3>
-              <p class="ui-card-text">Jo tidligere du skriver dig op, jo bedre anciennitet får du. Ventetiden afhænger af boligtype og efterspørgsel.</p>
+            <article class="ui-card community-vibe-card">
+              <span class="ui-card-icon"><i class="bi bi-brush" aria-hidden="true"></i></span>
+              <h3 class="ui-card-title">Jeg vil lave noget kreativt</h3>
+              <p class="ui-card-text">
+                Kunstklubben, Musikrummet, Filmklubben og Bryggerklubben giver plads til
+                projekter, fordybelse og “okay, det her blev faktisk ret fedt”-øjeblikke.
+              </p>
+              <a class="text-link" href="#kreative-klubber">
+                Se kreative klubber <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
             </article>
 
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-heart" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Husdyr</h3>
-              <p class="ui-card-text">Husdyr kan være muligt på værelserne, men kræver aftale med gang/naboer og registrering hos varmemesteren.</p>
+            <article class="ui-card community-vibe-card">
+              <span class="ui-card-icon"><i class="bi bi-tree" aria-hidden="true"></i></span>
+              <h3 class="ui-card-title">Jeg vil bruge kroppen eller være ude</h3>
+              <p class="ui-card-text">
+                Motionsklubben, Kano- og kajaklauget, Cykelværkstedet og Haveforeningen
+                giver fællesskab uden at det nødvendigvis skal være smalltalk-maraton.
+              </p>
+              <a class="text-link" href="#aktive-klubber">
+                Se aktive klubber <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </a>
             </article>
-          </div>
-
-          <div class="accordion faq-accordion mt-4" id="housingFaq">
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
-                  Kan jeg søge, før jeg er optaget på mit studie?
-                </button>
-              </h3>
-              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#housingFaq">
-                <div class="accordion-body">
-                  Ja. Du kan skrive dig op, selvom du endnu ikke har modtaget endelig bekræftelse fra uddannelsesstedet. Ved indflytning skal du dog kunne opfylde kravene og være fyldt 18 år.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
-                  Hvem kontakter jeg, hvis ansøgningen driller?
-                </button>
-              </h3>
-              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#housingFaq">
-                <div class="accordion-body">
-                  Kontakt KAB, hvis problemet handler om opskrivning, venteliste eller boligtilbud. Kontakt Nybros sekretariat, hvis spørgsmålet handler om lokale forhold på kollegiet.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
-                  Skal jeg svare hurtigt, hvis jeg får tilbudt en bolig?
-                </button>
-              </h3>
-              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#housingFaq">
-                <div class="accordion-body">
-                  Ja. Når du får anvist en bolig, skal du svare inden for fristen i KABs system. Derfor er det vigtigt at holde øje med din mail og dine kontaktoplysninger.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <!-- Move in / out -->
-      <section id="flyt-ind-ud" class="page-section border-bottom-soft">
+      <!-- Clubs overview -->
+      <section id="klubber" class="page-section bg-soft border-bottom-soft" aria-labelledby="clubs-title">
         <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Flyt ind / flyt ud</span>
-            <h2 class="section-title">Når du får nøgler — eller skal videre</h2>
-            <p class="section-text">
-              Selve kontrakt, opsigelse og betaling håndteres gennem KAB, mens lokale spørgsmål om nøgler, praktiske forhold og hverdag på Nybro typisk går gennem kollegiets egne kontaktpunkter.
-            </p>
-          </div>
+          <div class="community-layout">
+            <!-- Sticky side navigation -->
+            <aside class="community-sidebar" aria-label="Oversigt over klubber">
+              <div class="community-sidebar-card">
+                <span class="community-sidebar-kicker">Hop direkte til</span>
+                <h2>Klubber</h2>
 
-          <div class="move-grid">
-            <article class="move-card">
-              <span class="move-card-icon"><i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></span>
-              <h3>Før indflytning</h3>
-              <p>Læs dit boligtilbud grundigt, tjek betaling/depositum, og sørg for at dokumentation og kontaktoplysninger er klar.</p>
-              <a class="text-link" href="kontakt-hjaelp.html">Find kontaktperson <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            </article>
+                <nav class="community-club-nav" aria-label="Klubnavigation">
+                  <a href="#kaeldercafeen"><i class="bi bi-cup-straw" aria-hidden="true"></i>KælderCaféen</a>
+                  <a href="#braetspil"><i class="bi bi-dice-5" aria-hidden="true"></i>Brætspil</a>
+                  <a href="#motionsklubben"><i class="bi bi-heart-pulse" aria-hidden="true"></i>Motionsklubben</a>
+                  <a href="#filmklubben"><i class="bi bi-film" aria-hidden="true"></i>Filmklubben</a>
+                  <a href="#musikrummet"><i class="bi bi-music-note-beamed" aria-hidden="true"></i>Musikrummet</a>
+                  <a href="#kunstklubben"><i class="bi bi-palette" aria-hidden="true"></i>Kunstklubben</a>
+                  <a href="#cykelvaerksted"><i class="bi bi-bicycle" aria-hidden="true"></i>Cykelværksted</a>
+                  <a href="#kano-kajak"><i class="bi bi-water" aria-hidden="true"></i>Kano & kajak</a>
+                  <a href="#haveforening"><i class="bi bi-flower1" aria-hidden="true"></i>Haveforening</a>
+                  <a href="#miljoegruppen"><i class="bi bi-recycle" aria-hidden="true"></i>Miljøgruppen</a>
+                  <a href="#bryggerklub"><i class="bi bi-cup-hot" aria-hidden="true"></i>Bryggerklub</a>
+                </nav>
 
-            <article class="move-card">
-              <span class="move-card-icon"><i class="bi bi-key" aria-hidden="true"></i></span>
-              <h3>Når du flytter ind</h3>
-              <p>Få styr på nøgler, vaskeri, internet, køkken, husorden og hvem du skal kontakte, hvis noget ikke virker.</p>
-              <a class="text-link" href="for-beboere.html#praktisk-info">Se praktisk info <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            </article>
+                <div class="community-sidebar-note">
+                  <i class="bi bi-info-circle" aria-hidden="true"></i>
+                  <p>Nogle klubber kræver medlemskab, adgang med brik eller kontakt til en klubansvarlig.</p>
+                </div>
+              </div>
+            </aside>
 
-            <article class="move-card">
-              <span class="move-card-icon"><i class="bi bi-box-arrow-right" aria-hidden="true"></i></span>
-              <h3>Når du flytter ud</h3>
-              <p>Kontakt KAB om opsigelse, frister og økonomi. Sørg også for at få afklaret aflevering af nøgler og lokale forhold.</p>
-              <a class="text-link" href="kontakt-hjaelp.html#kontaktoversigt">Kontakt & hjælp <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-            </article>
+            <div class="community-main">
+              <div class="section-header">
+                <span class="section-kicker">Klubber & socialt</span>
+                <h2 id="clubs-title" class="section-title">Vælg dit lille hjørne af Nybro</h2>
+                <p class="section-text">
+                  Her er klubberne samlet som overskuelige kort, så nye og nuværende beboere hurtigt kan
+                  se, hvad der findes — og hvor de kan læse videre.
+                </p>
+              </div>
+
+              <div class="community-category" id="sociale-klubber">
+                <span class="community-category-label">Socialt</span>
+
+                <article id="kaeldercafeen" class="community-club-card community-featured-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-cup-straw" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Fredagsbar · socialt · arrangementer</span>
+                        <h3>KælderCaféen</h3>
+                      </div>
+                      <span class="community-badge">Samlingspunkt</span>
+                    </div>
+
+                    <p>
+                      Kollegiets sociale mødested til fredage, temaftener og aftener hvor man gerne vil
+                      hive naboerne med ud af køkkenet og ned i kælderen.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://nybro.dk/klubber/kaeldercafeen/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                      <a class="btn btn-outline-secondary" href="#praktisk">
+                        Sådan deltager du
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="braetspil" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-dice-5" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Spil · hygge · rolige aftener</span>
+                        <h3>Brætspilsklubben</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Et oplagt sted at starte, hvis man gerne vil være social uden nødvendigvis at skulle
+                      råbe hen over musik. Kom for spillene, bliv for “bare én runde mere”.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/braetspilsklubben/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="community-category" id="aktive-klubber">
+                <span class="community-category-label">Aktivt & praktisk</span>
+
+                <article id="motionsklubben" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-heart-pulse" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Træning · døgnåbent · kælder O</span>
+                        <h3>Motionsklubben</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Til dig der vil træne tæt på hjemmet — uanset om du er fitness-goblin kl. 23:47
+                      eller bare gerne vil have en nemmere vej ind i rutinen.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://nybro.dk/klubber/motionsrummet/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="cykelvaerksted" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-bicycle" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Cykler · værktøj · kælder M</span>
+                        <h3>Cykelværksted</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Til punkteringer, justeringer og den klassiske “jeg kan godt selv fikse det…
+                      tror jeg”-energi. Praktisk fællesskab med olie på fingrene.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/cykelvaerksted/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="kano-kajak" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-water" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Søerne · udstyr · natur</span>
+                        <h3>Kano- og kajaklauget</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Til beboere der vil bruge søerne omkring kollegiet aktivt. En ret unik mulighed,
+                      fordi Nybro basically bor midt i naturens egen lille adventure-zone.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://nybro.dk/klubber/kanolauget/om-lauget/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="community-category" id="kreative-klubber">
+                <span class="community-category-label">Kreativt</span>
+
+                <article id="filmklubben" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-film" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Hjemmebio · booking · kælder B</span>
+                        <h3>Filmklubben</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      En hjemmebiograf med surroundsound, sofarækker og stort lærred. Perfekt til
+                      filmnørder, fællesvisninger eller den der ene ven, der altid siger “du SKAL se den her”.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/filmklubben/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="musikrummet" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-music-note-beamed" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Musik · øverum · kælder EF</span>
+                        <h3>Musikrummet</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Til øvning, jam og musikprojekter. Rummet har blandt andet fælles gear,
+                      men kræver medlemskab og hensyn til andre beboere.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://nybro.dk/klubber/musikrummet/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="kunstklubben" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-palette" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Atelier · kreativitet · kælder F</span>
+                        <h3>Kunstklubben</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Et kreativt værksted til kunst, fordybelse og projekter der fylder lidt mere,
+                      end et kollegieværelse lige kan holde til.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/kunstklub/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="bryggerklub" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-cup-hot" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Håndværk · smag · kælder D</span>
+                        <h3>Bryggerklub</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      For beboere der vil nørde malt, humle og hjemmebryg. Lidt kemi,
+                      lidt tålmodighed og lidt “se hvad jeg har lavet”-stolthed.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/bryggerklub/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="community-category">
+                <span class="community-category-label">Grønt & bæredygtigt</span>
+
+                <article id="haveforening" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-flower1" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Haver · fællesdage · grønt liv</span>
+                        <h3>Nybrogård Haveforening</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Til dig der savner jord under neglene, planter der ikke bor i en vindueskarm,
+                      og fællesskab der dufter lidt af sol, jord og “jeg dyrkede den selv”.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://www.nybro.dk/klubber/havegruppen/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <article id="miljoegruppen" class="community-club-card">
+                  <div class="community-card-icon">
+                    <i class="bi bi-recycle" aria-hidden="true"></i>
+                  </div>
+
+                  <div class="community-card-content">
+                    <div class="community-card-header">
+                      <div>
+                        <span class="resident-label">Miljø · byttemarked · fælles ansvar</span>
+                        <h3>Miljøgruppen</h3>
+                      </div>
+                    </div>
+
+                    <p>
+                      Arbejder med energibesparelse, affaldssortering, byttemarkeder og andre
+                      grønne initiativer, der gør kollegiet bedre for alle.
+                    </p>
+
+                    <div class="community-card-actions">
+                      <a class="btn btn-primary" href="https://nybro.dk/klubber/miljogruppen/" target="_blank" rel="noopener">
+                        Læs mere
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
-      <section class="page-section bg-soft">
-        <div class="content-container-narrow text-center">
-          <span class="section-kicker justify-content-center">Næste skridt</span>
-          <h2 class="section-title">Vil du se, hvordan livet her føles?</h2>
-          <p class="section-text mx-auto">
-            Boligen er kun halvdelen af historien. Den anden halvdel er køkkenerne, klubberne, søerne og de små hverdagsfællesskaber.
-          </p>
-          <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-            <a class="btn btn-primary" href="om-kollegiet.html#livet">Læs om livet på kollegiet</a>
-            <a class="btn btn-outline-secondary" href="faellesskab.html">Se fællesskabet</a>
+      <!-- Practical info -->
+      <section id="praktisk" class="page-section border-bottom-soft" aria-labelledby="practical-title">
+        <div class="content-container">
+          <div class="two-column-layout community-practical-layout">
+            <div>
+              <span class="section-kicker">Sådan deltager du</span>
+              <h2 id="practical-title" class="section-title">Det skal være nemt at komme med</h2>
+              <p class="section-text">
+                En god fællesskabsside skal ikke kun fortælle, at klubberne findes. Den skal også fjerne
+                den lille friktion, der får folk til at tænke “meh, jeg gør det senere”.
+              </p>
+            </div>
+
+            <div class="content-panel community-practical-panel">
+              <div class="community-practical-step">
+                <span>01</span>
+                <div>
+                  <h3>Find en klub der matcher din energi</h3>
+                  <p>Start med vibe-sektionen eller hop direkte til en klub i sideboksen.</p>
+                </div>
+              </div>
+
+              <div class="community-practical-step">
+                <span>02</span>
+                <div>
+                  <h3>Læs adgang og medlemskab</h3>
+                  <p>Nogle klubber er gratis, nogle kræver brik, booking eller kontakt til ansvarlige.</p>
+                </div>
+              </div>
+
+              <div class="community-practical-step">
+                <span>03</span>
+                <div>
+                  <h3>Tag kontakt eller mød op</h3>
+                  <p>Brug klubbens officielle side, Facebookgruppe eller kontaktinformation.</p>
+                </div>
+              </div>
+
+              <div class="community-practical-step">
+                <span>04</span>
+                <div>
+                  <h3>Efterlad stedet pænt</h3>
+                  <p>Fællesskab fungerer bedst, når næste person også får en god oplevelse. Iconic behavior.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start your own -->
+      <section id="start-selv" class="page-section bg-soft" aria-labelledby="start-title">
+        <div class="content-container">
+          <div class="community-cta">
+            <div>
+              <span class="section-kicker">Har du en idé?</span>
+              <h2 id="start-title" class="section-title">Fællesskabet kan også starte med dig</h2>
+              <p class="section-text">
+                Mangler der en løbeklub, madklub, syklub, fotoklub eller noget helt femte?
+                Så kan siden også pege beboere videre til, hvordan man samler folk, spørger beboerrådet
+                eller undersøger muligheder for lokaler og støtte.
+              </p>
+            </div>
+
+            <div class="community-cta-card">
+              <h3>Forslag til CTA</h3>
+              <p>
+                “Har du en idé til en ny klub eller aktivitet? Kontakt beboerrådet eller administrationen,
+                så kan de hjælpe dig videre.”
+              </p>
+
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <a class="btn btn-primary" href="kontakt-hjaelp.html">
+                  Find kontaktvej
+                </a>
+                <a class="btn btn-outline-secondary" href="for-beboere.html">
+                  Se beboerinfo
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- FOOTER + SEARCH OVERLAY -->
+    <div data-include="components/footer.html"></div>
+    <div data-include="components/search-overlay.html"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Global includes -->
+    <script src="js/includes.js"></script>
+  </body>
+</html>
