@@ -791,166 +791,82 @@
 
 
           <!-- Events -->
-          <section id="events" class="community-section-anchor" aria-labelledby="events-title">
-            <div class="section-header">
-              <span class="section-kicker">Events</span>
+<section id="events" class="community-section-anchor">
+  <div class="community-events-board" data-community-events-board>
+    <div class="hero-news-mini-header">
+      <div>
+        <p class="hero-news-eyebrow">Kommende</p>
+        <h3>Særlige arrangementer</h3>
+      </div>
 
-              <h2 id="events-title" class="section-title">
-                Det sker i fællesskabet
-              </h2>
+      <span class="live-badge">
+        <span class="live-dot" aria-hidden="true"></span>
+        Prototype
+      </span>
+    </div>
 
-              <p class="section-text">
-                Events på et kollegie ændrer sig hurtigt, så denne sektion
-                viser faste typer af aktiviteter og sender brugeren videre til
-                de steder, hvor de aktuelle opslag normalt dukker op.
-              </p>
-            </div>
+    <article class="hero-live-message community-event-featured" data-event-featured>
+      <!-- Filled by JS -->
+    </article>
 
-            <div class="event-grid">
-              <article class="event-card">
-                <div class="event-date-box">
-                  <span>Ofte</span>
-                  <strong>Fre</strong>
-                </div>
+    <div class="hero-news-mini-list community-event-list" data-event-list>
+      <!-- Filled by JS -->
+    </div>
 
-                <div>
-                  <h3>Fredagsbar i KælderCaféen</h3>
-                  <p>
-                    Et oplagt sted at møde andre beboere, tage gangen med og
-                    starte weekenden sammen.
-                  </p>
-                  <a href="#kaeldercafeen" class="text-link">Se KælderCaféen</a>
-                </div>
-              </article>
+    <div class="community-events-pagination" aria-label="Events pagination">
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-events-prev>
+        <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        Nyere posts
+      </button>
 
-              <article class="event-card">
-                <div class="event-date-box">
-                  <span>Ca.</span>
-                  <strong>1/md</strong>
-                </div>
+      <span class="community-events-page-status" data-events-page-status>
+        Side 1
+      </span>
 
-                <div>
-                  <h3>Temafester</h3>
-                  <p>
-                    Hold øje med KælderCaféens Facebook-side for næste tema og
-                    praktisk info.
-                  </p>
-                  <a href="https://www.facebook.com/kaeldercafeen" class="text-link">
-                    Gå til Facebook
-                  </a>
-                </div>
-              </article>
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-events-next>
+        Ældre posts
+        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
 
-              <article class="event-card">
-                <div class="event-date-box">
-                  <span>Ved</span>
-                  <strong>Intro</strong>
-                </div>
 
-                <div>
-                  <h3>Klubintroduktioner</h3>
-                  <p>
-                    Nogle klubber kræver introduktion, registrering eller
-                    adgang via varmemester/beboerlogin.
-                  </p>
-                  <a href="#klubber" class="text-link">Se klubber</a>
-                </div>
-              </article>
+          <!-- Kort over fællesområder -->
+<section id="kort" class="community-section-anchor">
+  <div class="section-header">
+    <span class="section-kicker">Find rundt</span>
+    <h2 class="section-title">Kort over fællesområder</h2>
+    <p class="section-text">
+      Brug kortet til hurtigt at finde klubrum, fællesområder og de vigtigste
+      steder på kollegiet.
+    </p>
+  </div>
 
-              <article class="event-card">
-                <div class="event-date-box">
-                  <span>Når</span>
-                  <strong>der sker</strong>
-                </div>
+  <figure class="community-map-card community-map-image-card">
+    <a
+      href="assets/images/kort.png"
+      class="community-map-image-link"
+      target="_blank"
+      rel="noopener"
+      aria-label="Åbn kortet over fællesområder i fuld størrelse"
+    >
+      <img
+        src="assets/images/kort.png"
+        alt="Kort over fællesområder på Nybrogård Kollegiet"
+        loading="lazy"
+      />
+    </a>
 
-                <div>
-                  <h3>Spontane opslag</h3>
-                  <p>
-                    Mange små fællesskaber starter via Facebook-grupper,
-                    opslagstavler eller fælleskøkkenerne.
-                  </p>
-                  <a href="#facebook-grupper" class="text-link">Find grupper</a>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <!-- Map -->
-          <section id="kort" class="community-section-anchor" aria-labelledby="map-title">
-            <div class="section-header">
-              <span class="section-kicker">Kort over fællesområder</span>
-
-              <h2 id="map-title" class="section-title">
-                Hvor finder jeg fællesskabet?
-              </h2>
-
-              <p class="section-text">
-                Her er et visuelt overblik, der gør det lettere at forstå, hvor
-                de vigtigste fællesområder og klubber ligger. Kortet er
-                illustrativt og kan senere erstattes med et præcist kortbillede.
-              </p>
-            </div>
-
-            <div class="community-map-card">
-              <div
-                class="community-map"
-                role="img"
-                aria-label="Illustrativt kort over fællesområder på Nybrogård Kollegiet"
-              >
-                <span class="map-label map-label-top">Lyngby Sø / grønne omgivelser</span>
-                <span class="map-label map-label-bottom">Gange, kældre og fællesområder</span>
-
-                <a href="#kaeldercafeen" class="map-pin map-pin-cafe">
-                  <span>KC</span>
-                  KælderCaféen
-                </a>
-
-                <a href="#motionsklubben" class="map-pin map-pin-gym">
-                  <span>O</span>
-                  Motionsrum
-                </a>
-
-                <a href="#filmklubben" class="map-pin map-pin-film">
-                  <span>B</span>
-                  Filmklub
-                </a>
-
-                <a href="#braetspilsklubben" class="map-pin map-pin-board">
-                  <span>CD</span>
-                  Brætspil
-                </a>
-
-                <a href="#kunstklubben" class="map-pin map-pin-art">
-                  <span>F</span>
-                  Kunst
-                </a>
-
-                <a href="#musikrum" class="map-pin map-pin-music">
-                  <span>EF</span>
-                  Musik
-                </a>
-
-                <a href="#cykelvaerksted" class="map-pin map-pin-bike">
-                  <span>M</span>
-                  Cykelværksted
-                </a>
-
-                <a href="#haveforening" class="map-pin map-pin-garden">
-                  <span>H</span>
-                  Haver
-                </a>
-              </div>
-
-              <div class="map-note">
-                <i class="bi bi-info-circle" aria-hidden="true"></i>
-                <p>
-                  Brug kortet som et hurtigt overblik. Hvis du har adgang til
-                  et præcist kortbillede fra kollegiet, kan det indsættes her
-                  senere.
-                </p>
-              </div>
-            </div>
-          </section>
+    <figcaption class="map-note">
+      <i class="bi bi-info-circle" aria-hidden="true"></i>
+      <p>
+        Kortet giver et visuelt overblik over fællesområderne. Klik på billedet
+        for at åbne det i større størrelse.
+      </p>
+    </figcaption>
+  </figure>
+</section>
 
         
 
