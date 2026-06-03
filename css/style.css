@@ -6317,3 +6317,210 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+
+/* =====================================================
+   Hero news dashboard
+   Same structure as lower news cards, but keeps hero colors
+===================================================== */
+
+.hero-news-dashboard .hero-live-message p {
+  margin-bottom: 0.3rem;
+}
+
+.hero-news-dashboard .hero-news-mini-list {
+  gap: 0.65rem;
+}
+
+.hero-news-dashboard .hero-news-mini-item {
+  display: block;
+  padding: 0.8rem 0.85rem;
+}
+
+.hero-news-dashboard .hero-news-mini-item span {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.hero-news-item-main {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.hero-news-dashboard .hero-news-mini-item p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.hero-news-date {
+  display: inline-block;
+  margin-top: 0.18rem;
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.hero-news-dashboard .hero-live-message .hero-news-date {
+  color: var(--color-muted);
+}
+
+.hero-news-dashboard .hero-news-mini-item .hero-news-date {
+  color: var(--color-muted);
+}
+
+/* Optional: makes the category label feel like lower club news */
+.hero-news-dashboard .hero-news-mini-item span {
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+
+
+
+/* =====================================================
+   Home club news: lighter version of hero-news style
+===================================================== */
+
+.home-club-news-panel {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.home-club-news-card {
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 1.6rem);
+  color: var(--color-primary-dark);
+  background:
+    linear-gradient(135deg, #fcfcf8, #f6f3eb);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.home-club-news-card .hero-news-mini-header {
+  margin-bottom: 1rem;
+}
+
+.home-club-news-card .hero-news-eyebrow {
+  margin-bottom: 0.35rem;
+  color: var(--color-accent);
+}
+
+.home-club-news-card h2 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.home-club-news-card .live-badge {
+  color: var(--color-primary-dark);
+  background-color: rgba(36, 71, 52, 0.05);
+  border: 1px solid rgba(36, 71, 52, 0.12);
+}
+
+.home-club-news-card .hero-live-message {
+  margin-bottom: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(36, 71, 52, 0.1);
+  border-radius: 0.9rem;
+}
+
+.home-club-news-card .hero-live-label {
+  color: var(--color-muted);
+}
+
+.home-club-news-card .hero-live-message p {
+  margin-bottom: 0.3rem;
+}
+
+.home-club-news-card .hero-news-mini-list {
+  gap: 0.65rem;
+}
+
+.home-club-news-card .hero-news-mini-item {
+  display: block;
+  padding: 0.8rem 0.85rem;
+  color: var(--color-primary-dark);
+  background-color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(36, 71, 52, 0.08);
+  border-radius: 0.85rem;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.home-club-news-card .hero-news-mini-item:hover,
+.home-club-news-card .hero-news-mini-item:focus {
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  background-color: #ffffff;
+  border-color: rgba(36, 71, 52, 0.18);
+  box-shadow: var(--shadow-sm);
+}
+
+.club-news-item-main {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.home-club-news-card .hero-news-mini-item span {
+  color: var(--color-accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-club-news-card .hero-news-mini-item p {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 0.88rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.club-news-date {
+  display: inline-block;
+  margin-top: 0.2rem;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.home-club-news-card .hero-news-mini-link {
+  margin-top: 1rem;
+  color: var(--color-primary-dark);
+  background-color: rgba(199, 137, 85, 0.12);
+  border: 1px solid rgba(199, 137, 85, 0.24);
+}
+
+.home-club-news-card .hero-news-mini-link:hover,
+.home-club-news-card .hero-news-mini-link:focus {
+  color: #ffffff;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .home-club-news-card .hero-news-mini-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -96,43 +96,61 @@
       <div class="hero-side-stack">
 
         <!-- News box -->
-        <aside class="hero-news-mini" aria-labelledby="hero-news-title">
-          <div class="hero-news-mini-header">
-            <div>
-              <p class="hero-news-eyebrow">Aktuelt</p>
-              <h2 id="hero-news-title">Nyheder</h2>
-            </div>
+<!-- News box -->
+<aside class="hero-news-mini hero-news-dashboard" aria-labelledby="hero-news-title">
+  <div class="hero-news-mini-header">
+    <div>
+      <p class="hero-news-eyebrow">Aktuelt</p>
+      <h2 id="hero-news-title">Nyheder</h2>
+    </div>
 
-            <span class="live-badge">
-              <span class="live-dot" aria-hidden="true"></span>
-              Live
-            </span>
-          </div>
+    <span class="live-badge">
+      <span class="live-dot" aria-hidden="true"></span>
+      Live
+    </span>
+  </div>
 
-          <div class="hero-live-message" aria-live="polite">
-            <span class="hero-live-label">Seneste besked</span>
-            <p id="hero-live-text">
-              Husk fællesspisning i caféen på torsdag kl. 18.00.
-            </p>
-          </div>
+  <div class="hero-live-message" aria-live="polite">
+    <span class="hero-live-label">Seneste besked</span>
 
-          <div class="hero-news-mini-list">
-            <a href="for-beboere.html" class="hero-news-mini-item">
-              <span>12 jun</span>
-              <p>Sommerarrangement i gården</p>
-            </a>
+    <p id="hero-live-text">
+      Husk fællesspisning i caféen på torsdag kl. 18.00.
+    </p>
 
-            <a href="for-beboere.html" class="hero-news-mini-item">
-              <span>18 jun</span>
-              <p>Vaskeri: kort servicevindue</p>
-            </a>
-          </div>
+    <time class="hero-news-date" datetime="2026-06-03">
+      Opslået 3. juni 2026
+    </time>
+  </div>
 
-          <a href="for-beboere.html" class="hero-news-mini-link">
-            Se alle beskeder
-            <i class="bi bi-arrow-right" aria-hidden="true"></i>
-          </a>
-        </aside>
+  <div class="hero-news-mini-list">
+
+    <a href="for-beboere.html" class="hero-news-mini-item">
+      <div class="hero-news-item-main">
+        <span>Arrangement</span>
+        <p>Sommerarrangement i gården</p>
+        <time class="hero-news-date" datetime="2026-06-12">
+          Opslået 12. juni 2026
+        </time>
+      </div>
+    </a>
+
+    <a href="for-beboere.html" class="hero-news-mini-item">
+      <div class="hero-news-item-main">
+        <span>Drift</span>
+        <p>Vaskeri: kort servicevindue</p>
+        <time class="hero-news-date" datetime="2026-06-18">
+          Opslået 18. juni 2026
+        </time>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="for-beboere.html" class="hero-news-mini-link">
+    Se alle beskeder
+    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+  </a>
+</aside>
 
         <!-- Scroll cue -->
         <a class="hero-scroll-card" href="#entry-title" aria-label="Scroll ned til resten af forsiden">
@@ -311,7 +329,7 @@
 
           <a class="home-club-card" href="faellesskab.html#kanolaug">
             <div class="home-club-image">
-              <img src="assets/icons/icon2.png" alt="Kano ved Lyngby Sø">
+              <img src="assets/icons/icon-kano.png" alt="Kano ved Lyngby Sø">
             </div>
 
             <div class="home-club-body">
@@ -323,7 +341,7 @@
 
           <a class="home-club-card" href="faellesskab.html#musikrum">
             <div class="home-club-image">
-              <img src="assets/icons/icon3.png" alt="Grøn sti ved kollegiet">
+              <img src="assets/icons/icon-music.png" alt="Grøn sti ved kollegiet">
             </div>
 
             <div class="home-club-body">
@@ -335,7 +353,7 @@
 
           <a class="home-club-card" href="faellesskab.html#motionsklub">
             <div class="home-club-image">
-              <img src="assets/icons/icon4.png" alt="Udeområde ved kollegiet">
+              <img src="assets/icons/icon-motion.png" alt="Udeområde ved kollegiet">
             </div>
 
             <div class="home-club-body">
@@ -346,8 +364,8 @@
           </a>
 
           <a class="home-club-card" href="faellesskab.html#kaeldercafe">
-            <div class="home-club-image home-club-icon-image">
-              <img src="assets/icons/icon1.png" alt="Ikon for fællesskab">
+            <div class="home-club-image">
+              <img src="assets/icons/icon-alkohol.png" alt="Ikon for fællesskab">
             </div>
 
             <div class="home-club-body">
@@ -361,54 +379,60 @@
       </article>
 
       <!-- Club news preview -->
-<article class="home-panel home-news-panel">
-  <div class="home-panel-header">
-    <div>
-      <h2>Nyt fra klubberne</h2>
-      <p>Se aktuelle opslag, arrangementer og opdateringer fra kollegiets klubber.</p>
+<!-- Club news preview -->
+<!-- Club news preview -->
+<article class="home-panel home-news-panel home-club-news-panel">
+  <div class="home-club-news-card">
+
+    <div class="hero-news-mini-header">
+      <div>
+        <p class="hero-news-eyebrow">Klubliv lige nu</p>
+        <h2>Nyt fra klubberne</h2>
+      </div>
+
+      <span class="live-badge">
+        <span class="live-dot" aria-hidden="true"></span>
+        Aktivt
+      </span>
     </div>
 
-    <a class="text-link" href="faellesskab.html#klubber">
-      Se alle
-    </a>
-  </div>
+    <div class="hero-live-message">
+      <span class="hero-live-label">Seneste klubopslag</span>
+      <p>Kanolauget planlægger fællestur ved Lyngby Sø.</p>
+      <time class="club-news-date" datetime="2026-06-03">Posted 3. juni 2026</time>
+    </div>
 
-  <div class="home-news-list">
+    <div class="hero-news-mini-list">
 
-    <a class="home-news-item" href="faellesskab.html#kanolaug">
-      <span class="home-news-icon">
-        <i class="bi bi-water" aria-hidden="true"></i>
-      </span>
+      <a class="hero-news-mini-item" href="faellesskab.html#kanolaug">
+        <div class="club-news-item-main">
+          <span>Kanolaug</span>
+          <p>Fællestur ved søen, når vejret spiller.</p>
+          <time class="club-news-date" datetime="2026-06-03">Posted 3. juni 2026</time>
+        </div>
+      </a>
 
-      <span class="home-news-content">
-        <strong>Kanolauget planlægger fællestur</strong>
-        <span>Tag med på en rolig tur ved Lyngby Sø, når vejret spiller.</span>
-        <small>Kanolaug · Nyeste opslag</small>
-      </span>
-    </a>
+      <a class="hero-news-mini-item" href="faellesskab.html#musikrum">
+        <div class="club-news-item-main">
+          <span>Musikrum</span>
+          <p>Nye jam-buddies søges til hyggelige øvesessions.</p>
+          <time class="club-news-date" datetime="2026-06-01">Posted 1. juni 2026</time>
+        </div>
+      </a>
 
-    <a class="home-news-item" href="faellesskab.html#musikrum">
-      <span class="home-news-icon">
-        <i class="bi bi-music-note-beamed" aria-hidden="true"></i>
-      </span>
+      <a class="hero-news-mini-item" href="faellesskab.html#motionsklub">
+        <div class="club-news-item-main">
+          <span>Motionsklub</span>
+          <p>Uformel fællestræning for beboere denne uge.</p>
+          <time class="club-news-date" datetime="2026-05-30">Posted 30. maj 2026</time>
+        </div>
+      </a>
 
-      <span class="home-news-content">
-        <strong>Musikrummet søger nye jam-buddies</strong>
-        <span>Spil med andre beboere, uanset om du er øvet eller bare nysgerrig.</span>
-        <small>Musikrum · Åbent for nye</small>
-      </span>
-    </a>
+    </div>
 
-    <a class="home-news-item" href="faellesskab.html#motionsklub">
-      <span class="home-news-icon">
-        <i class="bi bi-heart-pulse" aria-hidden="true"></i>
-      </span>
-
-      <span class="home-news-content">
-        <strong>Motionsklubben inviterer til fællestræning</strong>
-        <span>Kom med til en uformel træning med andre beboere.</span>
-        <small>Motionsklub · Denne uge</small>
-      </span>
+    <a class="hero-news-mini-link" href="faellesskab.html#klubber">
+      Se kluboversigt
+      <i class="bi bi-arrow-right" aria-hidden="true"></i>
     </a>
 
   </div>
