@@ -1036,9 +1036,9 @@ if (document.readyState === "loading") {
 
 
 
-
 /* =====================================================
    Fællesskab: prototype events pagination
+   Shows nearest upcoming events first, then older posts
 ===================================================== */
 
 function initCommunityEventsPagination() {
@@ -1052,99 +1052,84 @@ function initCommunityEventsPagination() {
   const pageStatus = board.querySelector("[data-events-page-status]");
 
   const eventPosts = [
+    /* Newest / soon upcoming events */
     {
       date: "21. juni 2026",
-      category: "Sommer",
-      title: "Sommerfest ved fællesområderne",
+      category: "Fællesskab",
+      title: "Sommerdag ved fællesområderne",
       description:
-        "En større fælles sommerdag med musik, fællesspisning, små aktiviteter og hygge på tværs af gange og klubber.",
+        "En større fælles sommerdag med små aktiviteter, fællesspisning og hygge på tværs af gange og klubber.",
       note: "Kommende event"
     },
     {
-      date: "28. juni 2026",
+      date: "14. juni 2026",
       category: "KælderCaféen",
-      title: "Midsommerbar i KælderCaféen",
+      title: "Sommerbar i KælderCaféen",
       description:
-        "Temaaften med sommerdrinks, pynt, musik og mulighed for at møde nye og gamle beboere i caféen.",
-      note: "Tilmelding/opslag via caféen"
+        "Sommeraften med drinks, musik og fællesskab i caféen. En oplagt mulighed for at møde andre beboere før sommerferien.",
+      note: "Kommende event"
     },
     {
-      date: "12. juli 2026",
-      category: "Kano- og kajaklauget",
-      title: "Søndagstur på Lyngby Sø",
-      description:
-        "En rolig fællestur på vandet for medlemmer, der har været til intro og gerne vil udnytte Nybros placering ved søen.",
-      note: "Kræver medlemskab og intro"
-    },
-    {
-      date: "30. august 2026",
+      date: "7. juni 2026",
       category: "Velkomst",
-      title: "Velkomst-event for nye beboere",
+      title: "Åben klubaften for nye beboere",
       description:
-        "En introduktionsdag hvor nye beboere kan møde klubberne, finde rundt på kollegiet og få en blød landing i fællesskabet.",
-      note: "Særligt relevant for nye beboere"
-    },
-    {
-      date: "18. september 2026",
-      category: "Kultur",
-      title: "Open Club Night",
-      description:
-        "Klubberne åbner dørene, så beboere kan kigge forbi motionsrum, atelier, musikrum, brætspil og andre fællesrum.",
-      note: "Klubpræsentationer hele aftenen"
-    },
-    {
-      date: "31. oktober 2026",
-      category: "Temaevent",
-      title: "Halloween på Nybro",
-      description:
-        "En særlig temaaften med udklædning, pyntede fællesområder og arrangementer fra caféen og beboerfællesskabet.",
-      note: "Mere info kommer senere"
-    },
-    {
-      date: "6. december 2026",
-      category: "Vinter",
-      title: "Julehygge og byttemarked",
-      description:
-        "Miljøgruppen og beboere samler kollegiet til julehygge, genbrug, byttebord og varme drikke.",
-      note: "Prototype-opslag"
+        "En uformel aften hvor nye beboere kan møde klubberne, stille spørgsmål og finde ud af, hvor de har lyst til at være med.",
+      note: "Kommende event"
     },
 
-    /* Older posts */
+    /* Older posts / archive */
     {
-      date: "17. maj 2026",
-      category: "Arkiv",
-      title: "Forårsrengøring af udeområder",
+      date: "25. maj 2026",
+      category: "Miljøgruppen",
+      title: "Byttemarked i fællesområdet",
       description:
-        "Beboere mødtes til fælles oprydning, affaldsindsamling og en hyggelig afslutning i gårdmiljøet.",
+        "Beboere kunne give brugbare ting videre, finde gratis genbrugsguld og støtte en mere bæredygtig hverdag på kollegiet.",
       note: "Afholdt"
     },
     {
-      date: "26. april 2026",
-      category: "Arkiv",
+      date: "17. maj 2026",
+      category: "Udeliv",
+      title: "Fælles oprydning af udeområder",
+      description:
+        "Beboere mødtes til oprydning, affaldsindsamling og en hyggelig afslutning med snacks og fællesskab.",
+      note: "Afholdt"
+    },
+    {
+      date: "4. maj 2026",
+      category: "Brætspil",
       title: "Brætspilsmaraton i CD-kælderen",
       description:
         "En lang spilaften med klassikere, nye spil og snacks for både erfarne spillere og nysgerrige beboere.",
       note: "Afholdt"
     },
     {
-      date: "12. april 2026",
-      category: "Arkiv",
+      date: "20. april 2026",
+      category: "Haveforeningen",
       title: "Fælles havedag",
       description:
-        "Haveforeningen inviterede til klargøring af haverne, fælles jord under neglene og introduktion til nye medlemmer.",
+        "Haveforeningen inviterede til klargøring af haverne, introduktion til nye medlemmer og jord under neglene.",
       note: "Afholdt"
     },
     {
-      date: "22. marts 2026",
-      category: "Arkiv",
-      title: "Filmklubben: Oscar-aften",
+      date: "12. april 2026",
+      category: "Filmklubben",
+      title: "Filmquiz og fælles visning",
       description:
-        "Filmklubben holdt temaaften i hjemmebiografen med filmquiz, snacks og fælles visning.",
+        "Filmklubben holdt temaaften i hjemmebiografen med quiz, snacks og fælles filmvisning i B-kælderen.",
+      note: "Afholdt"
+    },
+    {
+      date: "29. marts 2026",
+      category: "Kunstklubben",
+      title: "Kreativ søndag i atelieret",
+      description:
+        "En rolig kreativ eftermiddag med tegning, maling og introduktion til Kunstklubbens lokale i F-kælderen.",
       note: "Afholdt"
     }
   ];
 
-  const postsPerPage = 4;
+  const postsPerPage = 3;
   let currentPage = 0;
   const totalPages = Math.ceil(eventPosts.length / postsPerPage);
 
@@ -1157,6 +1142,22 @@ function initCommunityEventsPagination() {
         <span>${event.category}</span>
         <p>${event.title}</p>
         <small class="club-news-date">${event.date} · ${event.note}</small>
+      </div>
+    `;
+
+    return article;
+  }
+
+  function createPlaceholderItem() {
+    const article = document.createElement("article");
+    article.className = "hero-news-mini-item community-event-item community-event-placeholder";
+    article.setAttribute("aria-hidden", "true");
+
+    article.innerHTML = `
+      <div class="club-news-item-main">
+        <span>Placeholder</span>
+        <p>Placeholder</p>
+        <small class="club-news-date">Placeholder</small>
       </div>
     `;
 
@@ -1177,15 +1178,27 @@ function initCommunityEventsPagination() {
   function renderEvents() {
     const start = currentPage * postsPerPage;
     const visiblePosts = eventPosts.slice(start, start + postsPerPage);
+
     const featuredPost = visiblePosts[0];
     const listPosts = visiblePosts.slice(1);
 
     renderFeaturedEvent(featuredPost);
 
     listEl.innerHTML = "";
+
     listPosts.forEach((event) => {
       listEl.appendChild(createEventItem(event));
     });
+
+    /*
+      Keeps the card height stable.
+      If the last page only has 1 event, invisible placeholders fill the missing space.
+    */
+    const missingListItems = postsPerPage - 1 - listPosts.length;
+
+    for (let i = 0; i < missingListItems; i++) {
+      listEl.appendChild(createPlaceholderItem());
+    }
 
     pageStatus.textContent = `Side ${currentPage + 1} af ${totalPages}`;
 

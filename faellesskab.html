@@ -49,24 +49,47 @@
           </div>
         </div>
 
-        <aside class="page-hero-card community-hero-card" aria-label="Kort overblik">
-          <h2>På denne side</h2>
+<aside
+  id="events"
+  class="page-hero-card community-hero-card community-events-hero-card"
+  aria-label="Kommende særlige events"
+  data-community-events-board
+>
+  <div class="hero-news-mini-header">
+    <div>
+      <p class="hero-news-eyebrow">Kommende arrangementer</p>
+    </div>
 
-          <ul class="community-check-list">
-            <li>
-              <i class="bi bi-stars" aria-hidden="true"></i>
-              Klubber og sociale tilbud
-            </li>
-            <li>
-              <i class="bi bi-calendar-event" aria-hidden="true"></i>
-              Events og faste aktiviteter
-            </li>
-            <li>
-              <i class="bi bi-map" aria-hidden="true"></i>
-              Kort over fællesområder
-            </li>
-          </ul>
-        </aside>
+    <span class="live-badge">
+      <span class="live-dot" aria-hidden="true"></span>
+      2026
+    </span>
+  </div>
+
+  <article class="hero-live-message community-event-featured" data-event-featured>
+    <!-- Filled by JS -->
+  </article>
+
+  <div class="hero-news-mini-list community-event-list" data-event-list>
+    <!-- Filled by JS -->
+  </div>
+
+  <div class="community-events-pagination" aria-label="Events pagination">
+    <button type="button" class="btn btn-sm btn-outline-secondary" data-events-prev>
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      Nyere
+    </button>
+
+    <span class="community-events-page-status" data-events-page-status>
+      Side 1
+    </span>
+
+    <button type="button" class="btn btn-sm btn-outline-secondary" data-events-next>
+      Ældre
+      <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </button>
+  </div>
+</aside>
       </div>
     </section>
 
@@ -119,14 +142,14 @@
             <p class="community-side-kicker">Hop direkte til</p>
 
             <nav class="community-page-nav" aria-label="Sektioner">
-              <a href="#klubber">
-                <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
-                Alle klubber
-              </a>
-
               <a href="#events">
                 <i class="bi bi-calendar-event" aria-hidden="true"></i>
                 Events
+              </a>
+              
+              <a href="#klubber">
+                <i class="bi bi-grid-3x3-gap" aria-hidden="true"></i>
+                Alle klubber
               </a>
 
               <a href="#kort">
@@ -209,6 +232,11 @@
           </div>
         </aside>
 
+
+
+
+
+        
         <div class="community-content">
           <!-- Intro panel -->
           <section class="community-intro-panel" aria-labelledby="community-intro-title">
@@ -788,50 +816,6 @@
 </section>
 
 
-
-
-          <!-- Events -->
-<section id="events" class="community-section-anchor">
-  <div class="community-events-board" data-community-events-board>
-    <div class="hero-news-mini-header">
-      <div>
-        <p class="hero-news-eyebrow">Kommende</p>
-        <h3>Særlige arrangementer</h3>
-      </div>
-
-      <span class="live-badge">
-        <span class="live-dot" aria-hidden="true"></span>
-        Prototype
-      </span>
-    </div>
-
-    <article class="hero-live-message community-event-featured" data-event-featured>
-      <!-- Filled by JS -->
-    </article>
-
-    <div class="hero-news-mini-list community-event-list" data-event-list>
-      <!-- Filled by JS -->
-    </div>
-
-    <div class="community-events-pagination" aria-label="Events pagination">
-      <button type="button" class="btn btn-sm btn-outline-secondary" data-events-prev>
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-        Nyere posts
-      </button>
-
-      <span class="community-events-page-status" data-events-page-status>
-        Side 1
-      </span>
-
-      <button type="button" class="btn btn-sm btn-outline-secondary" data-events-next>
-        Ældre posts
-        <i class="bi bi-arrow-right" aria-hidden="true"></i>
-      </button>
-    </div>
-  </div>
-</section>
-
-
           <!-- Kort over fællesområder -->
 <section id="kort" class="community-section-anchor">
   <div class="section-header">
@@ -861,8 +845,7 @@
     <figcaption class="map-note">
       <i class="bi bi-info-circle" aria-hidden="true"></i>
       <p>
-        Kortet giver et visuelt overblik over fællesområderne. Klik på billedet
-        for at åbne det i større størrelse.
+        Klik på billedet for at åbne det i et større format.
       </p>
     </figcaption>
   </figure>
@@ -942,9 +925,6 @@
     </div>
   </article>
 </div>
-  
-  
-  
   
   
   
