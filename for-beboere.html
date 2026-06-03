@@ -34,499 +34,1010 @@
     <!-- HEADER -->
     <div data-include="components/header.html"></div>
 
-    <main id="main-content">
-      <!-- Page hero -->
-      <section class="page-hero" aria-labelledby="page-title">
-        <div class="content-container page-hero-inner">
-          <div class="page-hero-text">
-            <span class="section-kicker">For beboere</span>
-            <h1 id="page-title">Alt det praktiske samlet ét sted</h1>
+<main id="main-content">
+
+  <!-- Page hero -->
+  <section class="page-hero resident-hub-hero" aria-labelledby="page-title">
+    <div class="content-container page-hero-inner">
+
+      <div class="page-hero-text">
+        <span class="section-kicker">For beboere</span>
+
+        <h1 id="page-title">Hjælp til hverdagen på Nybrogård</h1>
+
+        <p>
+          Find hurtigt ud af, hvad du skal gøre, hvem du skal kontakte,
+          og hvor du finder de vigtigste beboerinformationer.
+        </p>
+
+        <div class="resident-hero-actions" aria-label="Hurtige handlinger">
+          <a class="btn btn-primary" href="#akut">
+            Jeg har brug for hjælp nu
+          </a>
+
+          <a class="btn btn-outline-secondary" href="#administration">
+            Flytning, fremleje og opsigelse
+          </a>
+        </div>
+      </div>
+
+      <aside class="page-hero-card resident-hero-card" aria-label="Mest brugte beboerfunktioner">
+        <h2>Mest brugt</h2>
+
+        <div class="resident-hero-list">
+          <a href="#noegleservice">
+            <i class="bi bi-key" aria-hidden="true"></i>
+            <span>Låst ude</span>
+          </a>
+
+          <a href="#vaskeri">
+            <i class="bi bi-basket" aria-hidden="true"></i>
+            <span>Vaskeri</span>
+          </a>
+
+          <a href="#internet">
+            <i class="bi bi-wifi" aria-hidden="true"></i>
+            <span>Internet</span>
+          </a>
+
+          <a href="#kontakt">
+            <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
+            <span>Kontakt</span>
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+
+  <!-- Quick navigation -->
+  <section class="page-section-sm bg-white-soft border-bottom-soft" aria-label="Hurtige genveje">
+    <div class="content-container">
+      <div class="resident-shortcut-grid">
+
+        <a class="shortcut-card" href="#nyheder">
+          <i class="bi bi-megaphone" aria-hidden="true"></i>
+          <span>Aktuelt</span>
+        </a>
+
+        <a class="shortcut-card" href="#akut">
+          <i class="bi bi-exclamation-circle" aria-hidden="true"></i>
+          <span>Akut hjælp</span>
+        </a>
+
+        <a class="shortcut-card" href="#hverdag">
+          <i class="bi bi-house-heart" aria-hidden="true"></i>
+          <span>Hverdag</span>
+        </a>
+
+        <a class="shortcut-card" href="#administration">
+          <i class="bi bi-folder-check" aria-hidden="true"></i>
+          <span>Administration</span>
+        </a>
+
+        <a class="shortcut-card" href="#parkering">
+          <i class="bi bi-p-circle" aria-hidden="true"></i>
+          <span>Parkering</span>
+        </a>
+
+        <a class="shortcut-card" href="#regler">
+          <i class="bi bi-shield-check" aria-hidden="true"></i>
+          <span>Regler</span>
+        </a>
+
+        <a class="shortcut-card" href="#guides">
+          <i class="bi bi-lightbulb" aria-hidden="true"></i>
+          <span>Guides</span>
+        </a>
+
+        <a class="shortcut-card" href="#kontakt">
+          <i class="bi bi-chat-dots" aria-hidden="true"></i>
+          <span>Kontakt</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Task overview -->
+  <section id="overblik" class="page-section border-bottom-soft" aria-labelledby="overview-title">
+    <div class="content-container">
+
+      <div class="section-header center">
+        <span class="section-kicker">Beboer-overblik</span>
+        <h2 id="overview-title" class="section-title">Hvad prøver du at fikse?</h2>
+
+        <p class="section-text">
+          Siden er bygget efter beboerens behov: akut hjælp først, derefter hverdag,
+          administration, regler og kontakt.
+        </p>
+      </div>
+
+      <div class="resident-task-grid">
+
+        <a class="resident-task-card urgent" href="#akut">
+          <span class="resident-task-icon">
+            <i class="bi bi-lightning-charge" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Akut</span>
+          <h3>Jeg har brug for hjælp nu</h3>
+          <p>Låst ude, vand i kælder, brandalarm, fejl eller noget der ikke kan vente.</p>
+        </a>
+
+        <a class="resident-task-card" href="#hverdag">
+          <span class="resident-task-icon">
+            <i class="bi bi-basket" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Hverdag</span>
+          <h3>Jeg skal bruge en facilitet</h3>
+          <p>Vaskeri, cykelskure, trailer, trækvogne, internet, kiosk og klubber.</p>
+        </a>
+
+        <a class="resident-task-card" href="#administration">
+          <span class="resident-task-icon">
+            <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Administration</span>
+          <h3>Jeg skal ordne papirarbejde</h3>
+          <p>Studieerklæring, fremleje, intern flytning, opsigelse og husleje.</p>
+        </a>
+
+        <a class="resident-task-card" href="#parkering">
+          <span class="resident-task-icon">
+            <i class="bi bi-bicycle" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Transport</span>
+          <h3>Jeg har bil, cykel eller gæster</h3>
+          <p>Parkeringstilladelse, OPARKO, gæsteparkering og cykeloprydning.</p>
+        </a>
+
+        <a class="resident-task-card" href="#regler">
+          <span class="resident-task-icon">
+            <i class="bi bi-shield-check" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Regler</span>
+          <h3>Jeg vil forstå reglerne</h3>
+          <p>Husorden, fællesarealer, støj, klager og officielle dokumenter.</p>
+        </a>
+
+        <a class="resident-task-card" href="#guides">
+          <span class="resident-task-icon">
+            <i class="bi bi-tools" aria-hidden="true"></i>
+          </span>
+          <span class="resident-task-label">Guides</span>
+          <h3>Jeg vil løse et lille problem selv</h3>
+          <p>Afkalkning, udluftning, lampe, brandalarm, kældervand og inventar.</p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- News board -->
+  <section id="nyheder" class="page-section bg-soft border-bottom-soft" aria-labelledby="news-title">
+    <div class="content-container">
+
+      <article class="resident-news-board">
+
+        <div class="resident-news-header">
+          <div>
+            <span class="section-kicker">Aktuelt</span>
+            <h2 id="news-title" class="section-title">Nyheder og beskeder</h2>
+
+            <p class="section-text">
+              Her samles korte beskeder, driftsinfo, frister og arrangementer,
+              så beboere ikke skal lede gennem gamle opslag.
+            </p>
+          </div>
+
+          <span class="live-badge">
+            <span class="live-dot" aria-hidden="true"></span>
+            Opdateret
+          </span>
+        </div>
+
+        <div class="resident-news-featured">
+          <div class="resident-news-main-message">
+            <span>Seneste besked</span>
+            <h3>Cykeloprydning varsles i god tid</h3>
             <p>
-              Find de vigtigste links, regler og kontaktveje, når du allerede bor på
-              Nybrogård Kollegiet — uden at skulle grave dig gennem en jungle af menuer.
+              Når der er cykeloprydning, får beboere besked om dato, strips
+              og hvor stripsen skal sættes på cyklen.
             </p>
           </div>
-
-          <aside class="page-hero-card resident-hero-card" aria-label="Mest brugte beboerlinks">
-            <h2>Mest brugt</h2>
-            <ul class="resident-hero-list">
-              <li><a href="#vaskeri">Book vaskeri</a></li>
-              <li><a href="#internet">Få hjælp til internet</a></li>
-              <li><a href="#regler">Find regler og husorden</a></li>
-              <li><a href="#kontakt">Kontakt den rigtige person</a></li>
-            </ul>
-          </aside>
         </div>
-      </section>
 
-      <!-- Quick navigation -->
-      <section class="page-section-sm border-bottom-soft bg-white-soft" aria-label="Hurtige genveje">
-        <div class="content-container">
-          <div class="equal-card-grid">
-            <a class="shortcut-card" href="#nyheder">
-              <i class="bi bi-megaphone" aria-hidden="true"></i>
-              <span>Nyheder</span>
-            </a>
+        <div class="resident-news-list">
 
-            <a class="shortcut-card" href="#vaskeri">
-              <i class="bi bi-basket" aria-hidden="true"></i>
-              <span>Vaskeri</span>
-            </a>
-
-            <a class="shortcut-card" href="#internet">
-              <i class="bi bi-wifi" aria-hidden="true"></i>
-              <span>Internet</span>
-            </a>
-
-            <a class="shortcut-card" href="#regler">
-              <i class="bi bi-file-earmark-text" aria-hidden="true"></i>
-              <span>Regler</span>
-            </a>
-
-            <a class="shortcut-card" href="#flytning">
-              <i class="bi bi-box-seam" aria-hidden="true"></i>
-              <span>Flyt ind/ud</span>
-            </a>
-
-            <a class="shortcut-card" href="#kontakt">
-              <i class="bi bi-question-circle" aria-hidden="true"></i>
-              <span>Kontakt</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Resident overview -->
-      <section id="overblik" class="page-section border-bottom-soft" aria-labelledby="overview-title">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Beboer-overblik</span>
-            <h2 id="overview-title" class="section-title">Hvad leder du efter?</h2>
-            <p class="section-text">
-              Siden er bygget som et praktisk dashboard, så beboere hurtigt kan finde
-              det, de typisk har brug for i hverdagen.
-            </p>
-          </div>
-
-          <div class="content-grid content-grid-3 resident-dashboard-grid">
-            <a class="ui-card resident-dashboard-card" href="#nyheder">
-              <span class="ui-card-icon"><i class="bi bi-newspaper" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Nyheder og beskeder</h3>
-              <p class="ui-card-text">Aktuelle opdateringer om drift, åbningstider og vigtige beskeder.</p>
-            </a>
-
-            <a class="ui-card resident-dashboard-card" href="#hverdag">
-              <span class="ui-card-icon"><i class="bi bi-house-heart" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Hverdag og faciliteter</h3>
-              <p class="ui-card-text">Vaskeri, cykelskure, trailere, trækvogne og andre fælles ting.</p>
-            </a>
-
-            <a class="ui-card resident-dashboard-card" href="#internet">
-              <span class="ui-card-icon"><i class="bi bi-router" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Internet og netværk</h3>
-              <p class="ui-card-text">Find info om oprettelse, netværkskabel, Wi-Fi og support.</p>
-            </a>
-
-            <a class="ui-card resident-dashboard-card" href="#regler">
-              <span class="ui-card-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Regler og hensyn</h3>
-              <p class="ui-card-text">Få overblik over husorden, reglement og ansvar som beboer.</p>
-            </a>
-
-            <a class="ui-card resident-dashboard-card" href="#flytning">
-              <span class="ui-card-icon"><i class="bi bi-key" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Flytning og administration</h3>
-              <p class="ui-card-text">Studiekontrol, intern flytning, fremleje, opsigelse og nøgler.</p>
-            </a>
-
-            <a class="ui-card resident-dashboard-card" href="#kontakt">
-              <span class="ui-card-icon"><i class="bi bi-person-lines-fill" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Kontakt og hjælp</h3>
-              <p class="ui-card-text">Find ud af, om du skal kontakte varmemester, sekretariat eller netgruppe.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- News -->
-      <section id="nyheder" class="page-section bg-soft border-bottom-soft" aria-labelledby="news-title">
-        <div class="content-container">
-          <div class="two-column-layout resident-news-layout">
+          <a class="resident-news-item" href="#cykeloprydning">
             <div>
-              <div class="section-header">
-                <span class="section-kicker">Nyheder</span>
-                <h2 id="news-title" class="section-title">Vigtige beskeder til beboere</h2>
-                <p class="section-text">
-                  Brug denne sektion til driftsbeskeder, ændrede åbningstider, varslinger
-                  og andre ting, beboere hurtigt skal kunne se.
-                </p>
-              </div>
-
-              <div class="notice-box resident-notice-highlight">
-                <h3>Tip til prototypen</h3>
-                <p>
-                  Når siden afleveres, kan nyhederne være statiske eksempler. Senere kan de
-                  kobles til et CMS, en JSON-fil eller et simpelt admin-flow.
-                </p>
-              </div>
+              <span>Cykler</span>
+              <h3>Sådan fungerer cykeloprydning</h3>
+              <p>Marker din cykel tydeligt, når der varsles oprydning.</p>
             </div>
+            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+          </a>
 
-            <div class="content-panel">
-              <div class="list-group list-group-flush news-list resident-news-list">
-                <a href="https://nybro.dk/for-beboere/nyheder/" target="_blank" rel="noopener" class="list-group-item list-group-item-action">
-                  <div class="d-flex gap-3">
-                    <span class="news-icon"><i class="bi bi-info-circle" aria-hidden="true"></i></span>
-                    <div>
-                      <h3 class="h6 mb-1">Se officielle beboernyheder</h3>
-                      <p class="mb-1 small text-muted">Gå til Nybrogårds nuværende nyhedsside for seneste opslag.</p>
-                      <small>Eksternt link</small>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#kontakt" class="list-group-item list-group-item-action">
-                  <div class="d-flex gap-3">
-                    <span class="news-icon"><i class="bi bi-clock" aria-hidden="true"></i></span>
-                    <div>
-                      <h3 class="h6 mb-1">Tjek åbningstider</h3>
-                      <p class="mb-1 small text-muted">Sekretariat, varmemester og netgruppe kan have forskellige tider.</p>
-                      <small>Find kontakt nederst</small>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#regler" class="list-group-item list-group-item-action">
-                  <div class="d-flex gap-3">
-                    <span class="news-icon"><i class="bi bi-shield-exclamation" aria-hidden="true"></i></span>
-                    <div>
-                      <h3 class="h6 mb-1">Husk husordenen</h3>
-                      <p class="mb-1 small text-muted">Støj, fællesarealer og hensyn påvirker alle på gangen.</p>
-                      <small>Læs mere under regler</small>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Everyday practical information -->
-      <section id="hverdag" class="page-section border-bottom-soft" aria-labelledby="everyday-title">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Hverdag</span>
-            <h2 id="everyday-title" class="section-title">Praktiske ting i hverdagen</h2>
-            <p class="section-text">
-              De små hverdagslinks er ofte dem, man leder efter mest. Her er de samlet i
-              korte, overskuelige blokke.
-            </p>
-          </div>
-
-          <div class="content-grid content-grid-2 resident-practical-grid">
-            <article id="vaskeri" class="content-panel resident-info-panel">
-              <div class="resident-panel-heading">
-                <span class="ui-card-icon"><i class="bi bi-basket" aria-hidden="true"></i></span>
-                <div>
-                  <span class="resident-label">Facilitet</span>
-                  <h3>Vaskeri</h3>
-                </div>
-              </div>
-
-              <p>
-                Nybrogård har et pengeløst vaskeri med vaskemaskiner og tørretumblere.
-                Betaling sker via huslejen, og vaskebrikken udleveres af varmemesteren.
-              </p>
-
-              <ul class="resident-check-list">
-                <li>Book online eller direkte på vaskeriet.</li>
-                <li>Kontakt varmemester ved problemer med vaskebrik eller maskiner.</li>
-                <li>Husk at rydde op efter dig, så næste beboer også kan være med.</li>
-              </ul>
-
-              <div class="d-flex flex-wrap gap-2 mt-4">
-                <a class="btn btn-primary" href="https://mielelogic.com" target="_blank" rel="noopener">
-                  Gå til vaskeri-login
-                </a>
-                <a class="btn btn-outline-secondary" href="kontakt-hjaelp.html#varmemester">
-                  Kontakt varmemester
-                </a>
-              </div>
-            </article>
-
-            <article id="internet" class="content-panel resident-info-panel">
-              <div class="resident-panel-heading">
-                <span class="ui-card-icon"><i class="bi bi-wifi" aria-hidden="true"></i></span>
-                <div>
-                  <span class="resident-label">Support</span>
-                  <h3>Internet</h3>
-                </div>
-              </div>
-
-              <p>
-                Internet håndteres af netgruppen. De hjælper med oprettelse, flytning af
-                forbindelse og spørgsmål om kabel eller trådløst netværk.
-              </p>
-
-              <ul class="resident-check-list">
-                <li>Kontakt netgruppen, hvis du skal oprettes på netværket.</li>
-                <li>Ved intern flytning kan forbindelsen flyttes til det nye værelse.</li>
-                <li>Brug netværkskabel, hvis Wi-Fi er ustabilt i dit område.</li>
-              </ul>
-
-              <div class="d-flex flex-wrap gap-2 mt-4">
-                <a class="btn btn-primary" href="kontakt-hjaelp.html#internet">
-                  Få internet-hjælp
-                </a>
-                <a class="btn btn-outline-secondary" href="https://www.nybro.dk/administration/internet/" target="_blank" rel="noopener">
-                  Officiel internet-info
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="equal-card-grid mt-4">
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-bicycle" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Cykelskure</h3>
-              <p class="ui-card-text">Der er aflåste cykelskure ved flere blokke. Nøgler håndteres gennem varmemesteren.</p>
-            </article>
-
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Trailer</h3>
-              <p class="ui-card-text">Beboere kan låne trailer efter aftale. Praktisk til flytning, store indkøb og kaos med papkasser.</p>
-            </article>
-
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-cart3" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Trækvogne</h3>
-              <p class="ui-card-text">Trækvogne kan bruges til transport på kollegiets område. Husk at låse og stille dem tilbage.</p>
-            </article>
-
-            <article class="ui-card">
-              <span class="ui-card-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-              <h3 class="ui-card-title">Klubber</h3>
-              <p class="ui-card-text">Mange klubber bruger vaskebrik/adgangssystem. Kontakt klubformanden ved klubspecifikke problemer.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Rules -->
-      <section id="regler" class="page-section bg-white-soft border-bottom-soft" aria-labelledby="rules-title">
-        <div class="content-container">
-          <div class="two-column-layout resident-rules-layout">
+          <a class="resident-news-item" href="#sekretariat">
             <div>
-              <span class="section-kicker">Regler</span>
-              <h2 id="rules-title" class="section-title">Husorden, ansvar og hensyn</h2>
-              <p class="section-text">
-                Reglerne findes ikke for at være kedelige. De findes, så mange forskellige
-                mennesker kan bo tæt sammen uden at fællesarealerne udvikler sig til Hunger Games.
-              </p>
-
-              <div class="notice-box mt-4">
-                <h3>God tommelfingerregel</h3>
-                <p>
-                  Start med dialog, hvis noget generer dig. Hvis problemet fortsætter,
-                  kan du finde den rette kontaktvej gennem administrationen eller klagenævnet.
-                </p>
-              </div>
+              <span>Administration</span>
+              <h3>Husk frister for studieerklæring</h3>
+              <p>Du skal reagere hurtigt, når du modtager brev fra KAB.</p>
             </div>
+            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+          </a>
 
-            <div class="content-panel">
-              <div class="accordion resident-accordion" id="rulesAccordion">
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rulesOne" aria-expanded="true" aria-controls="rulesOne">
-                      Hvad dækker reglementet?
-                    </button>
-                  </h3>
-                  <div id="rulesOne" class="accordion-collapse collapse show" data-bs-parent="#rulesAccordion">
-                    <div class="accordion-body">
-                      Det dækker blandt andet hensyn til bygninger, fællesarealer og medbeboere.
-                      Brug det som fælles spilleregler for hverdagen.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rulesTwo" aria-expanded="false" aria-controls="rulesTwo">
-                      Hvor finder jeg dokumenterne?
-                    </button>
-                  </h3>
-                  <div id="rulesTwo" class="accordion-collapse collapse" data-bs-parent="#rulesAccordion">
-                    <div class="accordion-body">
-                      Du kan linke til ordensreglement, beboerrådets forretningsorden,
-                      kollegianerforeningens vedtægter og kollegiets vedtægter.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rulesThree" aria-expanded="false" aria-controls="rulesThree">
-                      Hvad hvis noget går galt?
-                    </button>
-                  </h3>
-                  <div id="rulesThree" class="accordion-collapse collapse" data-bs-parent="#rulesAccordion">
-                    <div class="accordion-body">
-                      Ved drift og vedligeholdelse: kontakt varmemester. Ved kontrakt,
-                      studiekontrol eller fremleje: kontakt sekretariatet. Ved net: kontakt netgruppen.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <a class="btn btn-primary mt-4" href="https://nybro.dk/for-beboere/reglement/" target="_blank" rel="noopener">
-                Se officielt reglement
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Moving and administration -->
-      <section id="flytning" class="page-section border-bottom-soft" aria-labelledby="moving-title">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Administration</span>
-            <h2 id="moving-title" class="section-title">Flytning, fremleje og praktiske ændringer</h2>
-            <p class="section-text">
-              Nogle ting klares gennem KAB, andre gennem Nybros interne administration.
-              Her får beboeren en klarere vej videre.
-            </p>
-          </div>
-
-          <div class="resident-step-grid">
-            <article class="resident-step-card">
-              <span class="resident-step-number">01</span>
-              <h3>Studiekontrol</h3>
-              <p>Hold øje med frister og dokumentation, så din status som studieaktiv er på plads.</p>
-              <a class="text-link" href="https://nybro.dk/for-beboere/intern-administration/" target="_blank" rel="noopener">
-                Læs om intern administration <i class="bi bi-arrow-right" aria-hidden="true"></i>
-              </a>
-            </article>
-
-            <article class="resident-step-card">
-              <span class="resident-step-number">02</span>
-              <h3>Intern flytning</h3>
-              <p>Ved flytning internt kan både nøgler, internet og praktiske forhold skulle opdateres.</p>
-              <a class="text-link" href="kontakt-hjaelp.html#sekretariat">
-                Kontakt sekretariatet <i class="bi bi-arrow-right" aria-hidden="true"></i>
-              </a>
-            </article>
-
-            <article class="resident-step-card">
-              <span class="resident-step-number">03</span>
-              <h3>Fremleje</h3>
-              <p>Fremleje kræver klare aftaler og korrekt administration. Start med sekretariatets info.</p>
-              <a class="text-link" href="kontakt-hjaelp.html#sekretariat">
-                Find hjælp <i class="bi bi-arrow-right" aria-hidden="true"></i>
-              </a>
-            </article>
-
-            <article class="resident-step-card">
-              <span class="resident-step-number">04</span>
-              <h3>Opsigelse</h3>
-              <p>Når du skal videre, skal opsigelse, nøgler og fraflytning håndteres korrekt.</p>
-              <a class="text-link" href="bolig-ansoegning.html#flyt-ind-ud">
-                Se flyt ind/ud <i class="bi bi-arrow-right" aria-hidden="true"></i>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Useful links -->
-      <section id="links" class="page-section bg-soft border-bottom-soft" aria-labelledby="links-title">
-        <div class="content-container">
-          <div class="section-header center">
-            <span class="section-kicker">Links</span>
-            <h2 id="links-title" class="section-title">Nyttige beboerlinks</h2>
-            <p class="section-text">
-              En roligere version af “alt på én gang” — pakket ind som klikbare kort.
-            </p>
-          </div>
-
-          <div class="content-grid content-grid-3 resident-link-grid">
-            <a class="resident-link-card" href="https://nybro.dk/for-beboere/faciliteter/" target="_blank" rel="noopener">
-              <i class="bi bi-buildings" aria-hidden="true"></i>
+          <a class="resident-news-item" href="#vaskeri">
+            <div>
               <span>Faciliteter</span>
-            </a>
+              <h3>Vaskeri og vaskebrik</h3>
+              <p>Book online eller direkte på vaskeriet.</p>
+            </div>
+            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
+          </a>
 
-            <a class="resident-link-card" href="https://nybro.dk/for-beboere/reglement/" target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-check" aria-hidden="true"></i>
-              <span>Reglement</span>
-            </a>
+        </div>
 
-            <a class="resident-link-card" href="https://nybro.dk/for-beboere/intern-administration/" target="_blank" rel="noopener">
-              <i class="bi bi-folder2-open" aria-hidden="true"></i>
-              <span>Intern administration</span>
-            </a>
+      </article>
 
-            <a class="resident-link-card" href="https://www.nybro.dk/administration/internet/" target="_blank" rel="noopener">
-              <i class="bi bi-router" aria-hidden="true"></i>
-              <span>Internet</span>
-            </a>
+    </div>
+  </section>
 
-            <a class="resident-link-card" href="faellesskab.html#klubber">
-              <i class="bi bi-stars" aria-hidden="true"></i>
-              <span>Klubber</span>
-            </a>
 
-            <a class="resident-link-card" href="kontakt-hjaelp.html">
-              <i class="bi bi-chat-dots" aria-hidden="true"></i>
-              <span>Kontakt & hjælp</span>
-            </a>
+  <!-- Emergency help -->
+  <section id="akut" class="page-section border-bottom-soft" aria-labelledby="urgent-title">
+    <div class="content-container">
+
+      <div class="section-header">
+        <span class="section-kicker">Akut hjælp</span>
+        <h2 id="urgent-title" class="section-title">Når noget ikke kan vente</h2>
+
+        <p class="section-text">
+          Start her, hvis du er låst ude, der er akut fejl, internetproblem,
+          brandalarm eller vand et sted, hvor vand ikke burde være. Iconic kaos, men organiseret.
+        </p>
+      </div>
+
+      <div class="resident-emergency-grid">
+
+        <article id="noegleservice" class="resident-emergency-card resident-emergency-card-highlight">
+          <span class="resident-card-icon">
+            <i class="bi bi-key" aria-hidden="true"></i>
+          </span>
+
+          <h3>Låst ude?</h3>
+          <p>
+            Det kan være muligt at blive låst ind via nøgleservice.
+            Hav gyldigt billed-ID klar og vær opmærksom på, at hjælpen er frivillig.
+          </p>
+
+          <ul>
+            <li>Pris afhænger af tidspunkt på dagen.</li>
+            <li>Betaling skal ske kontant.</li>
+            <li>Kontakt kun via officielle kontaktoplysninger.</li>
+          </ul>
+
+          <a class="btn btn-primary" href="kontakt-hjaelp.html">
+            Se kontaktmuligheder
+          </a>
+        </article>
+
+        <article class="resident-emergency-card">
+          <span class="resident-card-icon">
+            <i class="bi bi-droplet" aria-hidden="true"></i>
+          </span>
+
+          <h3>Vand, varme eller fejl</h3>
+          <p>
+            Ved problemer med vand, varme, vaskebrik, nøgler, kældervand eller
+            praktiske fejl skal du som udgangspunkt kontakte varmemesteren.
+          </p>
+
+          <a class="text-link" href="#kontakt">
+            Find varmemester <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="resident-emergency-card">
+          <span class="resident-card-icon">
+            <i class="bi bi-wifi-off" aria-hidden="true"></i>
+          </span>
+
+          <h3>Internet nede?</h3>
+          <p>
+            Netgruppen hjælper med oprettelse, forbindelse, kabler, Wi-Fi
+            og flytning af internet ved intern flytning.
+          </p>
+
+          <a class="text-link" href="#internet">
+            Se internet-info <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="resident-emergency-card">
+          <span class="resident-card-icon">
+            <i class="bi bi-alarm" aria-hidden="true"></i>
+          </span>
+
+          <h3>Brandalarm eller damp?</h3>
+          <p>
+            Brandalarmen kan reagere på damp fra bad. Hold badeværelsesdøren lukket,
+            og kontakt relevant hjælp, hvis alarmen ikke stopper.
+          </p>
+
+          <a class="text-link" href="#guides">
+            Se beboer-guides <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Everyday and facilities -->
+  <section id="hverdag" class="page-section bg-white-soft border-bottom-soft" aria-labelledby="everyday-title">
+    <div class="content-container">
+
+      <div class="section-header">
+        <span class="section-kicker">Hverdag og faciliteter</span>
+        <h2 id="everyday-title" class="section-title">Det du bruger i hverdagen</h2>
+
+        <p class="section-text">
+          Her ligger de praktiske ting, som beboere typisk skal finde hurtigt:
+          vaskeri, internet, cykelskure, trailer, trækvogne, kiosk og klubber.
+        </p>
+      </div>
+
+      <div class="resident-info-grid">
+
+        <article id="vaskeri" class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-basket" aria-hidden="true"></i></span>
+            <div>
+              <span>Facilitet</span>
+              <h3>Vaskeri</h3>
+            </div>
+          </div>
+
+          <p>
+            Nybrogård har et pengeløst vaskeri med vaskemaskiner og tørretumblere.
+            Betaling sker via vaskebrik og husleje.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Book online eller direkte på vaskeriet.</li>
+            <li>Kontakt varmemesteren ved problemer med vaskebrik.</li>
+            <li>Ryd op efter dig, så næste beboer også kan bruge rummet.</li>
+          </ul>
+
+          <a class="btn btn-primary" href="https://mielelogic.com" target="_blank" rel="noopener">
+            Book vaskeri
+          </a>
+        </article>
+
+        <article id="internet" class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-router" aria-hidden="true"></i></span>
+            <div>
+              <span>Support</span>
+              <h3>Internet</h3>
+            </div>
+          </div>
+
+          <p>
+            Internet håndteres af netgruppen. De hjælper med oprettelse,
+            kabler, Wi-Fi og flytning af forbindelse ved intern flytning.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Ny beboer: kontakt netgruppen for oprettelse.</li>
+            <li>Intern flytning: forbindelsen kan flyttes til nyt værelse.</li>
+            <li>Det kan tage tid at blive oprettet, så start i god tid.</li>
+          </ul>
+
+          <a class="btn btn-outline-secondary" href="kontakt-hjaelp.html">
+            Kontakt netgruppen
+          </a>
+        </article>
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-bicycle" aria-hidden="true"></i></span>
+            <div>
+              <span>Opbevaring</span>
+              <h3>Cykelskure</h3>
+            </div>
+          </div>
+
+          <p>
+            Der er cykelskure ved AB, GH og JK. Nøgler administreres af varmemesteren
+            og kræver depositum.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Brug cykelskure og stativer til cykler.</li>
+            <li>Hold området ryddeligt.</li>
+            <li>Gamle cykler fjernes ved varslet cykeloprydning.</li>
+          </ul>
+        </article>
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
+            <div>
+              <span>Udlån</span>
+              <h3>Trailer</h3>
+            </div>
+          </div>
+
+          <p>
+            Kollegiet har trailere, som beboere kan låne via varmemesteren.
+            Det kræver depositum og fremvisning af ID.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Kontakt varmemesteren for reservation.</li>
+            <li>Medbring ID.</li>
+            <li>Aflever traileren i ordentlig stand.</li>
+          </ul>
+        </article>
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-cart3" aria-hidden="true"></i></span>
+            <div>
+              <span>Praktisk</span>
+              <h3>Trækvogne</h3>
+            </div>
+          </div>
+
+          <p>
+            Trækvogne findes rundt på kollegiet og kan bruges til transport.
+            Nøglen til dit værelse passer til hængelåsen.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Stil vognen tæt ind til væggen efter brug.</li>
+            <li>Lås den igen.</li>
+            <li>Lad hængelåsen hænge på væggen.</li>
+          </ul>
+        </article>
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-cup-hot" aria-hidden="true"></i></span>
+            <div>
+              <span>Mad</span>
+              <h3>Kiosk & pizzaria</h3>
+            </div>
+          </div>
+
+          <p>
+            Kiosken og pizzariaet er en del af kollegiets hverdag og kan bruges,
+            når madplanen crasher totalt.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Mandag-fredag: 15.00-21.00.</li>
+            <li>Lørdag-søndag: 13.00-21.00.</li>
+            <li>Maj-august: åbent til 22.00.</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Administration -->
+  <section id="administration" class="page-section border-bottom-soft" aria-labelledby="admin-title">
+    <div class="content-container">
+
+      <div class="two-column-layout resident-admin-layout">
+
+        <div>
+          <span class="section-kicker">Bolig og administration</span>
+          <h2 id="admin-title" class="section-title">Papirarbejde uden panik</h2>
+
+          <p class="section-text">
+            Her får du overblik over de vigtigste administrative situationer:
+            studieerklæring, fremleje, intern flytning, opsigelse, dispensation og husleje.
+          </p>
+
+          <div id="sekretariat" class="resident-side-note">
+            <h3>Sekretariatet</h3>
+            <p>
+              Sekretariatet hjælper med dispensationer, interne ventelister,
+              opsigelse og fremleje. Personlig betjening foregår i H-kælderen.
+            </p>
+
+            <dl>
+              <div>
+                <dt>Mandag</dt>
+                <dd>19.00-20.00</dd>
+              </div>
+
+              <div>
+                <dt>Torsdag</dt>
+                <dd>20.00-21.00</dd>
+              </div>
+            </dl>
           </div>
         </div>
-      </section>
 
-      <!-- Contact -->
-      <section id="kontakt" class="page-section" aria-labelledby="contact-title">
-        <div class="content-container">
-          <div class="section-header">
-            <span class="section-kicker">Kontakt</span>
-            <h2 id="contact-title" class="section-title">Hvem skal du kontakte?</h2>
-            <p class="section-text">
-              Ikke alle problemer skal sendes samme sted. Her er den hurtige sortering.
+        <div class="accordion resident-accordion" id="adminAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="adminStudyHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#adminStudy" aria-expanded="true" aria-controls="adminStudy">
+                Studieerklæring
+              </button>
+            </h3>
+
+            <div id="adminStudy" class="accordion-collapse collapse show" aria-labelledby="adminStudyHeading" data-bs-parent="#adminAccordion">
+              <div class="accordion-body">
+                <p>
+                  Du bliver mindst én gang om året bedt om at udfylde og indsende
+                  studieerklæring. Den modtages typisk fra KAB tre måneder før
+                  lejekontrakten udløber.
+                </p>
+
+                <ul>
+                  <li>Udfyld navn, adresse, uddannelse og forventet afslutning.</li>
+                  <li>Vedlæg studiebekræftelse eller få uddannelsesstedet til at stemple.</li>
+                  <li>Aflever via KABs boligportal.</li>
+                </ul>
+
+                <a class="text-link" href="https://www.kab-bolig.dk/portal" target="_blank" rel="noopener">
+                  Gå til KAB boligportal <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="adminSubletHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adminSublet" aria-expanded="false" aria-controls="adminSublet">
+                Fremleje
+              </button>
+            </h3>
+
+            <div id="adminSublet" class="accordion-collapse collapse" aria-labelledby="adminSubletHeading" data-bs-parent="#adminAccordion">
+              <div class="accordion-body">
+                <p>
+                  Fremleje skal gå gennem sekretariatet og være godkendt senest
+                  én måned før fremlejeperiodens start.
+                </p>
+
+                <ul>
+                  <li>Uddannelsesrelateret fremleje: op til 6 måneder.</li>
+                  <li>Ikke-uddannelsesrelateret fremleje: op til 3 måneder.</li>
+                  <li>Begge parter skal være studieaktive.</li>
+                  <li>Du må ikke tjene penge på fremleje.</li>
+                  <li>Airbnb og lignende portaler er ikke tilladt.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="adminMoveHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adminMove" aria-expanded="false" aria-controls="adminMove">
+                Intern flytning
+              </button>
+            </h3>
+
+            <div id="adminMove" class="accordion-collapse collapse" aria-labelledby="adminMoveHeading" data-bs-parent="#adminAccordion">
+              <div class="accordion-body">
+                <p>
+                  Ved intern flytning skal du kontakte sekretariatet og skrive dig på
+                  en intern venteliste.
+                </p>
+
+                <ul>
+                  <li>Almindelige værelser.</li>
+                  <li>Store enkeltværelser.</li>
+                  <li>Lejligheder for to beboere.</li>
+                  <li>Lejligheder med partner, der endnu ikke bor på kollegiet.</li>
+                  <li>Der betales dobbelt husleje i 14 dage ved intern flytning.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="adminCancelHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adminCancel" aria-expanded="false" aria-controls="adminCancel">
+                Opsigelse
+              </button>
+            </h3>
+
+            <div id="adminCancel" class="accordion-collapse collapse" aria-labelledby="adminCancelHeading" data-bs-parent="#adminAccordion">
+              <div class="accordion-body">
+                <p>
+                  Lejemålet opsiges ikke automatisk, når din kontrakt ophører.
+                  Du skal selv opsige skriftligt.
+                </p>
+
+                <ul>
+                  <li>Udfyld opsigelsesformular fra sekretariatet eller KAB.</li>
+                  <li>Send opsigelsen til KAB.</li>
+                  <li>Varsel: minimum 6 uger frem til næstkommende 1. i måneden.</li>
+                  <li>Oplys ny adresse, hvis du kender den.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="adminRentHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#adminRent" aria-expanded="false" aria-controls="adminRent">
+                Husleje og priser
+              </button>
+            </h3>
+
+            <div id="adminRent" class="accordion-collapse collapse" aria-labelledby="adminRentHeading" data-bs-parent="#adminAccordion">
+              <div class="accordion-body">
+                <p>
+                  Priser ændrer sig over tid, så tjek altid den nyeste opkrævning
+                  eller KAB for det endelige beløb.
+                </p>
+
+                <div class="resident-price-grid">
+                  <div class="resident-price-card">
+                    <span>Kollegieværelse</span>
+                    <strong>ca. 3.169 kr./md.</strong>
+                    <small>Eksempel baseret på nuværende informationsside.</small>
+                  </div>
+
+                  <div class="resident-price-card">
+                    <span>Lejlighed</span>
+                    <strong>ca. 5.857 kr./md.</strong>
+                    <small>Eksempel baseret på nuværende informationsside.</small>
+                  </div>
+                </div>
+
+                <p class="small text-muted mt-3 mb-0">
+                  Ved indflytning betales depositum svarende til tre måneders husleje.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Parking and bikes -->
+  <section id="parkering" class="page-section bg-soft border-bottom-soft" aria-labelledby="parking-title">
+    <div class="content-container">
+
+      <div class="section-header">
+        <span class="section-kicker">Parkering og cykler</span>
+        <h2 id="parking-title" class="section-title">Bil, gæster og cykelkaos</h2>
+
+        <p class="section-text">
+          Her får du et hurtigt overblik over parkeringstilladelse, OPARKO,
+          cykelparkering og cykeloprydning.
+        </p>
+      </div>
+
+      <div class="resident-info-grid resident-info-grid-compact">
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-car-front" aria-hidden="true"></i></span>
+            <div>
+              <span>Bil</span>
+              <h3>Parkering</h3>
+            </div>
+          </div>
+
+          <p>
+            Bilparkering foregår på kollegiets parkeringspladser ved Varmecentralen,
+            AB, EF, JK og PR.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Uden P-tilladelse: max 30 min. med korrekt P-skive.</li>
+            <li>Længere parkering kræver gyldig P-tilladelse.</li>
+            <li>Veje, stier og græsarealer må ikke bruges til parkering.</li>
+          </ul>
+        </article>
+
+        <article class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+            <div>
+              <span>Tilladelse</span>
+              <h3>OPARKO</h3>
+            </div>
+          </div>
+
+          <p>
+            Beboere kan blive oprettet i OPARKO via Klagenævnet.
+            Når du har login, kan du selv registrere din bil.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Send fulde navn.</li>
+            <li>Send adresse.</li>
+            <li>Send e-mail.</li>
+          </ul>
+        </article>
+
+        <article id="cykeloprydning" class="resident-info-card">
+          <div class="resident-info-card-header">
+            <span class="resident-card-icon"><i class="bi bi-bicycle" aria-hidden="true"></i></span>
+            <div>
+              <span>Cykler</span>
+              <h3>Cykeloprydning</h3>
+            </div>
+          </div>
+
+          <p>
+            Cykeloprydning varsles i god tid. Når der er aktiv oprydning,
+            får beboere strips i postkassen.
+          </p>
+
+          <ul class="resident-check-list">
+            <li>Sæt stripsen synligt på cyklen.</li>
+            <li>Typisk på styret eller sadelstangen.</li>
+            <li>Umærkede cykler kan blive fjernet.</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Rules -->
+  <section id="regler" class="page-section border-bottom-soft" aria-labelledby="rules-title">
+    <div class="content-container">
+
+      <div class="two-column-layout resident-rules-layout">
+
+        <div>
+          <span class="section-kicker">Regler og ansvar</span>
+          <h2 id="rules-title" class="section-title">Regler kort fortalt</h2>
+
+          <p class="section-text">
+            Reglerne handler ikke om at gøre livet kedeligt. De handler om, at mange
+            mennesker kan bo tæt sammen uden at fællesarealerne bliver til en boss fight.
+          </p>
+
+          <div class="resident-side-note">
+            <h3>Husk især</h3>
+            <p>
+              Tag hensyn til medbeboere, hold fællesarealer frie, ryd op efter dig
+              og kontakt den rigtige gruppe, hvis noget går galt.
             </p>
           </div>
-
-          <div class="content-grid content-grid-4">
-            <article class="contact-card h-100">
-              <i class="bi bi-tools" aria-hidden="true"></i>
-              <h3>Varmemester</h3>
-              <p>Varme, vand, nøgler, vaskebrik, vedligeholdelse og praktiske fejl.</p>
-              <a href="kontakt-hjaelp.html#varmemester">Kontakt varmemester</a>
-            </article>
-
-            <article class="contact-card h-100">
-              <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
-              <h3>Sekretariat</h3>
-              <p>Kontrakt, studiekontrol, fremleje, intern venteliste og opsigelse.</p>
-              <a href="kontakt-hjaelp.html#sekretariat">Kontakt sekretariatet</a>
-            </article>
-
-            <article class="contact-card h-100">
-              <i class="bi bi-wifi" aria-hidden="true"></i>
-              <h3>Netgruppen</h3>
-              <p>Internet, oprettelse, kabler, Wi-Fi og flytning af forbindelse.</p>
-              <a href="kontakt-hjaelp.html#internet">Få internet-hjælp</a>
-            </article>
-
-            <article class="contact-card h-100 contact-card-highlight">
-              <i class="bi bi-question-circle" aria-hidden="true"></i>
-              <h3>Ikke sikker?</h3>
-              <p>Start på kontakt-siden, hvis du ikke ved, hvor din henvendelse hører hjemme.</p>
-              <a href="kontakt-hjaelp.html">Find hjælp</a>
-            </article>
-          </div>
         </div>
-      </section>
-    </main>
+
+        <div class="accordion resident-accordion" id="rulesAccordion">
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="rulesGeneralHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rulesGeneral" aria-expanded="true" aria-controls="rulesGeneral">
+                Husorden og hensyn
+              </button>
+            </h3>
+
+            <div id="rulesGeneral" class="accordion-collapse collapse show" aria-labelledby="rulesGeneralHeading" data-bs-parent="#rulesAccordion">
+              <div class="accordion-body">
+                <p>
+                  Husordenen handler om støj, oprydning, fællesarealer, gæster
+                  og hensyn til bygninger og beboere.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="rulesSharedHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rulesShared" aria-expanded="false" aria-controls="rulesShared">
+                Fællesarealer
+              </button>
+            </h3>
+
+            <div id="rulesShared" class="accordion-collapse collapse" aria-labelledby="rulesSharedHeading" data-bs-parent="#rulesAccordion">
+              <div class="accordion-body">
+                <p>
+                  Gange, trapper, kældre og andre fællesarealer skal holdes ryddelige,
+                  så de kan bruges sikkert af alle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="rulesComplaintHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rulesComplaint" aria-expanded="false" aria-controls="rulesComplaint">
+                Klager og konflikter
+              </button>
+            </h3>
+
+            <div id="rulesComplaint" class="accordion-collapse collapse" aria-labelledby="rulesComplaintHeading" data-bs-parent="#rulesAccordion">
+              <div class="accordion-body">
+                <p>
+                  Start med dialog, hvis det er muligt. Hvis problemet fortsætter,
+                  kan Klagenævnet eller administrationen hjælpe med næste skridt.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="rulesDocsHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rulesDocs" aria-expanded="false" aria-controls="rulesDocs">
+                Officielle dokumenter
+              </button>
+            </h3>
+
+            <div id="rulesDocs" class="accordion-collapse collapse" aria-labelledby="rulesDocsHeading" data-bs-parent="#rulesAccordion">
+              <div class="accordion-body">
+                <p>
+                  De vigtigste regelsæt er ordensreglementet, opsigelsesbekendtgørelsen,
+                  beboerrådets forretningsorden og vedtægterne.
+                </p>
+
+                <a class="text-link" href="https://nybro.dk/for-beboere/reglement/" target="_blank" rel="noopener">
+                  Se officielle dokumenter <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Resident guides -->
+  <section id="guides" class="page-section bg-white-soft border-bottom-soft" aria-labelledby="guides-title">
+    <div class="content-container">
+
+      <div class="section-header center">
+        <span class="section-kicker">Beboer-guides</span>
+        <h2 id="guides-title" class="section-title">Løs små problemer selv</h2>
+
+        <p class="section-text">
+          Gamle beboertips omskrevet til hurtige guides. Perfekt til de små problemer,
+          hvor man ikke gider panikke-mail nr. 500.
+        </p>
+      </div>
+
+      <div class="resident-guide-grid">
+
+        <article class="resident-guide-card">
+          <i class="bi bi-droplet-half" aria-hidden="true"></i>
+          <h3>Afkalk bruser</h3>
+          <p>
+            Brug eddike eller afkalker, rens dyser og lad koldt vand løbe igennem,
+            så kalk og partikler ikke sætter sig fast.
+          </p>
+        </article>
+
+        <article class="resident-guide-card">
+          <i class="bi bi-wind" aria-hidden="true"></i>
+          <h3>Udluftning og skimmel</h3>
+          <p>
+            Luft ud flere gange dagligt i 5-10 minutter, hold luftslusen åben,
+            og kontakt varmemesteren ved mistanke om skimmelsvamp.
+          </p>
+        </article>
+
+        <article class="resident-guide-card">
+          <i class="bi bi-lightbulb" aria-hidden="true"></i>
+          <h3>Lampe gået ud</h3>
+          <p>
+            Send besked til varmemesteren. Hvis det sker op til weekend,
+            kan løsningen tage lidt længere tid.
+          </p>
+        </article>
+
+        <article class="resident-guide-card">
+          <i class="bi bi-alarm" aria-hidden="true"></i>
+          <h3>Brandalarm ved bad</h3>
+          <p>
+            Hold badeværelsesdøren lukket under badet, så dampen ikke aktiverer alarmen.
+          </p>
+        </article>
+
+        <article class="resident-guide-card">
+          <i class="bi bi-water" aria-hidden="true"></i>
+          <h3>Vand i kælder</h3>
+          <p>
+            Kontakt varmemesteren hurtigt, så der kan tilkaldes hjælp og eventuelt bruges pumpe eller vandstøvsuger.
+          </p>
+        </article>
+
+        <article class="resident-guide-card">
+          <i class="bi bi-box-seam" aria-hidden="true"></i>
+          <h3>Inventar og hylder</h3>
+          <p>
+            Noget gammelt inventar cirkulerer stadig blandt beboere. Spørg naboer
+            eller varmemesteren, hvis du mangler noget bestemt.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact guide -->
+  <section id="kontakt" class="page-section bg-soft" aria-labelledby="contact-title">
+    <div class="content-container">
+
+      <div class="section-header">
+        <span class="section-kicker">Kontaktvejviser</span>
+        <h2 id="contact-title" class="section-title">Hvem skal du kontakte?</h2>
+
+        <p class="section-text">
+          Ikke alle problemer skal samme sted hen. Brug den her oversigt,
+          så din besked ikke ender på en lille digital verdensrejse.
+        </p>
+      </div>
+
+      <div class="resident-contact-grid">
+
+        <article class="resident-contact-card">
+          <h3>Varmemester</h3>
+          <p>Vand, varme, nøgler, vaskebrik, cykelskur, trailer, inventar og praktiske fejl.</p>
+          <a class="text-link" href="kontakt-hjaelp.html">
+            Kontakt varmemester <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="resident-contact-card">
+          <h3>Sekretariat</h3>
+          <p>Studiekontrol, fremleje, intern flytning, opsigelse, dispensation og ventelister.</p>
+          <a class="text-link" href="kontakt-hjaelp.html">
+            Kontakt sekretariat <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="resident-contact-card">
+          <h3>Netgruppen</h3>
+          <p>Internet, oprettelse, kabler, Wi-Fi, registrering og flytning af forbindelse.</p>
+          <a class="text-link" href="kontakt-hjaelp.html">
+            Kontakt netgruppen <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="resident-contact-card">
+          <h3>Klagenævnet</h3>
+          <p>Parkering, OPARKO, parkeringsspørgsmål og klager, hvor dialog ikke er nok.</p>
+          <a class="text-link" href="kontakt-hjaelp.html">
+            Kontakt Klagenævnet <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 
 

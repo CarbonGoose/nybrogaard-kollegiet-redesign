@@ -4388,243 +4388,7 @@ body.search-lock {
 }
 
 
-/* =====================================================
-   For beboere page
-   Extra styles for resident dashboard sections
-===================================================== */
 
-.resident-hero-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.resident-hero-card::after {
-  content: "";
-  position: absolute;
-  right: -2.5rem;
-  bottom: -2.5rem;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.resident-hero-list {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 0.55rem;
-  padding-left: 0;
-  list-style: none;
-}
-
-.resident-hero-list a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  color: var(--color-primary-dark);
-  font-weight: 750;
-  text-decoration: none;
-}
-
-.resident-hero-list a::before {
-  content: "\F26A";
-  color: var(--color-accent);
-  font-family: "bootstrap-icons";
-  font-size: 0.95rem;
-}
-
-.resident-hero-list a:hover {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-
-.resident-dashboard-card {
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.resident-dashboard-card:hover,
-.resident-dashboard-card:focus-visible {
-  color: var(--color-text);
-}
-
-.resident-news-layout,
-.resident-rules-layout {
-  align-items: center;
-}
-
-.resident-notice-highlight {
-  background: linear-gradient(135deg, rgba(238, 243, 232, 0.95), rgba(242, 223, 207, 0.8));
-}
-
-.resident-news-list .list-group-item {
-  border-color: var(--color-border);
-}
-
-.resident-practical-grid {
-  align-items: stretch;
-}
-
-.resident-info-panel {
-  display: flex;
-  flex-direction: column;
-}
-
-.resident-panel-heading {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.resident-panel-heading .ui-card-icon {
-  flex: 0 0 auto;
-  margin-bottom: 0;
-}
-
-.resident-panel-heading h3 {
-  margin-bottom: 0;
-  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
-}
-
-.resident-label {
-  display: inline-flex;
-  margin-bottom: 0.2rem;
-  color: var(--color-primary);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.resident-check-list {
-  display: grid;
-  gap: 0.65rem;
-  margin: 1rem 0 0;
-  padding-left: 0;
-  color: var(--color-muted);
-  list-style: none;
-}
-
-.resident-check-list li {
-  position: relative;
-  padding-left: 1.6rem;
-}
-
-.resident-check-list li::before {
-  content: "\F26E";
-  position: absolute;
-  left: 0;
-  top: 0.05rem;
-  color: var(--color-secondary);
-  font-family: "bootstrap-icons";
-}
-
-.resident-accordion .accordion-item {
-  overflow: hidden;
-  border-color: var(--color-border);
-}
-
-.resident-accordion .accordion-button {
-  color: var(--color-primary-dark);
-  font-weight: 750;
-}
-
-.resident-accordion .accordion-button:not(.collapsed) {
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-light);
-  box-shadow: none;
-}
-
-.resident-step-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--grid-gap);
-}
-
-.resident-step-card {
-  position: relative;
-  min-height: 100%;
-  padding: clamp(1.15rem, 2.5vw, 1.55rem);
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.resident-step-number {
-  display: inline-flex;
-  margin-bottom: 1rem;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-size: 1.45rem;
-  font-weight: 800;
-}
-
-.resident-step-card h3 {
-  font-size: 1.08rem;
-  font-weight: 800;
-}
-
-.resident-step-card p {
-  color: var(--color-muted);
-  font-size: 0.96rem;
-}
-
-.resident-link-card {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  min-height: 5rem;
-  padding: 1rem 1.15rem;
-  color: var(--color-text);
-  background-color: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  font-weight: 750;
-  text-decoration: none;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
-}
-
-.resident-link-card i {
-  display: inline-grid;
-  place-items: center;
-  width: 2.7rem;
-  height: 2.7rem;
-  color: var(--color-primary);
-  background-color: var(--color-primary-light);
-  border-radius: 999px;
-  font-size: 1.25rem;
-}
-
-.resident-link-card:hover,
-.resident-link-card:focus-visible {
-  color: var(--color-text);
-  border-color: rgba(36, 71, 52, 0.24);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-}
-
-@media (max-width: 991.98px) {
-  .resident-step-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 767.98px) {
-  .resident-step-grid,
-  .resident-link-grid,
-  .resident-practical-grid,
-  .resident-dashboard-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .resident-panel-heading {
-    align-items: flex-start;
-  }
-}
 /* =====================================================
    Community page
    Fællesskab page-specific styles
@@ -6154,409 +5918,1158 @@ html {
 
 
 /* =====================================================
-   Global compact scale
-   Makes the whole website feel more balanced and standard-sized
+   GLOBAL TYPOGRAPHY RESET
+   Smaller, calmer and more consistent text sizes
+   Place this at the VERY BOTTOM of style.css
 ===================================================== */
 
 :root {
-  /* Slightly tighter layout */
-  --page-max-width: 1120px;
-  --page-max-width-wide: 1220px;
-  --container-padding: clamp(1rem, 3vw, 1.6rem);
+  /* One global font system */
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-heading: var(--font-body);
 
-  /* Smaller spacing scale */
-  --space-sm: 0.85rem;
-  --space-md: 1.2rem;
-  --space-lg: 1.6rem;
-  --space-xl: 2.25rem;
-  --space-2xl: 3.25rem;
-  --space-3xl: 4.5rem;
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
 
-  /* Smaller section padding */
-  --section-padding-sm: clamp(2rem, 4vw, 3rem);
-  --section-padding: clamp(2.75rem, 5.5vw, 4.25rem);
-  --section-padding-lg: clamp(3.5rem, 7vw, 5.5rem);
+  /* Recommended web text scale */
+  --text-xs: 0.78rem;
+  --text-sm: 0.88rem;
+  --text-base: 1rem;
+  --text-md: 1.05rem;
+  --text-lg: 1.15rem;
 
-  /* Slightly smaller grid spacing */
-  --grid-gap: clamp(0.85rem, 2vw, 1.35rem);
+  --h1-size: clamp(2rem, 4vw, 2.8rem);
+  --h2-size: clamp(1.55rem, 3vw, 2.05rem);
+  --h3-size: clamp(1.18rem, 2vw, 1.38rem);
+  --h4-size: clamp(1rem, 1.5vw, 1.12rem);
+  --h5-size: 0.98rem;
+  --h6-size: 0.9rem;
 }
 
 /* ---------- Base text ---------- */
 
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-size: 0.96rem;
-  line-height: 1.58;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+}
+
+/* Make all normal text consistent */
+p,
+li,
+td,
+th,
+label,
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-body);
 }
 
 p,
 li {
-  font-size: 0.96rem;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* ---------- Global headings ---------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.page-title,
+.card-title,
+.modal-title,
+.footer-heading {
+  font-family: var(--font-heading) !important;
+  color: var(--color-primary-dark);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+h1,
+.h1 {
+  font-size: var(--h1-size) !important;
+  font-weight: var(--weight-bold) !important;
+}
+
+h2,
+.h2,
+.section-title {
+  font-size: var(--h2-size) !important;
+  font-weight: var(--weight-bold) !important;
+}
+
+h3,
+.h3 {
+  font-size: var(--h3-size) !important;
+  font-weight: var(--weight-semibold) !important;
+}
+
+h4,
+.h4 {
+  font-size: var(--h4-size) !important;
+  font-weight: var(--weight-semibold) !important;
+}
+
+h5,
+.h5 {
+  font-size: var(--h5-size) !important;
+  font-weight: var(--weight-semibold) !important;
+}
+
+h6,
+.h6 {
+  font-size: var(--h6-size) !important;
+  font-weight: var(--weight-bold) !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---------- Bootstrap display classes ----------
+   Stops accidental giant Bootstrap titles
+---------- */
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
+  font-family: var(--font-heading) !important;
+  font-weight: var(--weight-bold) !important;
+  line-height: 1.12;
+}
+
+.display-1,
+.display-2 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+}
+
+.display-3,
+.display-4 {
+  font-size: clamp(2rem, 4vw, 2.7rem) !important;
+}
+
+.display-5,
+.display-6 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem) !important;
+}
+
+/* ---------- Hero text ----------
+   These were the biggest offenders
+---------- */
+
+.page-hero h1,
+.home-hero h1,
+.hero-home-v2 h1,
+.hero-main-copy h1,
+#hero-title {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.05rem, 4.8vw, 3rem) !important;
+  font-weight: var(--weight-bold) !important;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.page-hero p,
+.hero-subtitle,
+.hero-main-copy p {
+  font-size: clamp(1rem, 1.4vw, 1.12rem) !important;
+  line-height: 1.6;
+}
+
+/* ---------- Section text ---------- */
+
+.section-header,
+.section-intro {
+  max-width: 720px;
+}
+
+.section-text,
+.lead,
+.content-panel p,
+.ui-card-text,
+.feature-card p,
+.contact-card p,
+.club-card p,
+.transport-card p,
+.facility-item p,
+.life-card p,
+.life-link-panel p,
+.location-address-card p,
+.location-media-label p {
+  font-size: var(--text-base) !important;
+  line-height: 1.6;
 }
 
 .lead {
+  font-weight: var(--weight-regular);
+}
+
+/* ---------- Small labels / eyebrows ---------- */
+
+.section-kicker,
+.eyebrow,
+.location-media-label span,
+.life-brand-text span,
+.search-result-meta {
+  font-size: var(--text-xs) !important;
+  font-weight: var(--weight-bold) !important;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Cards and smaller components ---------- */
+
+.ui-card-title,
+.feature-card h3,
+.contact-card h3,
+.club-card h3,
+.transport-card h3,
+.life-card h3,
+.life-link-panel h3,
+.location-address-card h3,
+.search-result-card h3 {
+  font-family: var(--font-heading) !important;
+  font-size: var(--h4-size) !important;
+  font-weight: var(--weight-semibold) !important;
+  line-height: 1.25;
+}
+
+/* Big category titles should not become huge */
+.facility-category-header h3,
+.life-brand-text strong,
+.location-media-label strong,
+.college-slider .carousel-caption h3 {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.15rem, 2vw, 1.45rem) !important;
+  font-weight: var(--weight-bold) !important;
+  line-height: 1.2;
+}
+
+/* Facility item titles */
+.facility-item h4 {
+  font-family: var(--font-heading) !important;
+  font-size: 1rem !important;
+  font-weight: var(--weight-semibold) !important;
+}
+
+/* ---------- Notice box / "Godt at vide" ---------- */
+
+.notice-box h3 {
+  font-family: var(--font-heading) !important;
+  font-size: 1rem !important;
+  font-weight: var(--weight-semibold) !important;
+  line-height: 1.25;
+}
+
+.notice-box p {
+  font-size: 0.95rem !important;
+  line-height: 1.6;
+}
+
+/* Make notice icon less chunky */
+.notice-box::before {
+  width: 2.55rem;
+  height: 2.55rem;
   font-size: 1.05rem;
 }
 
-/* ---------- Headings ---------- */
+/* ---------- Navigation / header ---------- */
 
-h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+.brand-text strong {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(1.25rem, 2vw, 1.65rem) !important;
+  font-weight: var(--weight-bold) !important;
 }
 
-h2 {
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
+.topbar-actions,
+.topbar-link,
+.main-nav .nav-link,
+.nav-search,
+.mobile-action-link,
+.dropdown-item {
+  font-size: 0.92rem !important;
 }
 
-h3 {
-  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
-}
-
-.section-title {
-  font-size: clamp(1.75rem, 3.4vw, 2.55rem);
-}
-
-.section-header h2,
-.section-intro h2,
-.content-panel h2 {
-  font-size: clamp(1.65rem, 3vw, 2.3rem);
-}
-
-.section-text {
-  font-size: 1rem;
-}
-
-.section-kicker,
-.eyebrow {
-  font-size: 0.76rem;
-  margin-bottom: 0.55rem;
+.main-nav .nav-link,
+.nav-search {
+  font-weight: var(--weight-semibold) !important;
 }
 
 /* ---------- Buttons ---------- */
 
 .btn {
-  padding: 0.58rem 1rem;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
 }
 
-/* ---------- Cards and panels ---------- */
+/* ---------- Tables and forms ---------- */
 
-.content-panel,
-.ui-card,
-.contact-card,
-.feature-card,
-.facility-category-card,
-.life-card,
-.move-card,
-.resident-step-card,
-.facebook-card,
-.community-highlight-card {
-  padding: clamp(1rem, 2.2vw, 1.35rem);
+.info-table td,
+.info-table th,
+.form-control,
+.form-select {
+  font-size: 0.95rem;
 }
 
-.feature-card {
-  min-height: 12.5rem;
-  gap: 0.65rem;
+/* ---------- Search overlay ---------- */
+
+.search-panel-header h2 {
+  font-size: clamp(1.35rem, 3vw, 1.8rem) !important;
 }
 
-.feature-icon,
-.ui-card-icon,
-.contact-card i {
-  width: 2.75rem;
-  height: 2.75rem;
-  font-size: 1.25rem;
+.search-input-wrap input {
+  font-size: 1rem !important;
 }
 
-.feature-card h3,
-.ui-card-title,
-.contact-card h3,
-.life-card h3,
-.move-card h3 {
-  font-size: 1rem;
+.search-suggestions button,
+.search-results-info,
+.search-result-card p {
+  font-size: 0.92rem !important;
 }
 
-.feature-card p,
-.ui-card-text,
-.contact-card p,
-.life-card p,
-.move-card p {
-  font-size: 0.9rem;
+/* ---------- Footer ---------- */
+
+.footer-heading {
+  font-size: 0.85rem !important;
+  font-weight: var(--weight-bold) !important;
 }
 
-/* ---------- Navigation ---------- */
+/* ---------- Mobile fine-tuning ---------- */
 
-.topbar {
-  min-height: 3.8rem;
+@media (max-width: 575.98px) {
+  :root {
+    --h1-size: clamp(1.85rem, 9vw, 2.35rem);
+    --h2-size: clamp(1.4rem, 7vw, 1.75rem);
+    --h3-size: clamp(1.12rem, 5vw, 1.25rem);
+  }
+
+  .page-hero h1,
+  .home-hero h1,
+  .hero-home-v2 h1,
+  .hero-main-copy h1,
+  #hero-title {
+    font-size: clamp(1.9rem, 9vw, 2.45rem) !important;
+  }
+
+  p,
+  li,
+  .section-text,
+  .lead {
+    font-size: 0.97rem !important;
+  }
 }
 
-.topbar .container {
-  min-height: 3.8rem;
+
+
+
+
+
+
+
+/* =====================================================
+   20. For beboere - compact polished version
+   Place at the VERY bottom of style.css
+   ===================================================== */
+
+/* ---------- Page density ---------- */
+
+#overblik,
+#nyheder,
+#akut,
+#hverdag,
+#administration,
+#parkering,
+#regler,
+#guides,
+#kontakt {
+  scroll-margin-top: 6.5rem;
 }
 
-.brand-logo {
-  width: clamp(2.4rem, 4vw, 3.35rem);
-  height: clamp(2.4rem, 4vw, 3.35rem);
+#overblik.page-section,
+#nyheder.page-section,
+#akut.page-section,
+#hverdag.page-section,
+#administration.page-section,
+#parkering.page-section,
+#regler.page-section,
+#guides.page-section,
+#kontakt.page-section {
+  padding-block: clamp(2.25rem, 4.2vw, 3.4rem) !important;
 }
 
-.brand-text strong {
-  font-size: clamp(1.4rem, 1.8vw, 1.95rem);
+#main-content .section-header {
+  margin-bottom: 1.35rem;
 }
 
-.main-nav {
-  min-height: 2.75rem;
+#main-content .section-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem) !important;
+  line-height: 1.15;
 }
 
-.main-nav .container,
-.main-nav .navbar-nav,
-.main-nav .nav-link,
-.nav-search {
-  min-height: 2.75rem;
-}
-
-.main-nav .nav-link,
-.nav-search {
-  padding-inline: 0.95rem !important;
-  font-size: 0.9rem;
-}
-
-/* ---------- Hero compact ---------- */
-
-.home-hero.hero-home-v2 {
-  min-height: clamp(27rem, 56vh, 35rem);
-  padding-block: clamp(2rem, 4vw, 3.2rem);
-}
-
-.hero-v2-layout {
-  gap: clamp(1.4rem, 3vw, 2.6rem);
-}
-
-.hero-main-info {
-  min-height: 22rem;
-  max-width: 38rem;
-  padding: clamp(1.25rem, 2.4vw, 1.75rem);
-}
-
-.hero-main-info h1 {
-  font-size: clamp(2rem, 3.2vw, 3rem);
-}
-
-.hero-main-info .lead {
-  font-size: 0.92rem;
+#main-content .section-text {
+  max-width: 58ch;
+  font-size: 0.94rem !important;
   line-height: 1.55;
 }
 
-.hero-brand-name {
-  font-size: 0.68rem;
+#main-content .section-kicker {
+  margin-bottom: 0.45rem;
+  font-size: 0.68rem !important;
+  letter-spacing: 0.11em;
 }
 
-.hero-actions {
-  gap: 0.65rem;
+#main-content .section-kicker::before {
+  width: 1.35rem;
 }
 
-.hero-main-info .btn {
-  min-height: 2.25rem;
-  padding: 0.55rem 0.9rem;
-  font-size: 0.86rem;
+
+/* ---------- Hero: smaller and calmer ---------- */
+
+.resident-hub-hero {
+  padding-block: clamp(2.5rem, 5vw, 3.8rem) !important;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(199, 137, 85, 0.13), transparent 30%),
+    linear-gradient(135deg, rgba(239, 244, 235, 0.96), rgba(251, 250, 245, 0.98));
 }
 
-.hero-tags {
-  gap: 0.55rem 0.9rem;
-  padding-top: 0.7rem;
+.resident-hub-hero .page-hero-inner {
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.34fr) !important;
+  gap: clamp(1.4rem, 3.5vw, 2.4rem) !important;
 }
 
-.hero-tags span {
-  font-size: 0.72rem;
+.resident-hub-hero .page-hero-text {
+  max-width: 39rem !important;
 }
 
-/* ---------- Hero side / news ---------- */
-
-.hero-side-stack {
-  width: min(100%, 20.5rem);
-  min-height: 22rem;
-  gap: 0.8rem;
+.resident-hub-hero h1 {
+  max-width: 15ch;
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.8rem, 3.6vw, 2.45rem) !important;
+  letter-spacing: -0.025em;
 }
 
-.hero-news-mini {
-  padding: 0.9rem;
-  border-radius: 1rem;
+.resident-hub-hero p {
+  max-width: 54ch;
+  font-size: 0.98rem !important;
+  line-height: 1.55;
 }
 
-.hero-news-mini-header {
-  margin-bottom: 0.65rem;
+.resident-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.15rem !important;
 }
 
-.hero-news-mini h2 {
-  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+.resident-hero-actions .btn {
+  padding: 0.52rem 0.9rem;
+  font-size: 0.87rem;
 }
 
-.hero-news-eyebrow {
-  font-size: 0.62rem;
-  margin-bottom: 0.15rem;
+.resident-hero-card {
+  padding: 1rem !important;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
 }
 
-.live-badge {
-  padding: 0.23rem 0.48rem;
-  font-size: 0.64rem;
+.resident-hero-card h2 {
+  margin-bottom: 0.75rem !important;
+  font-family: var(--font-body);
+  font-size: 0.9rem !important;
+  font-weight: 850 !important;
 }
 
-.hero-live-message {
-  padding: 0.62rem 0.7rem;
+.resident-hero-list {
+  display: grid;
+  gap: 0.45rem !important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.hero-live-label {
-  font-size: 0.6rem;
+.resident-hero-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.65rem;
+  padding: 0.55rem 0.65rem !important;
+  color: var(--color-primary-dark);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+  text-decoration: none;
 }
 
-.hero-live-message p {
-  font-size: 0.79rem;
-  line-height: 1.3;
+.resident-hero-list a::before {
+  content: none !important;
 }
 
-.hero-news-mini-list {
-  gap: 0.45rem;
-  margin-top: 0.6rem;
+.resident-hero-list i {
+  display: inline-grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  flex: 0 0 auto;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border-radius: 999px;
+  font-size: 0.88rem !important;
 }
 
-.hero-news-mini-item {
-  padding: 0.6rem 0.7rem;
+
+/* ---------- Quick navigation ---------- */
+
+.resident-shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem !important;
 }
 
-.hero-news-mini-item span {
-  font-size: 0.62rem;
+.resident-shortcut-grid .shortcut-card {
+  min-height: 3.35rem !important;
+  padding: 0.65rem 0.8rem !important;
+  border-radius: 0.9rem;
 }
 
-.hero-news-mini-item p {
-  font-size: 0.78rem;
+.resident-shortcut-grid .shortcut-card i {
+  font-size: 1.05rem !important;
+}
+
+.resident-shortcut-grid .shortcut-card span {
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.resident-shortcut-grid .shortcut-card::after {
+  font-size: 0.8rem;
+}
+
+
+/* ---------- Overview task cards ---------- */
+
+.resident-task-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 0.85rem !important;
+}
+
+.resident-task-card {
+  display: grid;
+  align-content: start;
+  min-height: 0 !important;
+  padding: 0.95rem !important;
+  color: var(--color-text);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem !important;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.resident-task-card:hover,
+.resident-task-card:focus-visible {
+  color: var(--color-text);
+  transform: translateY(-2px);
+  border-color: rgba(199, 137, 85, 0.42);
+  box-shadow: var(--shadow-md);
+}
+
+.resident-task-card.urgent {
+  background:
+    linear-gradient(135deg, rgba(199, 137, 85, 0.12), rgba(255, 255, 255, 0.96)),
+    #ffffff;
+  border-color: rgba(199, 137, 85, 0.34);
+}
+
+.resident-task-icon {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  margin-bottom: 0.65rem !important;
+  color: var(--color-primary-dark);
+  background: var(--color-accent-soft);
+  border-radius: 999px;
+  font-size: 0.98rem !important;
+}
+
+.resident-task-label {
+  width: fit-content;
+  margin-bottom: 0.45rem !important;
+  padding: 0.18rem 0.5rem !important;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border-radius: 999px;
+  font-size: 0.64rem !important;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resident-task-card h3 {
+  margin-bottom: 0.35rem !important;
+  font-family: var(--font-body);
+  font-size: 0.98rem !important;
+  font-weight: 850 !important;
   line-height: 1.25;
 }
 
-.hero-news-date {
-  font-size: 0.68rem;
+.resident-task-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.86rem !important;
+  line-height: 1.45;
 }
 
-.hero-news-mini-link {
-  margin-top: 0.65rem;
-  padding: 0.48rem 0.75rem;
-  font-size: 0.74rem;
+
+/* ---------- News board: less chunky ---------- */
+
+.resident-news-board {
+  max-width: 980px;
+  margin-inline: auto;
+  padding: 1.1rem !important;
+  background:
+    linear-gradient(135deg, #ffffff, rgba(251, 250, 245, 0.9));
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 1.15rem !important;
+  box-shadow: var(--shadow-sm) !important;
 }
 
-/* ---------- Hero scroll CTA ---------- */
-
-.hero-scroll-card {
-  min-height: 4.5rem;
-  padding: 0.75rem 0.9rem;
+.resident-news-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem !important;
 }
 
-.hero-scroll-card span {
+.resident-news-main-message,
+.resident-news-status {
+  padding: 0.85rem !important;
+  border-radius: 0.95rem !important;
+}
+
+.resident-news-main-message {
+  background: rgba(36, 71, 52, 0.045);
+  border: 1px solid rgba(36, 71, 52, 0.1);
+}
+
+.resident-news-status {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.resident-news-main-message span,
+.resident-news-status span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.64rem !important;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resident-news-main-message span {
+  color: var(--color-accent);
+}
+
+.resident-news-status span,
+.resident-news-status p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.resident-news-main-message h3 {
+  margin-bottom: 0.25rem !important;
+  font-family: var(--font-body);
+  font-size: 1rem !important;
+  font-weight: 850 !important;
+}
+
+.resident-news-main-message p,
+.resident-news-status p {
+  margin: 0;
+  font-size: 0.86rem !important;
+  line-height: 1.45;
+}
+
+.resident-news-status strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.resident-news-list {
+  display: grid;
+  gap: 0.5rem !important;
+}
+
+.resident-news-item {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.7rem !important;
+  align-items: center;
+  padding: 0.7rem 0.8rem !important;
+  color: var(--color-text);
+  background: #ffffff !important;
+  border: 1px solid var(--color-border);
+  border-radius: 0.85rem !important;
+  text-decoration: none;
+}
+
+.resident-news-item:hover,
+.resident-news-item:focus-visible {
+  color: var(--color-text);
+  transform: translateY(-2px);
+  border-color: rgba(199, 137, 85, 0.4);
+  box-shadow: var(--shadow-sm);
+}
+
+.resident-news-item span {
+  display: block;
+  margin-bottom: 0.15rem !important;
+  color: var(--color-accent);
+  font-size: 0.63rem !important;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resident-news-item h3 {
+  margin-bottom: 0.12rem !important;
+  font-family: var(--font-body);
+  font-size: 0.9rem !important;
+  font-weight: 850 !important;
+}
+
+.resident-news-item p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.82rem !important;
+  line-height: 1.4;
+}
+
+.resident-news-item i {
+  color: var(--color-accent);
+  font-size: 1.1rem !important;
+}
+
+
+/* ---------- Card grids ---------- */
+
+.resident-emergency-grid,
+.resident-info-grid,
+.resident-guide-grid,
+.resident-contact-grid {
+  display: grid;
+  gap: 0.85rem !important;
+}
+
+.resident-emergency-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+.resident-info-grid,
+.resident-info-grid-compact,
+.resident-guide-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.resident-contact-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+
+/* ---------- Shared compact cards ---------- */
+
+.resident-emergency-card,
+.resident-info-card,
+.resident-guide-card,
+.resident-contact-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 0.95rem !important;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.resident-emergency-card-highlight {
+  background:
+    linear-gradient(135deg, rgba(199, 137, 85, 0.11), rgba(255, 255, 255, 0.97)),
+    #ffffff;
+  border-color: rgba(199, 137, 85, 0.32);
+}
+
+.resident-card-icon,
+.resident-guide-card > i {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem !important;
+  height: 2.2rem !important;
+  margin-bottom: 0.65rem !important;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  border-radius: 999px;
+  font-size: 0.95rem !important;
+}
+
+.resident-emergency-card-highlight .resident-card-icon {
+  background: var(--color-accent-soft);
+}
+
+.resident-emergency-card h3,
+.resident-info-card h3,
+.resident-guide-card h3,
+.resident-contact-card h3 {
+  margin-bottom: 0.35rem !important;
+  font-family: var(--font-body);
+  font-size: 0.95rem !important;
+  font-weight: 850 !important;
+  line-height: 1.25;
+}
+
+.resident-emergency-card p,
+.resident-info-card p,
+.resident-guide-card p,
+.resident-contact-card p {
+  margin-bottom: 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.84rem !important;
+  line-height: 1.45;
+}
+
+.resident-emergency-card ul,
+.resident-info-card ul {
+  margin-bottom: 0.75rem !important;
+}
+
+.resident-emergency-card .btn,
+.resident-info-card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 0.48rem 0.85rem;
   font-size: 0.84rem;
 }
 
-.hero-scroll-card span::after {
-  font-size: 0.64rem;
+.resident-emergency-card .text-link,
+.resident-info-card .text-link,
+.resident-contact-card .text-link {
+  margin-top: auto;
+  font-size: 0.84rem;
 }
 
-.hero-scroll-card i {
-  width: 2.15rem;
-  height: 2.15rem;
-  font-size: 1.35rem;
+
+/* ---------- Info headers ---------- */
+
+.resident-info-card-header {
+  display: flex;
+  gap: 0.65rem !important;
+  align-items: flex-start;
+  margin-bottom: 0.7rem !important;
 }
 
-/* ---------- Front page club/news section ---------- */
-
-.home-panel {
-  padding: clamp(1.15rem, 2.4vw, 1.55rem);
+.resident-info-card-header .resident-card-icon {
+  flex: 0 0 auto;
+  margin-bottom: 0 !important;
 }
 
-.home-panel-header {
-  margin-bottom: 1.1rem;
+.resident-info-card-header span {
+  display: block;
+  margin-bottom: 0.12rem !important;
+  color: var(--color-primary);
+  font-size: 0.63rem !important;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.home-panel-header h2 {
-  font-size: clamp(1.55rem, 2.5vw, 2rem);
+
+/* ---------- Check lists ---------- */
+
+.resident-check-list {
+  display: grid;
+  gap: 0.35rem !important;
+  margin: 0.65rem 0 0.75rem !important;
+  padding: 0 !important;
+  color: var(--color-muted);
+  list-style: none;
 }
 
-.home-panel-header p {
-  font-size: 0.92rem;
+.resident-check-list li {
+  position: relative;
+  padding-left: 1.25rem !important;
+  font-size: 0.82rem !important;
+  line-height: 1.4;
 }
 
-.home-club-preview-grid {
-  gap: 0.8rem;
+.resident-check-list li::before {
+  content: "✓" !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+  font-weight: 900;
 }
 
-.home-club-body {
-  padding: 0.85rem;
+
+/* ---------- Administration / rules ---------- */
+
+.resident-admin-layout,
+.resident-rules-layout {
+  align-items: start !important;
 }
 
-.home-club-body h3 {
-  font-size: 0.98rem;
+.resident-side-note {
+  margin-top: 1rem !important;
+  padding: 0.95rem !important;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 1rem !important;
+  box-shadow: var(--shadow-sm);
 }
 
-.home-club-body p {
+.resident-side-note h3 {
+  margin-bottom: 0.35rem !important;
+  font-family: var(--font-body);
+  font-size: 0.95rem !important;
+  font-weight: 850 !important;
+}
+
+.resident-side-note p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.84rem !important;
+  line-height: 1.45;
+}
+
+.resident-side-note dl {
+  display: grid;
+  gap: 0.35rem !important;
+  margin: 0.75rem 0 0 !important;
+}
+
+.resident-side-note dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.4rem !important;
+  border-top: 1px solid var(--color-border);
+}
+
+.resident-side-note dt {
+  color: var(--color-primary-dark);
+  font-size: 0.8rem !important;
+  font-weight: 850;
+}
+
+.resident-side-note dd {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.8rem !important;
+}
+
+
+/* ---------- Accordion ---------- */
+
+.resident-accordion {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.resident-accordion .accordion-button {
+  min-height: 3rem;
+  padding: 0.75rem 0.95rem !important;
+  color: var(--color-primary-dark);
+  background: #ffffff;
+  font-size: 0.9rem !important;
+  font-weight: 850;
+}
+
+.resident-accordion .accordion-button:not(.collapsed) {
+  color: var(--color-primary-dark);
+  background: var(--color-primary-light);
+  box-shadow: none;
+}
+
+.resident-accordion .accordion-body {
+  padding: 0.9rem 0.95rem !important;
+  color: var(--color-muted);
+  font-size: 0.86rem !important;
+}
+
+.resident-accordion .accordion-body p,
+.resident-accordion .accordion-body li {
+  font-size: 0.86rem !important;
+  line-height: 1.45;
+}
+
+
+/* ---------- Price cards ---------- */
+
+.resident-price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 0.55rem !important;
+}
+
+.resident-price-card {
+  padding: 0.75rem !important;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 0.85rem !important;
+}
+
+.resident-price-card span,
+.resident-price-card small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.78rem !important;
+}
+
+.resident-price-card strong {
+  display: block;
+  margin-block: 0.2rem;
+  color: var(--color-primary-dark);
+  font-size: 0.95rem !important;
+}
+
+
+/* ---------- Cleaner links/buttons ---------- */
+
+#main-content .text-link {
   font-size: 0.86rem;
+  font-weight: 800;
 }
 
-.home-club-body span {
-  font-size: 0.88rem;
+#main-content .btn {
+  border-radius: 999px;
+  font-weight: 750;
 }
 
-/* ---------- Subpage hero ---------- */
 
-.page-hero {
-  padding-block: clamp(3rem, 6vw, 4.75rem);
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1199.98px) {
+  .resident-emergency-grid,
+  .resident-contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .resident-task-grid,
+  .resident-info-grid,
+  .resident-info-grid-compact,
+  .resident-guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .resident-shortcut-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
 }
-
-.page-hero h1 {
-  font-size: clamp(2rem, 4.7vw, 3.5rem);
-}
-
-.page-hero p {
-  font-size: 1rem;
-}
-
-.page-hero-card {
-  padding: clamp(1rem, 2.4vw, 1.45rem);
-}
-
-/* ---------- Responsive compact ---------- */
 
 @media (max-width: 991.98px) {
-  .home-hero.hero-home-v2 {
-    min-height: auto;
+  .resident-hub-hero .page-hero-inner,
+  .resident-news-featured {
+    grid-template-columns: 1fr !important;
   }
 
-  .hero-main-info,
-  .hero-side-stack {
-    min-height: auto;
+  .resident-hub-hero h1 {
+    max-width: none;
   }
 
-  .hero-main-info h1 {
-    font-size: clamp(1.85rem, 7vw, 2.55rem);
+  .resident-shortcut-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #overblik.page-section,
+  #nyheder.page-section,
+  #akut.page-section,
+  #hverdag.page-section,
+  #administration.page-section,
+  #parkering.page-section,
+  #regler.page-section,
+  #guides.page-section,
+  #kontakt.page-section {
+    padding-block: 2.1rem !important;
+  }
+
+  .resident-news-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resident-task-grid,
+  .resident-info-grid,
+  .resident-info-grid-compact,
+  .resident-guide-grid,
+  .resident-contact-grid,
+  .resident-emergency-grid,
+  .resident-price-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .resident-task-card,
+  .resident-emergency-card,
+  .resident-info-card,
+  .resident-guide-card,
+  .resident-contact-card {
+    padding: 0.9rem !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  body {
-    font-size: 0.94rem;
+  .resident-hero-actions .btn {
+    width: 100%;
   }
 
-  .brand-text strong {
-    font-size: 1.15rem;
+  .resident-shortcut-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
   }
 
-  .home-hero.hero-home-v2 {
-    padding-block: 1.75rem;
+  .resident-shortcut-grid .shortcut-card {
+    min-height: 3rem !important;
+    padding: 0.55rem 0.65rem !important;
   }
 
-  .hero-main-info,
-  .hero-news-mini,
-  .home-panel {
-    padding: 1rem;
+  .resident-shortcut-grid .shortcut-card span {
+    font-size: 0.8rem;
   }
 
-  .hero-main-info h1 {
-    font-size: clamp(1.75rem, 9vw, 2.25rem);
+  .resident-info-card-header {
+    flex-direction: row;
   }
 
-  .hero-main-info .lead {
-    font-size: 0.9rem;
+  .resident-news-item {
+    grid-template-columns: 1fr !important;
   }
 }
