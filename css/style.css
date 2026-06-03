@@ -7741,164 +7741,6 @@ h6,
 
 
 
-
-
-
-
-
-/* =====================================================
-   Fællesskab events board
-   Special events + older posts pagination
-===================================================== */
-
-.community-events-board {
-  max-width: 980px;
-  padding: clamp(1.25rem, 3vw, 1.6rem);
-  color: var(--color-primary-dark);
-  background:
-    linear-gradient(135deg, #fcfcf8, #f6f3eb);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-accent);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
-}
-
-.community-events-board .hero-news-mini-header {
-  margin-bottom: 1rem;
-}
-
-.community-events-board h3 {
-  margin: 0;
-  color: var(--color-primary-dark);
-  font-family: var(--font-heading);
-  font-size: clamp(1.45rem, 2.4vw, 1.9rem) !important;
-  font-weight: 750 !important;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-}
-
-.community-event-featured {
-  margin-bottom: 0.9rem;
-  background-color: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(36, 71, 52, 0.1);
-  border-radius: 0.9rem;
-}
-
-.community-event-featured p {
-  margin-bottom: 0.25rem;
-  color: var(--color-primary-dark);
-  font-size: 0.9rem !important;
-  font-weight: 750;
-  line-height: 1.45;
-}
-
-.community-event-featured-text {
-  margin-top: 0.5rem !important;
-  color: var(--color-muted) !important;
-  font-weight: 500 !important;
-}
-
-.community-event-list {
-  gap: 0.65rem;
-}
-
-.community-event-item {
-  display: block;
-  padding: 0.8rem 0.85rem;
-  color: var(--color-primary-dark);
-  background-color: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(36, 71, 52, 0.08);
-  border-radius: 0.85rem;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    background-color 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
-}
-
-.community-event-item:hover {
-  transform: translateY(-2px);
-  background-color: #ffffff;
-  border-color: rgba(36, 71, 52, 0.18);
-  box-shadow: var(--shadow-sm);
-}
-
-.community-event-item span {
-  display: block;
-  margin-bottom: 0.2rem;
-  color: var(--color-accent);
-  font-size: 0.68rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.community-event-item p {
-  margin: 0;
-  color: var(--color-primary-dark);
-  font-size: 0.88rem !important;
-  font-weight: 760;
-  line-height: 1.35;
-}
-
-.community-events-board .club-news-date {
-  display: inline-block;
-  margin-top: 0.2rem;
-  color: var(--color-muted);
-  font-size: 0.78rem;
-  font-weight: 650;
-}
-
-.community-events-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.85rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(36, 71, 52, 0.1);
-}
-
-.community-events-pagination .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  padding: 0.5rem 0.85rem;
-  font-size: 0.82rem;
-}
-
-.community-events-pagination .btn:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.community-events-page-status {
-  color: var(--color-muted);
-  font-size: 0.82rem;
-  font-weight: 750;
-  white-space: nowrap;
-}
-
-@media (max-width: 575.98px) {
-  .community-events-board .hero-news-mini-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .community-events-pagination {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .community-events-page-status {
-    text-align: center;
-  }
-}
-
-
 /* =====================================================
    Fællesskab hero events card
    Moves special events into the hero aside
@@ -8144,3 +7986,17 @@ h6,
 
 
 
+/* =====================================================
+   Fællesskab hero anchor fix
+   Prevents Events anchor from jumping awkwardly under nav
+===================================================== */
+
+.community-hero.community-section-anchor {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 991.98px) {
+  .community-hero.community-section-anchor {
+    scroll-margin-top: 5rem;
+  }
+}
