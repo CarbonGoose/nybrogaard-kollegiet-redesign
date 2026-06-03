@@ -573,3 +573,459 @@ if (document.readyState === "loading") {
 } else {
   initImageLightbox();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Fællesskab: club modal + relevant club info
+   Paste this at the bottom of js/main.js
+===================================================== */
+
+const clubModalContent = {
+  kaeldercafeen: {
+    category: "Social klub",
+    title: "KælderCaféen",
+    description:
+      "KælderCaféen er kollegiets bar og sociale samlingspunkt. Den drives af frivillige beboere og er især stedet for fredagsbar, temafester, drinks, øl og en nem måde at møde andre kollegianere på.",
+    details: [
+      "Drives af frivillige beboere.",
+      "Holder typisk åbent fredag og ved udvalgte arrangementer.",
+      "Der afholdes også temafester og særlige events.",
+      "Man kan engagere sig som bartender eller hjælpe i barens udvalg.",
+      "God for nye beboere, der gerne vil møde folk på en afslappet måde."
+    ],
+    facebook: "https://www.facebook.com/KaelderCafeen/",
+    images: [
+      "assets/images/kældercafe.jpg",
+      "assets/images/kældercafe2.jpg"
+    ]
+  },
+
+  motionsklubben: {
+    category: "Aktiv klub",
+    title: "Motionsklubben",
+    description:
+      "Motionsklubben er kollegiets eget motionsrum i O-kælderen. Det er for beboere, der gerne vil træne tæt på hjemmet — uden at skulle betale for et eksternt fitnesscenter.",
+    details: [
+      "Ligger i kælderen i opgang O.",
+      "Motionsrummet har åbent hele døgnet.",
+      "Der er maskiner og udstyr til forskellige øvelser.",
+      "Adgang gives via varmemesteren efter tilmelding.",
+      "Facebookgruppen bruges til information, idéer og forbedringsforslag."
+    ],
+    facebook: "https://www.facebook.com/groups/1439073929643407/",
+    images: [
+      "assets/images/motion1.jpg",
+      "assets/images/motion2.jpg"
+    ]
+  },
+
+  kanolauget: {
+    category: "Natur og aktivitet",
+    title: "Kano- og kajaklauget",
+    description:
+      "Kano- og kajaklauget giver beboere mulighed for at bruge kollegiets kanoer og kajakker på Lyngby Sø, Bagsværd Sø og Mølleåen. Det er en af de klubber, der virkelig udnytter Nybros placering ved vandet.",
+    details: [
+      "Klubben har kanoer og kajakker til brug for medlemmer.",
+      "Medlemskab er gratis.",
+      "For at blive medlem skal man registreres via varmemesteren.",
+      "Man skal deltage i introduktionskursus før brug af udstyret.",
+      "Reservation foregår via beboerlogin, når man er medlem.",
+      "Redningsvest og regler for færdsel på søerne skal overholdes."
+    ],
+    facebook: "https://www.facebook.com/groups/171257265128384/",
+    images: [
+      "assets/images/kano.jpg",
+      "assets/images/kano2.jpg"
+    ]
+  },
+
+  braetspilsklubben: {
+    category: "Social klub",
+    title: "Brætspilsklubben",
+    description:
+      "Brætspilsklubben — også kaldet Brættet — er Nybros egen brætspilsklub i CD-kælderen. Her kan beboere mødes om brætspil, hygge, spil-aftaler og små sociale arrangementer.",
+    details: [
+      "Holder til i CD-kælderen.",
+      "Medlemskab er gratis ifølge klubbens nuværende side.",
+      "Officielle spilbegivenheder holdes ugentligt.",
+      "Tidspunkter og aftaler deles i Facebookgruppen.",
+      "Medlemmer kan låne brætspil og bruge klublokalet.",
+      "Klubben opfordrer beboere til selv at tage initiativ til spilleaftener."
+    ],
+    facebook: "https://www.facebook.com/groups/1402237493173038/",
+    images: [
+      "assets/images/kollegie-social.jpg",
+      "assets/images/img_2664.jpg"
+    ]
+  },
+
+  cykelvaerksted: {
+    category: "Praktisk klub",
+    title: "Cykelværksted",
+    description:
+      "Cykelværkstedet er kollegiets praktiske værksted til cykelreparationer og vedligeholdelse. Perfekt til alt fra punkteringer til den der mystiske lyd, cyklen laver, når den har valgt drama.",
+    details: [
+      "Ligger i kælderen ved blok M.",
+      "For at blive medlem skal man tage sit vaskekort med til varmemesteren.",
+      "Værkstedet har værktøj til de fleste almindelige cykelreparationer.",
+      "Der er blandt andet kædeværktøj, kassetteaftrækker, wire- og kabelsaks og hjulopretter.",
+      "Man skal rydde op efter sig selv og hænge værktøj på plads.",
+      "Facebookgruppen bruges til hjælp, erfaringer, værktøj og varsling om cykeloprydning."
+    ],
+    facebook: "https://www.facebook.com/groups/751662049138329/",
+    images: [
+      "assets/images/bus.jpg",
+      "assets/images/house.png"
+    ]
+  },
+
+  filmklubben: {
+    category: "Social klub",
+    title: "Filmklubben",
+    description:
+      "Filmklubben er kollegiets hjemmebiograf i B-kælderen med surroundsound, sofarækker og stort lærred. Den kan bruges af registrerede medlemmer via booking.",
+    details: [
+      "Holder til i B-kælderen.",
+      "Rummet har hjemmebiograf med surroundsound, sofarækker og stort lærred.",
+      "Man bliver medlem ved at læse og underskrive reglementet hos varmemesteren.",
+      "Adgang gives via aktiveret SALTO-brik.",
+      "Booking er kun for registrerede medlemmer.",
+      "Der er DVD/Blu-ray-afspiller og HDMI-stik til egen computer."
+    ],
+    facebook: "https://www.facebook.com/groups/632002704276746/",
+    images: [
+      "assets/images/img_2710.jpg",
+      "assets/images/kollegie-social.jpg"
+    ]
+  },
+
+  kunstklubben: {
+    category: "Kreativ klub",
+    title: "Kunstklubben",
+    description:
+      "Kunstklubben holder til i et hyggeligt atelier i F-kælderen ved siden af musikrummet. Klubben giver beboere plads til kreative projekter, kunst, værkstedsarbejde og små te-pauser midt i skaberkaosset.",
+    details: [
+      "Ligger i F-kælderen ved siden af Musikrummet.",
+      "Formålet er at give medlemmer plads til at arbejde med kunst og kreative projekter.",
+      "Rummet kan bruges til forskellige typer kunstnerisk arbejde.",
+      "Man skal efterlade rummet pænt og ryddeligt.",
+      "Der er mulighed for at låse egne ting inde med en lille hængelås.",
+      "Adgang fås ved registrering hos varmemesteren."
+    ],
+    facebook: "https://www.facebook.com/groups/619193229277730/",
+    images: [
+      "assets/images/img_2664.jpg",
+      "assets/images/kollegie-social.jpg"
+    ]
+  },
+
+  musikrum: {
+    category: "Kreativ klub",
+    title: "Musikrummet",
+    description:
+      "Musikrummet er øvelokalet for beboere, der spiller musik eller gerne vil øve sig. Det ligger under EF-køkkenerne og rummer både fælles gear og privat gear fra beboere.",
+    details: [
+      "Ligger i kælderen under EF-køkkenerne.",
+      "Kun beboere kan blive medlem.",
+      "Medlemskab er gratis.",
+      "Rummet har blandt andet trommesæt, klaver og øve-PA-anlæg.",
+      "Privat gear skal markeres tydeligt med navn og værelse.",
+      "Reservation foregår ved at skrive sig på sedlerne på døren.",
+      "Man må højst bruge rummet fire timer, hvis andre også vil bruge det samme dag.",
+      "Det er ikke tilladt at spille efter kl. 22."
+    ],
+    facebook: "https://www.facebook.com/groups/378872605654962/",
+    images: [
+      "assets/images/musik.jpg",
+      "assets/images/musik2.jpg"
+    ]
+  },
+
+  bryggerklub: {
+    category: "Social og praktisk klub",
+    title: "Bryggerklub",
+    description:
+      "Bryggerklubben holder til i et lille lokale i D-kælderen, hvor der brygges øl, cider, vin og andet godt i ca. 20 liters portioner. Den er for beboere, der vil lære hjemmebryg og dele erfaringer med andre.",
+    details: [
+      "Ligger i D-kælderen.",
+      "Klubben har udstyr til øl, cider, vin m.m. i portioner på ca. 20 liter.",
+      "Udstyret inkluderer blandt andet saftkoger, gæringsspande, vandlåse, hydrometer og nedkølingsspiral.",
+      "Klubben bruger Facebookgruppen til koordination og erfaringsudveksling.",
+      "Nye medlemmer skal læse lidt om bryggeprocessen først.",
+      "Et eksisterende medlem kan hjælpe med første bryg, men tanken er, at man selv lærer processen."
+    ],
+    facebook: "https://www.facebook.com/groups/454792794605313/",
+    images: [
+      "assets/images/img_2591.jpg",
+      "assets/images/kollegie-social.jpg"
+    ]
+  },
+
+  miljoegruppen: {
+    category: "Bæredygtighed",
+    title: "Miljøgruppen",
+    description:
+      "Miljøgruppen arbejder for et bedre miljø på og omkring kollegiet. Gruppen laver blandt andet kampagner, byttemarkeder og initiativer omkring affald, genbrug og fælles ansvar.",
+    details: [
+      "Arbejder for et bedre miljø for kollegiet og beboerne.",
+      "Laver informationskampagner om energibesparelse, affaldssortering, havebrug og andre miljøemner.",
+      "Arrangerer byttemarkeder, hvor beboere kan give og modtage brugbare ting.",
+      "Arrangerer fælles affaldsopsamling på udendørsarealerne.",
+      "Facebooksiden bruges til aktiviteter og diskussioner."
+    ],
+    facebook: "https://www.facebook.com/groups/NybroMiljo/",
+    images: [
+      "assets/images/outdoor5.jpg",
+      "assets/images/outdoor6.jpg"
+    ]
+  },
+
+  haveforening: {
+    category: "Natur og udeliv",
+    title: "Nybrogård Haveforening",
+    description:
+      "Haveforeningen er for beboere med grønne fingre, havedrømme eller bare lyst til lidt jord under neglene. Foreningen råder over CD-, LM- og NO-haverne samt kollegiets fælles bærbuske og frugttræer.",
+    details: [
+      "Haveforeningen har eksisteret siden 1978.",
+      "Foreningen råder over CD-haverne, LM-haverne og NO-haverne.",
+      "Der er cirka 46 haver i forskellige størrelser.",
+      "Som medlem kan man få tildelt en have alene eller dele den med andre.",
+      "Der findes haveredskaber, haveslange og trillebør til hvert haveareal.",
+      "Der arrangeres fælles havedage i løbet af året.",
+      "Tilmelding sker via haveformanden, og venteliste kan forekomme."
+    ],
+    facebook:
+      "https://www.facebook.com/search/groups/?q=Nybrog%C3%A5rd%20Haveforening",
+    images: [
+      "assets/images/outdoor2.jpg",
+      "assets/images/outdoor3.jpg"
+    ]
+  }
+};
+
+function initCommunityClubModal() {
+  const modal = document.querySelector("[data-club-modal]");
+  if (!modal) return;
+
+  const titleEl = modal.querySelector("[data-club-modal-title]");
+  const categoryEl = modal.querySelector("[data-club-modal-category]");
+  const descriptionEl = modal.querySelector("[data-club-modal-description]");
+  const detailsEl = modal.querySelector("[data-club-modal-details]");
+  const imagesEl = modal.querySelector("[data-club-modal-images]");
+  const facebookEl = modal.querySelector("[data-club-modal-facebook]");
+
+  const clubTitleMap = {
+    "kældercaféen": "kaeldercafeen",
+    "kaeldercafeen": "kaeldercafeen",
+    "motionsklubben": "motionsklubben",
+    "kano- og kajaklauget": "kanolauget",
+    "kano og kajaklauget": "kanolauget",
+    "brætspilsklubben": "braetspilsklubben",
+    "braetspilsklubben": "braetspilsklubben",
+    "cykelværksted": "cykelvaerksted",
+    "cykelvaerksted": "cykelvaerksted",
+    "filmklubben": "filmklubben",
+    "kunstklubben": "kunstklubben",
+    "musikrummet": "musikrum",
+    "bryggerklub": "bryggerklub",
+    "bryggerklubben": "bryggerklub",
+    "miljøgruppen": "miljoegruppen",
+    "miljoegruppen": "miljoegruppen",
+    "nybrogård haveforening": "haveforening",
+    "nybrogaard haveforening": "haveforening",
+    "haveforeningen": "haveforening"
+  };
+
+  function normalizeClubText(text) {
+    return String(text || "")
+      .toLowerCase()
+      .trim()
+      .replaceAll("æ", "ae")
+      .replaceAll("ø", "oe")
+      .replaceAll("å", "aa");
+  }
+
+  function getClubIdFromCard(card) {
+    if (card.dataset.club && clubModalContent[card.dataset.club]) {
+      return card.dataset.club;
+    }
+
+    if (card.id && clubModalContent[card.id]) {
+      return card.id;
+    }
+
+    const title = card.querySelector("h2, h3, .club-title")?.textContent;
+    const normalizedTitle = normalizeClubText(title);
+
+    return clubTitleMap[normalizedTitle];
+  }
+
+  function createButton(clubId) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "btn btn-sm btn-primary";
+    button.dataset.clubModalOpen = clubId;
+    button.textContent = "Læs mere";
+    return button;
+  }
+
+  function createFacebookLink(url) {
+    const link = document.createElement("a");
+    link.className = "btn btn-sm btn-outline-secondary";
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "Find gruppe";
+    return link;
+  }
+
+  function getOrCreateActions(card) {
+    const existingActions = card.querySelector(".club-actions");
+
+    if (existingActions) {
+      return existingActions;
+    }
+
+    const oldActionLink = Array.from(card.querySelectorAll("a")).find((link) =>
+      /læs mere|laes mere|facebook|find gruppe|regler|tilmelding/i.test(
+        link.textContent
+      )
+    );
+
+    if (oldActionLink?.parentElement) {
+      oldActionLink.parentElement.classList.add("club-actions");
+      return oldActionLink.parentElement;
+    }
+
+    const actions = document.createElement("div");
+    actions.className = "club-actions";
+    card.appendChild(actions);
+    return actions;
+  }
+
+  function updateClubActions() {
+    const clubCards = document.querySelectorAll(
+      ".club-card, .community-club-card, [data-club-card]"
+    );
+
+    clubCards.forEach((card) => {
+      const clubId = getClubIdFromCard(card);
+      const club = clubModalContent[clubId];
+
+      if (!club) return;
+
+      const actions = getOrCreateActions(card);
+
+      actions.replaceChildren(
+        createButton(clubId),
+        createFacebookLink(club.facebook)
+      );
+    });
+  }
+
+  function renderImages(images, title) {
+    imagesEl.innerHTML = "";
+
+    images.forEach((imageSrc, index) => {
+      const image = document.createElement("img");
+      image.src = imageSrc;
+      image.alt = `${title} billede ${index + 1}`;
+      image.loading = "lazy";
+
+      image.onerror = () => {
+        image.remove();
+      };
+
+      imagesEl.appendChild(image);
+    });
+  }
+
+  function renderDetails(details) {
+    detailsEl.innerHTML = "";
+
+    details.forEach((detail) => {
+      const item = document.createElement("li");
+      item.textContent = detail;
+      detailsEl.appendChild(item);
+    });
+  }
+
+  function openModal(clubId) {
+    const club = clubModalContent[clubId];
+    if (!club) return;
+
+    titleEl.textContent = club.title;
+    categoryEl.textContent = club.category;
+    descriptionEl.textContent = club.description;
+    facebookEl.href = club.facebook;
+
+    renderDetails(club.details);
+    renderImages(club.images, club.title);
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("club-modal-open");
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("club-modal-open");
+  }
+
+  document.addEventListener("click", (event) => {
+    const openButton = event.target.closest("[data-club-modal-open]");
+    const closeButton = event.target.closest("[data-club-modal-close]");
+
+    if (openButton) {
+      openModal(openButton.dataset.clubModalOpen);
+    }
+
+    if (closeButton) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+
+  updateClubActions();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initCommunityClubModal);
+} else {
+  initCommunityClubModal();
+}
