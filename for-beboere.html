@@ -61,31 +61,68 @@
         </div>
       </div>
 
-      <aside class="page-hero-card resident-hero-card" aria-label="Mest brugte beboerfunktioner">
-        <h2>Mest brugt</h2>
 
-        <div class="resident-hero-list">
-          <a href="#noegleservice">
-            <i class="bi bi-key" aria-hidden="true"></i>
-            <span>Låst ude</span>
-          </a>
 
-          <a href="#vaskeri">
-            <i class="bi bi-basket" aria-hidden="true"></i>
-            <span>Vaskeri</span>
-          </a>
 
-          <a href="#internet">
-            <i class="bi bi-wifi" aria-hidden="true"></i>
-            <span>Internet</span>
-          </a>
 
-          <a href="#kontakt">
-            <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
-            <span>Kontakt</span>
-          </a>
-        </div>
-      </aside>
+
+      <!---NYHEDER--->
+  <aside
+  id="nyheder"
+  class="page-hero-card community-hero-card community-events-hero-card resident-news-hero-card"
+  aria-labelledby="news-title"
+  data-resident-news-board
+>
+  <div class="hero-news-mini-header">
+    <div>
+      <p class="hero-news-eyebrow">Nyheder og beskeder</p>
+      <h2 id="news-title">Aktuelt for beboere</h2>
+    </div>
+
+    <span class="live-badge">
+      <span class="live-dot" aria-hidden="true"></span>
+      2026
+    </span>
+  </div>
+
+  <article
+    class="hero-live-message community-event-featured resident-news-featured"
+    data-resident-news-featured
+  >
+    <!-- Featured nyhed bliver indsat med JavaScript -->
+  </article>
+
+  <div
+    class="hero-news-mini-list community-event-list resident-news-hero-list"
+    data-resident-news-list
+  >
+    <!-- 2 mindre nyheder bliver indsat med JavaScript -->
+  </div>
+
+  <div class="community-events-pagination resident-news-actions" aria-label="Bladr mellem nyheder">
+    <button
+      class="btn btn-sm btn-outline-secondary"
+      type="button"
+      data-resident-news-prev
+    >
+      <i class="bi bi-arrow-left" aria-hidden="true"></i>
+      Nyere
+    </button>
+
+    <span class="community-events-page-status" data-resident-news-page-status>
+      Side 1 af 1
+    </span>
+
+    <button
+      class="btn btn-sm btn-outline-secondary"
+      type="button"
+      data-resident-news-next
+    >
+      Ældre
+      <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </button>
+  </div>
+</aside>
 
     </div>
   </section>
@@ -216,75 +253,7 @@
   </section>
 
 
-  <!-- News board -->
-  <section id="nyheder" class="page-section bg-soft border-bottom-soft" aria-labelledby="news-title">
-    <div class="content-container">
-
-      <article class="resident-news-board">
-
-        <div class="resident-news-header">
-          <div>
-            <span class="section-kicker">Aktuelt</span>
-            <h2 id="news-title" class="section-title">Nyheder og beskeder</h2>
-
-            <p class="section-text">
-              Her samles korte beskeder, driftsinfo, frister og arrangementer,
-              så beboere ikke skal lede gennem gamle opslag.
-            </p>
-          </div>
-
-          <span class="live-badge">
-            <span class="live-dot" aria-hidden="true"></span>
-            Opdateret
-          </span>
-        </div>
-
-        <div class="resident-news-featured">
-          <div class="resident-news-main-message">
-            <span>Seneste besked</span>
-            <h3>Cykeloprydning varsles i god tid</h3>
-            <p>
-              Når der er cykeloprydning, får beboere besked om dato, strips
-              og hvor stripsen skal sættes på cyklen.
-            </p>
-          </div>
-        </div>
-
-        <div class="resident-news-list">
-
-          <a class="resident-news-item" href="#cykeloprydning">
-            <div>
-              <span>Cykler</span>
-              <h3>Sådan fungerer cykeloprydning</h3>
-              <p>Marker din cykel tydeligt, når der varsles oprydning.</p>
-            </div>
-            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-          </a>
-
-          <a class="resident-news-item" href="#sekretariat">
-            <div>
-              <span>Administration</span>
-              <h3>Husk frister for studieerklæring</h3>
-              <p>Du skal reagere hurtigt, når du modtager brev fra KAB.</p>
-            </div>
-            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-          </a>
-
-          <a class="resident-news-item" href="#vaskeri">
-            <div>
-              <span>Faciliteter</span>
-              <h3>Vaskeri og vaskebrik</h3>
-              <p>Book online eller direkte på vaskeriet.</p>
-            </div>
-            <i class="bi bi-arrow-right-short" aria-hidden="true"></i>
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-  </section>
+ 
 
 
   <!-- Emergency help -->

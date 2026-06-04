@@ -7260,3 +7260,759 @@ body.search-lock {
     transform: translateY(0.25rem);
   }
 }
+
+
+
+
+
+
+
+
+/* =====================================================
+   For beboere hero news card
+   Uses same structure as Fællesskab upcoming events card
+===================================================== */
+
+.resident-news-hero-card {
+  align-self: center;
+}
+
+.resident-news-hero-card .hero-news-mini-header {
+  margin-bottom: 0.65rem !important;
+}
+
+.resident-news-hero-card .hero-news-eyebrow {
+  margin: 0 0 0.15rem !important;
+  color: var(--color-accent);
+  font-size: 0.58rem !important;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.resident-news-hero-card h2 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-size: 1.2rem !important;
+  font-weight: 750 !important;
+  line-height: 1.05 !important;
+}
+
+.resident-news-hero-card .live-badge {
+  padding: 0.2rem 0.45rem !important;
+  font-size: 0.58rem !important;
+}
+
+.resident-news-featured {
+  margin-bottom: 0.5rem !important;
+  padding: 0.6rem 0.68rem !important;
+  background-color: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(36, 71, 52, 0.1);
+  border-radius: 0.75rem !important;
+}
+
+.resident-news-featured .hero-live-label,
+.resident-news-hero-item span {
+  font-size: 0.56rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+.resident-news-featured p {
+  margin-bottom: 0.12rem !important;
+  color: var(--color-primary-dark);
+  font-size: 0.76rem !important;
+  font-weight: 760;
+  line-height: 1.25 !important;
+}
+
+.resident-news-featured .community-event-featured-text {
+  margin-top: 0.35rem !important;
+  color: var(--color-muted) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  line-height: 1.35 !important;
+}
+
+.resident-news-hero-list {
+  gap: 0.45rem !important;
+  margin-top: 0;
+}
+
+.resident-news-hero-item {
+  display: block;
+  padding: 0.55rem 0.65rem !important;
+  color: var(--color-primary-dark);
+  background-color: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(36, 71, 52, 0.08);
+  border-radius: 0.7rem !important;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.resident-news-hero-item:hover,
+.resident-news-hero-item:focus-visible {
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  background-color: #ffffff;
+  border-color: rgba(36, 71, 52, 0.18);
+  box-shadow: var(--shadow-sm);
+  outline: none;
+}
+
+.resident-news-hero-item span {
+  display: block;
+  margin-bottom: 0.12rem;
+  color: var(--color-accent);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.resident-news-hero-item p {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 0.73rem !important;
+  font-weight: 760;
+  line-height: 1.25 !important;
+}
+
+.resident-news-hero-item .club-news-date {
+  display: inline-block;
+  margin-top: 0.1rem !important;
+  color: var(--color-muted);
+  font-size: 0.62rem !important;
+  font-weight: 650;
+  line-height: 1.2 !important;
+}
+
+.resident-news-actions {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.6rem !important;
+  padding-top: 0.55rem !important;
+  border-top: 1px solid rgba(36, 71, 52, 0.1);
+}
+
+.resident-news-actions .btn {
+  width: auto;
+  padding: 0.28rem 0.5rem !important;
+  font-size: 0.66rem !important;
+}
+
+.resident-news-actions .community-events-page-status {
+  color: var(--color-muted);
+  font-size: 0.66rem !important;
+  font-weight: 750;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Keeps anchor jump pleasant when shortcut links to #nyheder */
+.resident-news-hero-card {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 991.98px) {
+  .resident-news-hero-card {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .resident-news-hero-card .hero-news-mini-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resident-news-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .resident-news-actions .btn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* =====================================================
+   For beboere - match Akut hjælp with Parkering og cykler
+===================================================== */
+
+#akut {
+  background-color: var(--color-bg-soft) !important;
+}
+
+/* Optional: hvis du også vil have samme bløde adskillelse */
+#akut {
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+
+
+.resident-news-actions .btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =====================================================
+   Index: club preview card fit fixes
+   Keeps longer club names inside the cards
+===================================================== */
+
+.home-club-preview-grid {
+  align-items: stretch;
+}
+
+.home-club-card {
+  min-width: 0;
+  height: 100%;
+}
+
+.home-club-body {
+  min-width: 0;
+  padding: 0.85rem;
+}
+
+.home-club-body h3 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(0.9rem, 1vw, 1rem) !important;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.home-club-body p {
+  margin-bottom: 0.65rem;
+  font-size: 0.82rem !important;
+  line-height: 1.35;
+}
+
+.home-club-body span {
+  font-size: 0.82rem;
+}
+
+.home-club-image {
+  aspect-ratio: 4 / 2.75;
+}
+
+.home-club-icon-image img,
+.home-club-image img {
+  max-height: 8rem;
+  object-fit: contain;
+  padding: 0.8rem;
+}
+
+/* Club news card text fit */
+.home-club-news-card .hero-news-mini-item {
+  min-width: 0;
+}
+
+.home-club-news-card .hero-news-mini-item span {
+  font-size: 0.62rem !important;
+  line-height: 1.15;
+}
+
+.home-club-news-card .hero-news-mini-item p {
+  font-size: 0.8rem !important;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.home-club-news-card .club-news-date {
+  font-size: 0.68rem !important;
+  line-height: 1.2;
+}
+
+/* Slightly tighter panel header */
+.home-panel-header {
+  gap: 0.9rem;
+}
+
+.home-panel-header h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem) !important;
+}
+
+.home-panel-header p {
+  font-size: 0.9rem !important;
+  line-height: 1.4;
+}
+
+/* On medium widths, 2x2 is cleaner than cramped 4 columns */
+@media (max-width: 1199.98px) {
+  .home-club-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .home-club-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-club-body h3 {
+    font-size: 1rem !important;
+  }
+
+  .home-club-body p {
+    font-size: 0.88rem !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Index: community news board next to clubs
+===================================================== */
+
+.home-club-news-card.community-events-board {
+  max-width: none;
+  height: 100%;
+}
+
+.home-club-news-card .community-event-featured {
+  padding: 0.85rem;
+}
+
+.home-club-news-card .community-event-featured-text {
+  margin-top: 0.4rem;
+  color: var(--color-muted);
+  font-size: 0.82rem !important;
+  line-height: 1.45;
+}
+
+.home-club-news-card .community-event-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.home-club-news-card .community-event-item {
+  display: block;
+}
+
+.home-club-news-card .hero-news-mini-link {
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* =====================================================
+   Index: bigger club preview icons
+   Makes frontpage club icons readable again
+===================================================== */
+
+.home-club-image {
+  display: grid;
+  place-items: center;
+  min-height: 8.75rem;
+  padding: 1rem;
+  background-color: var(--color-bg-soft);
+}
+
+.home-club-image img {
+  width: min(100%, 6.25rem);
+  max-width: 6.25rem;
+  height: auto;
+  max-height: 6.25rem;
+  object-fit: contain;
+  padding: 0;
+}
+
+/* Give the cards enough height for bigger icons + longer names */
+.home-club-card {
+  height: 100%;
+}
+
+.home-club-body {
+  padding: 0.95rem;
+}
+
+.home-club-body h3 {
+  font-size: 0.98rem !important;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.home-club-body p {
+  font-size: 0.84rem !important;
+  line-height: 1.4;
+}
+
+/* On slightly smaller screens, 2 columns looks better than squished icons */
+@media (max-width: 1199.98px) {
+  .home-club-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-club-image {
+    min-height: 9rem;
+  }
+
+  .home-club-image img {
+    max-width: 6.75rem;
+    max-height: 6.75rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-club-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-club-image {
+    min-height: 8.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Om kollegiet - Lokation & transport layout polish
+===================================================== */
+
+.location-section {
+  background:
+    linear-gradient(135deg, rgba(251, 250, 245, 0.98), rgba(244, 247, 239, 0.95));
+}
+
+.location-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 1.05fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.location-copy {
+  max-width: 34rem;
+}
+
+.location-copy .section-kicker {
+  margin-bottom: 0.55rem;
+}
+
+.location-copy .section-title {
+  max-width: 14ch;
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.75rem, 3vw, 2.35rem) !important;
+  line-height: 1.08;
+}
+
+.location-lead {
+  max-width: 48ch;
+  margin-bottom: 1.6rem;
+  color: var(--color-muted);
+  font-size: 0.98rem !important;
+  line-height: 1.6;
+}
+
+/* Address card */
+.location-address-card {
+  width: min(100%, 27rem);
+  margin-bottom: 1.35rem;
+  padding: 0.95rem 1rem;
+  background-color: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.location-address-icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  font-size: 1rem;
+}
+
+.location-address-card h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+}
+
+.location-address-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.45;
+}
+
+/* Buttons */
+.location-actions {
+  gap: 0.65rem;
+}
+
+.location-actions .btn {
+  min-height: 2.35rem;
+  padding: 0.5rem 0.95rem;
+  font-size: 0.86rem;
+}
+
+/* Image card */
+.location-media-card {
+  min-height: clamp(20rem, 34vw, 27rem);
+  border-radius: 1.45rem;
+  box-shadow: var(--shadow-md);
+}
+
+.location-media-card img {
+  min-height: clamp(20rem, 34vw, 27rem);
+  object-fit: cover;
+}
+
+.location-media-label {
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.95rem;
+}
+
+.location-media-label span {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.1em;
+}
+
+.location-media-label strong {
+  font-size: clamp(1.15rem, 2vw, 1.45rem) !important;
+}
+
+/* Bottom transport cards */
+.transport-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.35rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.transport-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  min-height: 100%;
+  padding: 1.15rem;
+  background-color: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--color-border);
+  border-radius: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.transport-icon {
+  width: 2.45rem;
+  height: 2.45rem;
+  font-size: 1.05rem;
+}
+
+.transport-card h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2;
+}
+
+.transport-card p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem !important;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .location-shell {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .location-copy {
+    max-width: 100%;
+  }
+
+  .location-copy .section-title {
+    max-width: none;
+  }
+
+  .location-media-card,
+  .location-media-card img {
+    min-height: 22rem;
+  }
+
+  .transport-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .location-address-card,
+  .transport-card {
+    grid-template-columns: 1fr;
+  }
+
+  .location-address-card {
+    flex-direction: column;
+  }
+
+  .location-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .location-media-card,
+  .location-media-card img {
+    min-height: 18rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   Bolig & ansøgning - boligtype image fit + lightbox
+   Makes detailed housing images fit their boxes
+===================================================== */
+
+.housing-detail-media {
+  position: relative;
+  min-height: clamp(18rem, 30vw, 24rem);
+  overflow: hidden;
+  background-color: var(--color-bg-soft);
+  border-radius: calc(var(--radius-xl) - 0.35rem);
+}
+
+.housing-detail-image-button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border-radius: inherit;
+}
+
+.housing-detail-image-button img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 220ms ease;
+}
+
+.housing-detail-image-button:hover img,
+.housing-detail-image-button:focus-visible img {
+  transform: scale(1.035);
+}
+
+.housing-detail-image-button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Plantegninger skal vises hele, ikke beskæres */
+.housing-floorplan-media {
+  display: block;
+  padding: 0;
+  background-color: #f7f4ed;
+}
+
+.housing-floorplan-media .housing-detail-image-button {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background-color: #f7f4ed;
+}
+
+.housing-floorplan-media .housing-detail-image-button img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 26rem;
+  min-height: auto;
+  object-fit: contain;
+}
+
+/* Lille zoom-label */
+.housing-detail-image-button::after {
+  content: "Klik for større billede";
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  color: #ffffff;
+  background-color: rgba(23, 49, 36, 0.78);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 750;
+  opacity: 0;
+  transform: translateY(0.35rem);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.housing-detail-image-button:hover::after,
+.housing-detail-image-button:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991.98px) {
+  .housing-detail-media {
+    min-height: 20rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .housing-detail-media {
+    min-height: 16.5rem;
+  }
+
+  .housing-detail-image-button::after {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    font-size: 0.72rem;
+  }
+}
+
+
+
+
+
+
+
+
+

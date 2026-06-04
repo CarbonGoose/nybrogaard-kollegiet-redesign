@@ -1228,3 +1228,207 @@ if (document.readyState === "loading") {
 } else {
   initCommunityEventsPagination();
 }
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   For beboere: prototype resident news pagination
+   Shows newest resident posts first, then older posts
+===================================================== */
+
+function initResidentNewsPagination() {
+  const board = document.querySelector("[data-resident-news-board]");
+  if (!board) return;
+
+  const featuredEl = board.querySelector("[data-resident-news-featured]");
+  const listEl = board.querySelector("[data-resident-news-list]");
+  const prevButton = board.querySelector("[data-resident-news-prev]");
+  const nextButton = board.querySelector("[data-resident-news-next]");
+  const pageStatus = board.querySelector("[data-resident-news-page-status]");
+
+  if (!featuredEl || !listEl || !prevButton || !nextButton || !pageStatus) return;
+
+  const residentNewsPosts = [
+    /* Newest resident messages */
+    {
+      date: "18. juni 2026",
+      category: "Drift",
+      title: "Kort servicevindue i vaskeriet",
+      description:
+        "Vaskeriet kan være kortvarigt utilgængeligt i forbindelse med service. Planlæg gerne tøjvask uden om tidsrummet.",
+      note: "Ny besked"
+    },
+    {
+      date: "12. juni 2026",
+      category: "Fællesskab",
+      title: "Sommerarrangement i gården",
+      description:
+        "Der inviteres til en hyggelig sommerdag i fællesområderne med aktiviteter, mad og mulighed for at møde andre beboere.",
+      note: "Kommende"
+    },
+    {
+      date: "3. juni 2026",
+      category: "Café",
+      title: "Fællesspisning i caféen torsdag kl. 18.00",
+      description:
+        "Beboere kan mødes til fællesspisning i caféen. En nem måde at lære nye naboer at kende på.",
+      note: "Aktuelt"
+    },
+
+    /* Older resident messages / archive */
+    {
+      date: "28. maj 2026",
+      category: "Cykler",
+      title: "Varsling om cykeloprydning",
+      description:
+        "Beboere skal være opmærksomme på varsling, strips og frister, så cykler ikke fjernes ved en fejl.",
+      note: "Afsluttet"
+    },
+    {
+      date: "20. maj 2026",
+      category: "Administration",
+      title: "Husk studieerklæring",
+      description:
+        "Beboere kan blive bedt om at dokumentere studieaktivitet. Reagér hurtigt på beskeder fra administrationen eller KAB.",
+      note: "Vigtig info"
+    },
+    {
+      date: "14. maj 2026",
+      category: "Internet",
+      title: "Guide til internet og netværk",
+      description:
+        "Hvis nettet driller, kan beboere finde hjælp til opsætning, fejlsøgning og kontakt til relevant support.",
+      note: "Guide"
+    },
+    {
+      date: "5. maj 2026",
+      category: "Parkering",
+      title: "Parkering og cykelområder",
+      description:
+        "Få overblik over parkering, cykelstativer og hvor beboere må stille køretøjer og cykler.",
+      note: "Beboerinfo"
+    },
+    {
+      date: "22. april 2026",
+      category: "Regler",
+      title: "Ro, gæster og fælles ansvar",
+      description:
+        "Husordenen hjælper med at skabe en god hverdag for alle beboere, både i fællesområder og på gangene.",
+      note: "Beboerinfo"
+    },
+    {
+      date: "10. april 2026",
+      category: "Vedligeholdelse",
+      title: "Kontakt varmemester ved fejl og mangler",
+      description:
+        "Ved problemer med varme, vand, nøgler eller mindre reparationer skal beboere kontakte varmemesteren.",
+      note: "Praktisk"
+    }
+  ];
+
+  const postsPerPage = 3;
+  let currentPage = 0;
+  const totalPages = Math.ceil(residentNewsPosts.length / postsPerPage);
+
+  function createResidentNewsItem(post) {
+    const article = document.createElement("article");
+    article.className = "hero-news-mini-item community-event-item resident-news-hero-item";
+
+    article.innerHTML = `
+      <div class="club-news-item-main">
+        <span>${post.category}</span>
+        <p>${post.title}</p>
+        <small class="club-news-date">${post.date} · ${post.note}</small>
+      </div>
+    `;
+
+    return article;
+  }
+
+  function createResidentNewsPlaceholderItem() {
+    const article = document.createElement("article");
+    article.className =
+      "hero-news-mini-item community-event-item resident-news-hero-item community-event-placeholder";
+    article.setAttribute("aria-hidden", "true");
+
+    article.innerHTML = `
+      <div class="club-news-item-main">
+        <span>Placeholder</span>
+        <p>Placeholder</p>
+        <small class="club-news-date">Placeholder</small>
+      </div>
+    `;
+
+    return article;
+  }
+
+  function renderFeaturedResidentNews(post) {
+    featuredEl.innerHTML = `
+      <span class="hero-live-label">${post.category}</span>
+      <p>${post.title}</p>
+      <small class="club-news-date">${post.date} · ${post.note}</small>
+      <p class="community-event-featured-text">
+        ${post.description}
+      </p>
+    `;
+  }
+
+  function renderResidentNews() {
+    const start = currentPage * postsPerPage;
+    const visiblePosts = residentNewsPosts.slice(start, start + postsPerPage);
+
+    const featuredPost = visiblePosts[0];
+    const listPosts = visiblePosts.slice(1);
+
+    renderFeaturedResidentNews(featuredPost);
+
+    listEl.innerHTML = "";
+
+    listPosts.forEach((post) => {
+      listEl.appendChild(createResidentNewsItem(post));
+    });
+
+    /*
+      Keeps the card height stable.
+      If the last page only has 1 post, invisible placeholders fill the missing space.
+    */
+    const missingListItems = postsPerPage - 1 - listPosts.length;
+
+    for (let i = 0; i < missingListItems; i++) {
+      listEl.appendChild(createResidentNewsPlaceholderItem());
+    }
+
+    pageStatus.textContent = `Side ${currentPage + 1} af ${totalPages}`;
+
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = currentPage === totalPages - 1;
+  }
+
+  prevButton.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      renderResidentNews();
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentPage < totalPages - 1) {
+      currentPage++;
+      renderResidentNews();
+    }
+  });
+
+  renderResidentNews();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initResidentNewsPagination);
+} else {
+  initResidentNewsPagination();
+}
